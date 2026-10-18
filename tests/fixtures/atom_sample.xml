@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sample Lab Blog</title>
+  <id>https://lab.example.org/</id>
+  <updated>2026-10-17T09:00:00Z</updated>
+  <entry>
+    <title>Open-weights model tops the coding leaderboard!</title>
+    <link href="https://www.example.com/news/open-model/" />
+    <id>https://lab.example.org/1</id>
+    <updated>2026-10-17T09:00:00Z</updated>
+    <summary>Same story as the RSS feed, reworded headline and a different URL form.</summary>
+  </entry>
+  <entry>
+    <title>Benchmark found leaking into training data</title>
+    <link href="https://lab.example.org/posts/benchmark-leak" />
+    <id>https://lab.example.org/2</id>
+    <updated>2026-10-16T20:00:00Z</updated>
+    <summary>Near-copies of test questions turned up in public web crawls.</summary>
+  </entry>
+</feed>

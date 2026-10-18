@@ -1,0 +1,37 @@
+# ai-newsroom configuration
+# Change the topic, keywords and feeds here; no code changes needed.
+
+topic: AI
+
+# Stories older than this are ignored.
+max_age_hours: 36
+
+# Used for feeds marked `filter: true` (general feeds that cover more than our topic).
+keywords:
+  - AI
+  - artificial intelligence
+  - LLM
+  - language model
+  - machine learning
+  - neural
+  - GPT
+  - Claude
+  - Gemini
+  - agent
+  - transformer
+  - diffusion
+
+feeds:
+  - name: arXiv cs.CL
+    url: https://rss.arxiv.org/rss/cs.CL
+  - name: arXiv cs.AI
+    url: https://rss.arxiv.org/rss/cs.AI
+  - name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+  - name: TechCrunch AI
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+  - name: MIT News AI
+    url: https://news.mit.edu/rss/topic/artificial-intelligence2
+  - name: Hacker News
+    url: https://hnrss.org/frontpage
+    filter: true

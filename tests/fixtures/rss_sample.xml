@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Sample AI News</title>
+    <link>https://example.com</link>
+    <description>Fixture feed for tests</description>
+    <item>
+      <title>Open-weights model tops coding leaderboard</title>
+      <link>https://example.com/news/open-model?utm_source=rss&amp;utm_medium=feed</link>
+      <description>&lt;p&gt;The release beats &lt;b&gt;several&lt;/b&gt; closed models &amp;amp; runs on one GPU.&lt;/p&gt;</description>
+      <pubDate>Fri, 17 Oct 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>MCP spec adds streaming tool calls</title>
+      <link>https://example.com/news/mcp-streaming/</link>
+      <description>Tools can now send partial results while they work.</description>
+      <pubDate>Fri, 17 Oct 2026 06:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Local bakery wins regional award</title>
+      <link>https://example.com/news/bakery</link>
+      <description>Nothing to do with machine learning, just good bread.</description>
+      <pubDate>Fri, 17 Oct 2026 05:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.com/news/untitled</link>
+      <description>An entry with no title should be skipped.</description>
+    </item>
+  </channel>
+</rss>

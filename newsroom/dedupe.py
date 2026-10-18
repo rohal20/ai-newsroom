@@ -1,0 +1,44 @@
+"""Remove duplicate stories: the same link shared by several feeds, or the same headline reworded slightly."""
+
+from __future__ import annotations
+
+import re
+from difflib import SequenceMatcher
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+from .models import Story
+
+TRACKING_PARAMS = re.compile(r"^(utm_|ref$|ref_src$|fbclid$|gclid$|mc_cid$|mc_eid$)")
+TITLE_SIMILARITY = 0.88
+
+
+def normalize_url(url: str) -> str:
+    """Canonical form: https, no www, no tracking params, no fragment, no trailing slash."""
+    parts = urlsplit(url.strip())
+    host = parts.netloc.lower().removeprefix("www.")
+    query = urlencode([(k, v) for k, v in parse_qsl(parts.query) if not TRACKING_PARAMS.match(k)])
+    path = parts.path.rstrip("/") or "/"
+    return urlunsplit(("https", host, path, query, ""))
+
+
+def normalize_title(title: str) -> str:
+    return re.sub(r"[^a-z0-9 ]", "", title.lower()).strip()
+
+
+def similar(a: str, b: str, threshold: float = TITLE_SIMILARITY) -> bool:
+    return SequenceMatcher(None, normalize_title(a), normalize_title(b)).ratio() >= threshold
+
+
+def dedupe(stories: list[Story]) -> list[Story]:
+    """Keep the first copy of each story, in input order."""
+    seen_urls: set[str] = set()
+    kept: list[Story] = []
+    for story in stories:
+        key = normalize_url(str(story.url))
+        if key in seen_urls:
+            continue
+        if any(similar(story.title, k.title) for k in kept):
+            continue
+        seen_urls.add(key)
+        kept.append(story)
+    return kept

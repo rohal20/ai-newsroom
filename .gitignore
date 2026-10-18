@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Secrets
+.env
+
+# Generated data (editions will be committed later, raw fetches are not)
+data/*.json
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
