@@ -1,0 +1,10 @@
+[project]
+name = "ai-newsroom"
+version = "0.1.0"
+description = "A team of AI agents that reads the news, checks every claim, and writes one briefing."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# Lets plain `pytest` find the `newsroom` package from the project root.
+pythonpath = ["."]
+testpaths = ["tests"]
