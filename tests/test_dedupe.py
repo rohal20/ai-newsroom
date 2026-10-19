@@ -1,4 +1,8 @@
-from newsroom.dedupe import dedupe, normalize_url, similar
+from newsroom.dedupe import dedupe, normalize_url, similar, strip_tracking
+
+
+def test_strip_tracking_keeps_the_rest_of_the_link():
+    assert strip_tracking("http://www.site.com/a/?utm_source=rss&id=3&fbclid=x#part") == "http://www.site.com/a/?id=3#part"
 from newsroom.models import Story
 from newsroom.sources import parse_feed
 
