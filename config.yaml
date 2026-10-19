@@ -3,6 +3,20 @@
 
 topic: AI
 
+# Which model writes the briefing. Any OpenAI-compatible provider works:
+#   gemini  → needs GEMINI_API_KEY (free at https://aistudio.google.com/apikey)
+#   groq    → needs GROQ_API_KEY
+#   ollama  → runs on your machine, no key (e.g. model: llama3.2)
+llm:
+  provider: gemini
+  model: gemini-3.8-flash
+  temperature: 0.3
+
+briefing:
+  stories: 5            # stories in each edition
+  max_candidates: 40    # stories the model chooses from
+  max_per_source: 8     # stops one busy feed (arXiv) from crowding out the rest
+
 # Stories older than this are ignored.
 max_age_hours: 36
 
