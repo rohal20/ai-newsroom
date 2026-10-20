@@ -14,11 +14,12 @@ import logging
 from datetime import date
 from pathlib import Path
 
-from . import __version__
-from .briefing import build_user_prompt, render_markdown, save_edition, select_candidates, write_briefing
-from .config import Config, load_config
+from . import __version__, pipeline
+from .agents import editor
+from .briefing import render_markdown, save_edition, select_candidates
+from .config import Config, ModelSpec, load_config
 from .dedupe import dedupe
-from .llm import LLM, LLMError, OpenAICompatClient
+from .llm import LLM, FallbackLLM, LLMError, OpenAICompatClient
 from .models import Story
 from .sources import collect
 
@@ -61,7 +62,21 @@ def cmd_fetch(args: argparse.Namespace) -> int:
 
 def make_llm(config: Config) -> LLM:
     """Separate function so tests can swap in a fake model."""
-    return OpenAICompatClient(config.llm.provider, config.llm.model, temperature=config.llm.temperature)
+    s = config.llm
+    clients = []
+    for spec in [ModelSpec(provider=s.provider, model=s.model), *s.fallbacks]:
+        try:
+            clients.append(OpenAICompatClient(
+                spec.provider, spec.model,
+                temperature=s.temperature, timeout=s.timeout_seconds, max_retries=s.max_retries,
+                reasoning_effort=s.reasoning_effort if spec.provider == "gemini" else None,
+                min_interval=s.min_interval_seconds,
+            ))
+        except LLMError as exc:
+            if not clients:      # the main model must be usable; a fallback without a key is just skipped
+                raise
+            print(f"Skipping fallback {spec.provider}/{spec.model}: {str(exc).splitlines()[0]}")
+    return FallbackLLM(clients)
 
 
 def cmd_brief(args: argparse.Namespace) -> int:
@@ -78,29 +93,47 @@ def cmd_brief(args: argparse.Namespace) -> int:
         print("No stories to write about. Check your feeds with: python -m newsroom fetch -v")
         return 1
 
-    b = config.briefing
-    candidates = select_candidates(stories, max_total=b.max_candidates, max_per_source=b.max_per_source)
-    print(f"Giving the model {len(candidates)} candidates from {len({s.source for s in candidates})} sources")
-
     if args.dry_run:
-        print("\n--- prompt (dry run, nothing sent) ---\n")
-        print(build_user_prompt(candidates))
+        b = config.briefing
+        candidates = select_candidates(stories, max_total=b.max_candidates, max_per_source=b.max_per_source)
+        print(f"\n--- what the editor would see (dry run, nothing sent) ---\n")
+        print(editor.build_prompt(candidates))
         return 0
 
     try:
         llm = make_llm(config)
-        briefing = write_briefing(llm, candidates, topic=config.topic, n=b.stories)
+        run = pipeline.run(llm, stories, config, read=make_reader())
     except LLMError as exc:
         print(f"Could not write the briefing: {exc}")
         return 1
 
     today = date.today()
-    path = save_edition(render_markdown(briefing, candidates, config.topic, today), today, args.out)
-    print(f"\n{briefing.one_line}\n")
-    for i, item in enumerate(briefing.items, 1):
+    md = render_markdown(run.briefing, run.sheets, config.topic, today, candidates=run.candidates)
+    path = save_edition(md, today, args.out)
+    log_path = Path(args.data) / f"run-{today.isoformat()}.json"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_path.write_text(run.model_dump_json(indent=2), encoding="utf-8")
+
+    facts = sum(len(s.facts) for s in run.sheets)
+    dropped = sum(len(s.dropped) for s in run.sheets)
+    print(f"\n{run.briefing.one_line}\n")
+    for i, item in enumerate(run.briefing.items, 1):
         print(f"  {i}. {item.title}")
-    print(f"\nSaved → {path}")
+    print(f"\n{facts} facts verified, {dropped} unsupported dropped · "
+          + " · ".join(f"{k} {v}s" for k, v in run.seconds.items())
+          + f" · model {getattr(llm, 'name', config.llm.model)}")
+    print(f"Saved → {path}\nRun log → {log_path}")
     return 0
+
+
+def make_reader():
+    """Separate function so tests can swap in fake article pages."""
+    import requests
+
+    from .article import read_article
+
+    session = requests.Session()
+    return lambda story: read_article(story, session)
 
 
 def main(argv: list[str] | None = None) -> int:

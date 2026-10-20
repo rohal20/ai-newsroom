@@ -26,22 +26,24 @@ def test_brief_dry_run_needs_no_key(tmp_path, rss_bytes, atom_bytes, capsys, mon
     assert "dry run" in out and "Open-weights model tops coding leaderboard" in out
 
 
-def test_brief_writes_an_edition(tmp_path, rss_bytes, atom_bytes, capsys, monkeypatch):
+def test_brief_writes_an_edition_and_a_run_log(tmp_path, rss_bytes, atom_bytes, capsys, monkeypatch):
+    from fakes import NewsroomLLM, fake_reader
+
     (tmp_path / "config.yaml").write_text(CONFIG)
     f = _stories_file(tmp_path, rss_bytes, atom_bytes)
-    ids = [s["id"] for s in json.loads(f.read_text())][:2]
+    monkeypatch.setattr(cli, "make_llm", lambda config: NewsroomLLM())
+    monkeypatch.setattr(cli, "make_reader", lambda: fake_reader)
 
-    class Fake:
-        def complete(self, system, user):
-            return json.dumps({"one_line": "Open models had a good day.", "items": [
-                {"story_id": i, "title": f"Title {n}", "summary": "S.", "why_it_matters": "W."} for n, i in enumerate(ids)]})
+    out_dir, data_dir = tmp_path / "editions", tmp_path / "data"
+    args = ["brief", "--input", str(f), "--out", str(out_dir), "--data", str(data_dir), "--config", str(tmp_path / "config.yaml")]
+    assert cli.main(args) == 0
 
-    monkeypatch.setattr(cli, "make_llm", lambda config: Fake())
-    out_dir = tmp_path / "editions"
-    assert cli.main(["brief", "--input", str(f), "--out", str(out_dir), "--config", str(tmp_path / "config.yaml")]) == 0
-    files = list(out_dir.glob("*.md"))
-    assert len(files) == 1 and "Open models had a good day." in files[0].read_text(encoding="utf-8")
-    assert "Saved →" in capsys.readouterr().out
+    edition = next(out_dir.glob("*.md")).read_text(encoding="utf-8")
+    assert "A focused day in AI." in edition and "facts verified against their sources" in edition
+    log = json.loads(next(data_dir.glob("run-*.json")).read_text(encoding="utf-8"))
+    assert {"candidates", "picks", "sheets", "briefing", "seconds"} <= set(log)
+    out = capsys.readouterr().out
+    assert "Editor: choosing" in out and "Researcher:" in out and "Saved →" in out
 
 
 def test_brief_reports_missing_key_cleanly(tmp_path, rss_bytes, atom_bytes, capsys, monkeypatch):
@@ -71,3 +73,19 @@ def test_fetch_writes_unique_stories(tmp_path, rss_bytes, atom_bytes, monkeypatc
     saved = json.loads(files[0].read_text())
     assert len(saved) == 4
     assert {"id", "title", "url", "source", "published", "summary"} <= set(saved[0])
+
+
+def test_make_llm_builds_a_fallback_chain_and_skips_fallbacks_without_keys(monkeypatch, capsys):
+    from newsroom.config import Config
+
+    monkeypatch.setenv("GEMINI_API_KEY", "k")
+    monkeypatch.delenv("GROQ_API_KEY", raising=False)
+    config = Config.model_validate({
+        "topic": "AI", "feeds": [{"name": "x", "url": "https://x.example/rss"}],
+        "llm": {"provider": "gemini", "model": "main", "reasoning_effort": "low",
+                "fallbacks": [{"provider": "gemini", "model": "lite"}, {"provider": "groq", "model": "g"}]},
+    })
+    llm = cli.make_llm(config)
+    assert [c.name for c in llm.clients] == ["gemini/main", "gemini/lite"]
+    assert llm.clients[0].reasoning_effort == "low"
+    assert "Skipping fallback groq/g" in capsys.readouterr().out

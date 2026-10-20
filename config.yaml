@@ -3,21 +3,35 @@
 
 topic: AI
 
-# Which model writes the briefing. Any OpenAI-compatible provider works:
+# Which model runs the newsroom. Any OpenAI-compatible provider works:
 #   gemini  → needs GEMINI_API_KEY (free at https://aistudio.google.com/apikey)
 #   groq    → needs GROQ_API_KEY
-#   ollama  → runs on your machine, no key (e.g. model: llama3.2)
+#   ollama  → runs on your machine, no key (e.g. model: gemma4:e4b)
 llm:
   provider: gemini
   model: gemini-3.8-flash
   temperature: 0.3
+  reasoning_effort: low     # Gemini 3 always "thinks"; low keeps answers fast
+  timeout_seconds: 120
+  max_retries: 2
+  min_interval_seconds: 5   # pause between calls so we stay under the free per-minute limit
+  # If the main model is overloaded or out of free quota, the run switches to these.
+  # Each model has its own free limit, so Flash-Lite usually still works when Flash is used up (same key).
+  fallbacks:
+    - {provider: gemini, model: gemini-3.5-flash-lite}
+    # - {provider: groq, model: <model id from console.groq.com/docs/models>}   # needs GROQ_API_KEY in .env
 
 briefing:
   stories: 5            # stories in each edition
-  max_candidates: 40    # stories the model chooses from
+  max_candidates: 40    # stories the editor chooses from
   max_per_source: 8     # stops one busy feed (arXiv) from crowding out the rest
+  max_papers: 2         # at most this many research papers per edition
 
-# Stories older than this are ignored.
+research:
+  max_article_chars: 6000   # how much of each article the researcher reads
+  min_facts: 2              # fewer verified facts than this → fall back to the feed text
+
+# Stories older than this are ignored (a feed can override it with its own max_age_hours).
 max_age_hours: 36
 
 # Used for feeds marked `filter: true` (general feeds that cover more than our topic).
@@ -42,10 +56,13 @@ feeds:
     url: https://rss.arxiv.org/rss/cs.AI
   - name: Hugging Face Blog
     url: https://huggingface.co/blog/feed.xml
+    max_age_hours: 96         # posts every few days, not daily
   - name: TechCrunch AI
     url: https://techcrunch.com/category/artificial-intelligence/feed/
   - name: MIT News AI
     url: https://news.mit.edu/rss/topic/artificial-intelligence2
+    max_age_hours: 72
   - name: Hacker News
     url: https://hnrss.org/frontpage
     filter: true
+    aggregator: true          # links point to other sites; shown as "site via Hacker News"
