@@ -37,14 +37,19 @@ def similar(a: str, b: str, threshold: float = TITLE_SIMILARITY) -> bool:
 
 
 def dedupe(stories: list[Story]) -> list[Story]:
-    """Keep the first copy of each story, in input order."""
+    """Keep the first copy of each story, in input order.
+
+    Same link → duplicate. Near-identical headline → duplicate only if it comes from a
+    *different* feed: one feed never lists a story twice, but it often lists papers
+    with similar titles ("X at Task A", "X at Task B") that are genuinely different.
+    """
     seen_urls: set[str] = set()
     kept: list[Story] = []
     for story in stories:
         key = normalize_url(str(story.url))
         if key in seen_urls:
             continue
-        if any(similar(story.title, k.title) for k in kept):
+        if any(k.source != story.source and similar(story.title, k.title) for k in kept):
             continue
         seen_urls.add(key)
         kept.append(story)

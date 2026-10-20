@@ -27,6 +27,13 @@ def test_dedupe_across_feeds(rss_bytes, atom_bytes):
     assert "Benchmark found leaking into training data" in titles
 
 
+def test_similar_titles_in_the_same_feed_are_kept():
+    a = Story(title="Team A at ImageEval 2026: a new method", url="https://arxiv.org/abs/1", source="arXiv")
+    b = Story(title="Team A at ImageEval 2026: a new model", url="https://arxiv.org/abs/2", source="arXiv")
+    c = Story(title="Team A at ImageEval 2026: a new method", url="https://blog.example/post", source="Blog")
+    assert dedupe([a, b, c]) == [a, b]   # c repeats a from another feed; b is a different paper
+
+
 def test_dedupe_same_url_different_tracking():
     a = Story(title="A story", url="https://site.com/x?utm_campaign=1", source="one")
     b = Story(title="Completely different headline", url="https://www.site.com/x/", source="two")
