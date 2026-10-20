@@ -17,15 +17,18 @@ from .models import Story
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "ai-newsroom/0.1 (+https://github.com/your-username/ai-newsroom)"
+USER_AGENT = "ai-newsroom/0.3 (+https://github.com/your-username/ai-newsroom)"
 TIMEOUT_SECONDS = 15
 _TAG_RE = re.compile(r"<[^>]+>")
 _SPACE_RE = re.compile(r"\s+")
+# arXiv RSS summaries start with "arXiv:2610.22515v1 Announce Type: new Abstract: ..."
+_ARXIV_PREFIX_RE = re.compile(r"^arXiv:\S+\s+Announce Type:\s*\S+\s+Abstract:\s*", re.IGNORECASE)
 
 
-def clean_text(raw: str, limit: int = 600) -> str:
-    """Strip HTML tags and entities, collapse whitespace, and cap the length."""
+def clean_text(raw: str, limit: int = 1500) -> str:
+    """Strip HTML tags, entities and arXiv boilerplate, collapse whitespace, and cap the length."""
     text = _SPACE_RE.sub(" ", html.unescape(_TAG_RE.sub(" ", raw or ""))).strip()
+    text = _ARXIV_PREFIX_RE.sub("", text)
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
 
 
@@ -37,7 +40,7 @@ def _published(entry) -> datetime | None:
     return None
 
 
-def parse_feed(content: bytes | str, source: str) -> list[Story]:
+def parse_feed(content: bytes | str, source: str, aggregated: bool = False) -> list[Story]:
     """Parse raw feed XML into stories. Pure function, so it is easy to test."""
     parsed = feedparser.parse(content)
     stories: list[Story] = []
@@ -50,6 +53,7 @@ def parse_feed(content: bytes | str, source: str) -> list[Story]:
                     source=source,
                     published=_published(entry),
                     summary=clean_text(entry.get("summary", "")),
+                    aggregated=aggregated,
                 )
             )
         except ValidationError:
@@ -66,7 +70,7 @@ def fetch_feed(feed: Feed, session: requests.Session | None = None) -> list[Stor
     except requests.RequestException as exc:
         log.warning("Could not fetch %s: %s", feed.name, exc)
         return []
-    return parse_feed(resp.content, feed.name)
+    return parse_feed(resp.content, feed.name, aggregated=feed.aggregator)
 
 
 def matches_keywords(story: Story, keywords: list[str]) -> bool:
@@ -92,7 +96,8 @@ def collect(config: Config, session: requests.Session | None = None) -> tuple[li
         items = fetch_feed(feed, http)
         if feed.filter:
             items = [s for s in items if matches_keywords(s, config.keywords)]
-        items = [s for s in items if is_recent(s, config.max_age_hours)]
+        max_age = feed.max_age_hours or config.max_age_hours
+        items = [s for s in items if is_recent(s, max_age)]
         counts[feed.name] = len(items)
         log.info("%-18s %3d stories", feed.name, len(items))
         stories.extend(items)

@@ -31,6 +31,29 @@ def test_parse_atom(atom_bytes):
     assert str(stories[1].url) == "https://lab.example.org/posts/benchmark-leak"
 
 
+def test_clean_text_removes_arxiv_boilerplate():
+    raw = "arXiv:2610.22515v1 Announce Type: new Abstract: We describe our system for subtask 1b."
+    assert clean_text(raw) == "We describe our system for subtask 1b."
+
+
+def test_aggregator_stories_are_marked(rss_bytes):
+    stories = parse_feed(rss_bytes, "Hacker News", aggregated=True)
+    assert all(s.aggregated for s in stories)
+    assert stories[0].display_source == "example.com via Hacker News"
+
+
+def test_per_feed_age_limit(rss_bytes, monkeypatch):
+    seen = []
+    monkeypatch.setattr("newsroom.sources.is_recent", lambda s, h: seen.append(h) or True)
+    config = Config(topic="AI", max_age_hours=36, feeds=[
+        Feed(name="Blog", url="https://blog.example/rss", max_age_hours=96),
+        Feed(name="News", url="https://news.example/rss"),
+    ])
+    session = FakeSession({"https://blog.example/rss": FakeResponse(rss_bytes), "https://news.example/rss": FakeResponse(rss_bytes)})
+    collect(config, session)  # type: ignore[arg-type]
+    assert set(seen) == {96, 36}
+
+
 def test_clean_text_truncates():
     assert clean_text("word " * 200, limit=20).endswith("…")
     assert len(clean_text("word " * 200, limit=20)) <= 20
