@@ -97,3 +97,78 @@ def test_extract_json_tolerates_wrapping(raw):
 def test_extract_json_rejects_garbage():
     with pytest.raises(json.JSONDecodeError):
         extract_json("no json here")
+
+
+# ---- v0.3.1: faster, gentler, with fallbacks -------------------------------------------------
+
+from newsroom.llm import FallbackLLM
+
+
+class Resp429(FakeResp):
+    def __init__(self, text="", headers=None):
+        super().__init__(429, text=text)
+        self.headers = headers or {}
+
+
+def test_sends_reasoning_effort_only_when_set():
+    s = FakeSession([ok("a"), ok("b")])
+    client(s, reasoning_effort="low").complete("s", "u")
+    client(s).complete("s", "u")
+    assert s.calls[0]["json"]["reasoning_effort"] == "low"
+    assert "reasoning_effort" not in s.calls[1]["json"]
+
+
+def test_waits_as_long_as_the_server_asks():
+    s = FakeSession([Resp429('{"error": {"details": [{"retryDelay": "7s"}]}}'), ok("done")])
+    c, waits = client(s), []
+    c.sleep = waits.append
+    assert c.complete("s", "u") == "done"
+    assert waits == [7.0]
+
+
+def test_daily_quota_fails_fast_without_retrying():
+    s = FakeSession([Resp429('Quota exceeded for metric: generate_requests_per_model_per_day')])
+    with pytest.raises(LLMError, match="daily free quota"):
+        client(s).complete("s", "u")
+    assert len(s.calls) == 1
+
+
+def test_very_long_server_wait_hands_over_to_a_fallback():
+    s = FakeSession([Resp429(headers={"Retry-After": "300"})])
+    with pytest.raises(LLMError, match="asked to wait 300s"):
+        client(s).complete("s", "u")
+    assert len(s.calls) == 1
+
+
+def test_only_one_retry_after_a_timeout():
+    s = FakeSession([requests.Timeout(), requests.Timeout(), ok("never reached")])
+    with pytest.raises(LLMError, match="timed out twice"):
+        client(s, max_retries=4).complete("s", "u")
+    assert len(s.calls) == 2
+
+
+def test_pacing_between_calls():
+    s = FakeSession([ok("a"), ok("b")])
+    c, waits, now = client(s, min_interval=5), [], [100.0]
+    c.sleep, c.clock = waits.append, lambda: now[0]
+    c.complete("s", "u")
+    now[0] = 102.0            # second call comes 2s later
+    c.complete("s", "u")
+    assert waits == [3.0]     # so it waits the remaining 3s
+
+
+def test_fallback_switches_and_sticks():
+    main = client(FakeSession([FakeResp(503), FakeResp(503), FakeResp(503)]), max_retries=2)
+    backup_session = FakeSession([ok("from backup"), ok("still backup")])
+    backup = client(backup_session)
+    llm = FallbackLLM([main, backup])
+    assert llm.complete("s", "u") == "from backup"
+    assert llm.complete("s", "u") == "still backup"       # does not go back to the failing model
+    assert llm.name == "gemini/test-model" and llm.active == 1
+
+
+def test_fallback_raises_when_everything_fails():
+    a = client(FakeSession([FakeResp(400, text="bad")]))
+    b = client(FakeSession([FakeResp(400, text="bad too")]))
+    with pytest.raises(LLMError, match="bad too"):
+        FallbackLLM([a, b]).complete("s", "u")
