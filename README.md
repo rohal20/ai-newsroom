@@ -16,8 +16,8 @@ Sources → Editor → Researcher → Writer → Critic → Publish
 | v0.1 | Fetch feeds, filter, remove duplicates | ✅ done |
 | v0.2 | First AI briefing (one agent, Gemini Flash) | ✅ done |
 | v0.3 | Editor, researcher and writer agents; quote-checked facts | ✅ done |
-| v0.4 | Critic agent + revise loop | next |
-| v0.5 | Daily run on GitHub Actions | planned |
+| v0.4 | Critic agent, revise loop, and a measured evaluation | ✅ done |
+| v0.5 | Daily run on GitHub Actions | next |
 | v0.6 | Website with an archive of editions | planned |
 
 ## Quick start
@@ -49,7 +49,13 @@ Researcher: 5 facts from the article  [techcrunch.com]
 Researcher: 4 facts from the article, 1 dropped  [huggingface.co]
 ...
 Writer: 5 stories written
-23 facts verified, 2 unsupported dropped · editor 6.1s · researcher 31.0s · writer 9.4s
+Critic (round 1): 4 of 5 approved, 1 problem(s) in 1 stor(ies)
+    ✗ "$60 billion": number not found in the verified facts
+Writer: rewrote 1 stor(ies)
+Critic (round 2): 1 of 1 approved
+
+Critic: 4 approved, 1 rewritten
+23 facts verified, 2 unsupported dropped · editor 6.1s · researcher 31.0s · writer 9.4s · critic 12.0s
 Saved → editions/2026-10-19.md
 Run log → data/run-2026-10-19.json
 ```
@@ -59,6 +65,7 @@ Other commands:
 ```bash
 python -m newsroom fetch -v          # only fetch and deduplicate, no AI
 python -m newsroom brief --dry-run   # show what the editor would see (no key needed)
+python -m newsroom eval-critic       # measure the critic on drafts with planted errors
 pytest -q                            # run the tests (no key or internet needed)
 ```
 
@@ -70,7 +77,18 @@ pytest -q                            # run the tests (no key or internet needed)
 4. **Editor agent:** ranks the candidates by importance. Code then applies the mix rule (at most 2 research papers), because hard rules are more reliable in code than in a prompt.
 5. **Researcher agent:** downloads each chosen article, extracts the readable text, and pulls out 3 to 6 facts. **Each fact must come with a quote, and code checks that the quote really appears in the article.** Facts that fail the check are dropped before anyone writes a word.
 6. **Writer agent:** writes the headline, summary and "why it matters" for each story using only the verified facts.
-7. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story. A full run log (editor reasons, every fact and quote, timings) goes to `data/run-YYYY-MM-DD.json`.
+7. **Critic agent:** checks every written sentence against that story's facts, in two layers:
+   - **Number check (code):** every number in the draft ($45B, 89%, 17 of 211) must appear in the facts. "$45 billion", "45B" and "45bn" are treated as the same number.
+   - **AI critic:** flags added names, dates, causes, "firsts" and over-certainty ("plans to" becoming "has launched"), quoting the exact phrase.
+
+   Flagged stories go back to the writer with the critic's notes, up to 2 rewrites. A story that still fails is published as its verified facts only, so nothing unverified reaches the reader. If the AI critic is unavailable, the number check still runs and the edition says so.
+8. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story. A full run log (editor reasons, every fact and quote, timings) goes to `data/run-YYYY-MM-DD.json`.
+
+### Measuring the critic
+
+`python -m newsroom eval-critic` runs the critic on [13 drafts](evals/critic_cases.json): 8 with a planted error (a changed number, an invented amount, an added company, a "plans to" turned into "has launched", a contradiction, a wrong month, an invented "world's first", an overclaimed result) and 5 clean drafts. It reports how many errors were caught, by which layer, and how many clean drafts were wrongly flagged, and writes a report to `evals/results-YYYY-MM-DD.md`.
+
+With the AI critic switched off, the number check alone catches **2 of 8** planted errors with **0 false alarms**. That is the baseline the AI layer has to beat. (This exact result is checked by the test suite.)
 
 ### Why the quote check matters
 
@@ -100,12 +118,15 @@ newsroom/
   agents/
     editor.py       ranks stories; code enforces the mix rule
     researcher.py   extracts facts and verifies each quote against the article
-    writer.py       writes the briefing from verified facts only
-  pipeline.py       runs editor → researcher → writer and records a run log
+    writer.py       writes the briefing from verified facts only, and rewrites flagged stories
+    critic.py       number check in code + AI critic on every written sentence
+  pipeline.py       runs editor → researcher → writer ⇄ critic and records a run log
+  evaluate.py       scores the critic on drafts with planted errors
   briefing.py       candidate selection and the Markdown edition
   __main__.py       command line: fetch, brief
 tests/              unit and pipeline tests with fake feeds, pages and a fake model
 editions/           one Markdown file per day
+evals/              critic test cases and evaluation reports
 ```
 
 ## License

@@ -17,7 +17,7 @@ from .models import Story
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "ai-newsroom/0.3 (+https://github.com/your-username/ai-newsroom)"
+USER_AGENT = "ai-newsroom/0.4 (+https://github.com/your-username/ai-newsroom)"
 TIMEOUT_SECONDS = 15
 _TAG_RE = re.compile(r"<[^>]+>")
 _SPACE_RE = re.compile(r"\s+")

@@ -1,6 +1,6 @@
 [project]
 name = "ai-newsroom"
-version = "0.3.1"
+version = "0.4.0"
 description = "A team of AI agents that reads the news, checks every claim, and writes one briefing."
 requires-python = ">=3.11"
 
