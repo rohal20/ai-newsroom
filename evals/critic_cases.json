@@ -1,0 +1,212 @@
+{
+  "about": "Drafts with known, planted errors, used to measure the critic. Each case gives verified facts and a draft; 'planted' is the unsupported phrase (null for a clean draft). The facts are illustrative, modeled on the kind of stories the newsroom covers; they are test data, not news.",
+  "cases": [
+    {
+      "id": "clean-voice-model",
+      "kind": "clean",
+      "title": "Mistral releases Voxtral 3",
+      "facts": [
+        "Mistral released Voxtral 3, a family of speech models and a voice agent SDK",
+        "Voxtral 3 supports more than 50 languages for real-time conversation",
+        "The models are available through Mistral's API or can be deployed on private infrastructure"
+      ],
+      "draft": {
+        "title": "Mistral releases Voxtral 3 speech models and a voice agent SDK",
+        "summary": "Mistral launched Voxtral 3, a set of speech models with a voice agent SDK that handles real-time conversation in over 50 languages. Teams can call it through Mistral's API or run it on their own infrastructure.",
+        "why_it_matters": "Builders of voice assistants get a multilingual option they can self-host."
+      },
+      "planted": null
+    },
+    {
+      "id": "changed-percentage",
+      "kind": "number",
+      "title": "TorchNeuron brings PyTorch to AWS Trainium",
+      "facts": [
+        "TorchNeuron is a PyTorch backend for AWS Trainium chips",
+        "It supports eager mode, torch.compile and native distributed APIs",
+        "It runs 89 percent of the top 100 text-generation model architectures out of the box"
+      ],
+      "draft": {
+        "title": "TorchNeuron makes PyTorch models run on AWS Trainium",
+        "summary": "TorchNeuron is a new PyTorch backend for AWS Trainium that supports eager mode and torch.compile. It runs 95 percent of the top 100 text-generation architectures without changes.",
+        "why_it_matters": "Teams can try Trainium without rewriting most of their models."
+      },
+      "planted": "95 percent"
+    },
+    {
+      "id": "added-company",
+      "kind": "name",
+      "title": "TorchTPU: native PyTorch execution on TPU",
+      "facts": [
+        "TorchTPU is a backend that runs PyTorch natively on Google TPUs",
+        "It combines eager execution with torch.compile",
+        "The authors report strong training and inference performance"
+      ],
+      "draft": {
+        "title": "Google and Meta partner on TorchTPU for native PyTorch on TPUs",
+        "summary": "TorchTPU runs PyTorch natively on Google TPUs by combining eager execution with torch.compile. The authors report strong training and inference performance.",
+        "why_it_matters": "PyTorch teams get a more direct path onto TPU hardware."
+      },
+      "planted": "Google and Meta partner"
+    },
+    {
+      "id": "overclaim-cure",
+      "kind": "overclaim",
+      "title": "AI-designed protein binders against scorpion toxins",
+      "facts": [
+        "Researchers used a Claude research model to design protein minibinders against scorpion neurotoxins",
+        "17 of 211 experimentally tested designs bound their target",
+        "All 211 designs and their data are being released publicly"
+      ],
+      "draft": {
+        "title": "Claude designs protein binders against scorpion neurotoxins",
+        "summary": "Researchers used a Claude research model to design protein binders against scorpion neurotoxins, and 17 of 211 tested designs worked. The result is a cure for scorpion stings that will reach patients soon.",
+        "why_it_matters": "The released dataset gives protein designers a tested starting point."
+      },
+      "planted": "a cure for scorpion stings that will reach patients soon"
+    },
+    {
+      "id": "clean-federal-ban",
+      "kind": "clean",
+      "title": "US orders agencies to remove DeepSeek",
+      "facts": [
+        "The US ordered federal civilian agencies to remove DeepSeek products from government systems",
+        "The order also covers third-party tools built on DeepSeek technology",
+        "Officials cited national security risks related to user data"
+      ],
+      "draft": {
+        "title": "US federal agencies ordered to remove DeepSeek",
+        "summary": "Federal civilian agencies must remove DeepSeek products from government systems, including third-party tools built on its technology. Officials cited national security risks around user data.",
+        "why_it_matters": "Vendors selling to US agencies need to check their dependencies for DeepSeek components."
+      },
+      "planted": null
+    },
+    {
+      "id": "invented-amount-and-certainty",
+      "kind": "number",
+      "title": "Nscale and Anthropic reportedly in talks on compute deal",
+      "facts": [
+        "Nscale and Anthropic are reportedly in talks about a compute deal",
+        "The deal under discussion is reported to be worth $45 billion",
+        "Neither company has confirmed the talks"
+      ],
+      "draft": {
+        "title": "Nscale and Anthropic sign compute deal",
+        "summary": "Nscale and Anthropic have agreed a compute deal worth $60 billion. Neither company has confirmed the details.",
+        "why_it_matters": "Large compute contracts shape which labs can train the next generation of models."
+      },
+      "planted": "$60 billion"
+    },
+    {
+      "id": "plans-become-done",
+      "kind": "certainty",
+      "title": "Acme ships Model X",
+      "facts": [
+        "Acme released Model X, an open-weights model for code",
+        "Model X is free for personal and research use",
+        "Acme plans to release a larger version early next year"
+      ],
+      "draft": {
+        "title": "Acme releases open-weights coding model Model X",
+        "summary": "Acme released Model X, an open-weights code model that is free for personal and research use. A larger version has also been released.",
+        "why_it_matters": "Developers get a free code model they can run themselves."
+      },
+      "planted": "A larger version has also been released"
+    },
+    {
+      "id": "clean-tool-hack",
+      "kind": "clean",
+      "title": "Hackers hit AI coding tool OpenCode",
+      "facts": [
+        "Attackers compromised the AI coding tool OpenCode",
+        "The attack ran up charges on users' AI provider accounts",
+        "Users were advised to rotate their API keys"
+      ],
+      "draft": {
+        "title": "Hackers hit OpenCode and run up charges on users' AI accounts",
+        "summary": "Attackers compromised the AI coding tool OpenCode and used it to run up charges on users' AI provider accounts. Users were told to rotate their API keys.",
+        "why_it_matters": "Anyone using the tool should rotate keys and check their provider bills."
+      },
+      "planted": null
+    },
+    {
+      "id": "contradiction",
+      "kind": "contradiction",
+      "title": "Replit changes its default model provider",
+      "facts": [
+        "Replit made OpenAI the default model provider for Replit Agent, replacing Anthropic",
+        "Anthropic's Claude models remain available to customers on the platform"
+      ],
+      "draft": {
+        "title": "Replit makes OpenAI its default model provider",
+        "summary": "Replit replaced Anthropic with OpenAI as the default provider for Replit Agent. Claude models have been removed from the platform.",
+        "why_it_matters": "Teams that depend on Claude inside Replit should plan a migration."
+      },
+      "planted": "Claude models have been removed from the platform"
+    },
+    {
+      "id": "clean-paraphrase-numbers",
+      "kind": "clean",
+      "title": "EU publishes guidance for general-purpose AI models",
+      "facts": [
+        "The European Commission published guidance for providers of general-purpose AI models",
+        "Providers must publish a summary of their training data",
+        "The rules apply from August 2027, about ten months away",
+        "Smaller open-source projects get lighter obligations"
+      ],
+      "draft": {
+        "title": "EU publishes guidance for general-purpose AI model providers",
+        "summary": "The European Commission told providers of general-purpose AI models to publish a summary of their training data, with rules applying from August 2027. Smaller open-source projects face lighter obligations.",
+        "why_it_matters": "Model providers have about 10 months to prepare their training-data summaries."
+      },
+      "planted": null
+    },
+    {
+      "id": "changed-date-words",
+      "kind": "date",
+      "title": "EU rules for general-purpose AI start in 2027",
+      "facts": [
+        "The European Commission published guidance for providers of general-purpose AI models",
+        "The rules apply from August 2027"
+      ],
+      "draft": {
+        "title": "EU sets 2027 start for general-purpose AI rules",
+        "summary": "The European Commission published guidance for providers of general-purpose AI models. The rules apply from January 2027.",
+        "why_it_matters": "Providers have a fixed deadline to plan compliance work around."
+      },
+      "planted": "January 2027"
+    },
+    {
+      "id": "invented-first",
+      "kind": "overclaim",
+      "title": "Chipmaker unveils inference accelerator",
+      "facts": [
+        "A chipmaker unveiled an inference accelerator for data centers running language models",
+        "The company claims three times the tokens per second per watt compared with its previous chip",
+        "Shipments start in the first quarter of 2027"
+      ],
+      "draft": {
+        "title": "Chipmaker unveils the world's first inference chip built for language models",
+        "summary": "A chipmaker unveiled an inference accelerator for language-model data centers, claiming three times the tokens per second per watt of its previous chip. Shipments begin in the first quarter of 2027.",
+        "why_it_matters": "Cheaper inference per watt lowers the cost of serving models at scale."
+      },
+      "planted": "the world's first inference chip"
+    },
+    {
+      "id": "clean-blog-release",
+      "kind": "clean",
+      "title": "Library adds hybrid search",
+      "facts": [
+        "The vector database added hybrid search combining keyword and vector results",
+        "Hybrid search is available in version 2.4",
+        "Existing indexes do not need to be rebuilt"
+      ],
+      "draft": {
+        "title": "Vector database adds hybrid search in version 2.4",
+        "summary": "Version 2.4 of the vector database adds hybrid search that combines keyword and vector results. Existing indexes keep working without a rebuild.",
+        "why_it_matters": "Teams can improve retrieval quality without re-indexing their data."
+      },
+      "planted": null
+    }
+  ]
+}

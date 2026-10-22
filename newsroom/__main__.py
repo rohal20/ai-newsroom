@@ -108,7 +108,7 @@ def cmd_brief(args: argparse.Namespace) -> int:
         return 1
 
     today = date.today()
-    md = render_markdown(run.briefing, run.sheets, config.topic, today, candidates=run.candidates)
+    md = render_markdown(run.briefing, run.sheets, config.topic, today, candidates=run.candidates, results=run.results)
     path = save_edition(md, today, args.out)
     log_path = Path(args.data) / f"run-{today.isoformat()}.json"
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -119,10 +119,41 @@ def cmd_brief(args: argparse.Namespace) -> int:
     print(f"\n{run.briefing.one_line}\n")
     for i, item in enumerate(run.briefing.items, 1):
         print(f"  {i}. {item.title}")
+    counts = {s: sum(1 for r in run.results if r.status == s) for s in ("approved", "rewritten", "facts-only", "numbers-only")}
+    if run.critic_rounds:
+        print("\nCritic: " + ", ".join(f"{v} {k}" for k, v in counts.items() if v))
     print(f"\n{facts} facts verified, {dropped} unsupported dropped · "
           + " · ".join(f"{k} {v}s" for k, v in run.seconds.items())
           + f" · model {getattr(llm, 'name', config.llm.model)}")
     print(f"Saved → {path}\nRun log → {log_path}")
+    return 0
+
+
+def cmd_eval_critic(args: argparse.Namespace) -> int:
+    from . import evaluate
+
+    config = _config_or_exit(args.config)
+    if config is None:
+        return 2
+    cases = evaluate.load_cases(args.cases)
+    try:
+        llm = make_llm(config)
+    except LLMError as exc:
+        print(f"Could not start the model: {exc}")
+        return 1
+    print(f"Running the critic on {len(cases)} cases…")
+    results = evaluate.run_eval(llm, cases)
+    for r in results:
+        mark = {"caught": "✓", "correctly passed": "✓", "missed": "✗", "false alarm": "✗"}[r.outcome]
+        print(f"  {mark} {r.case.id:32} {r.outcome}")
+    s = evaluate.summarize(results)
+    print(f"\nCaught {s['caught']}/{s['planted']} planted errors "
+          f"(numbers check {s['caught_by_numbers']}, AI critic {s['caught_by_ai']}) · "
+          f"false alarms {s['false_alarms']}/{s['clean']}")
+    out = Path(args.out) / f"results-{date.today().isoformat()}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(evaluate.report_markdown(results, getattr(llm, "name", config.llm.model), date.today()), encoding="utf-8")
+    print(f"Report → {out}")
     return 0
 
 
@@ -159,6 +190,11 @@ def main(argv: list[str] | None = None) -> int:
     brief.add_argument("--out", default="editions", help="where editions are written")
     brief.add_argument("--dry-run", action="store_true", help="print the prompt without calling the model")
     brief.set_defaults(func=cmd_brief)
+
+    ev = sub.add_parser("eval-critic", help="measure the critic on drafts with planted errors", parents=[common])
+    ev.add_argument("--cases", default="evals/critic_cases.json")
+    ev.add_argument("--out", default="evals")
+    ev.set_defaults(func=cmd_eval_critic)
 
     args = parser.parse_args(argv)
     verbose = getattr(args, "verbose", False)
