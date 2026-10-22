@@ -40,3 +40,23 @@ def test_markdown_edition(tmp_path):
 
     path = save_edition(md, date(2026, 10, 19), tmp_path / "editions")
     assert path.name == "2026-10-19.md" and path.read_text(encoding="utf-8") == md
+
+
+def test_markdown_shows_critic_results():
+    from newsroom.pipeline import StoryResult
+
+    s1, s2, s3 = story(1), story(2), story(3)
+    sheets = [FactSheet(story=s, text_source="article", facts=[Fact(claim="a", quote="a")]) for s in (s1, s2, s3)]
+    b = Briefing(one_line="Day.", items=[
+        BriefItem(story_id=s1.id, title="One", summary="S1.", why_it_matters="W1."),
+        BriefItem(story_id=s2.id, title="Two", summary="S2.", why_it_matters="W2."),
+        BriefItem(story_id=s3.id, title=s3.title, summary="a.", why_it_matters=""),
+    ])
+    results = [StoryResult(story_id=s1.id, status="approved", sentences_checked=3),
+               StoryResult(story_id=s2.id, status="rewritten", rewrites=1, sentences_checked=6),
+               StoryResult(story_id=s3.id, status="facts-only", rewrites=2, sentences_checked=9)]
+    md = render_markdown(b, sheets, "AI", date(2026, 10, 22), candidates=30, results=results)
+    assert "✓ critic approved" in md and "✓ approved after 1 rewrite<" in md
+    assert "⚠ draft failed fact-check; showing verified facts only" in md
+    assert md.count("**Why it matters:**") == 2                             # facts-only story has none
+    assert "critic checked 18 sentences, 1 story rewritten, 1 shown as facts only" in md
