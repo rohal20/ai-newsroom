@@ -41,6 +41,26 @@ def test_fails_when_no_story_matches():
         writer.run(ScriptedLLM(json.dumps({"one_line": "Day.", "items": [item("nope")]})), sheets(1), "AI")
 
 
+def test_revise_sends_draft_facts_and_problems_and_keeps_unreturned_drafts():
+    from newsroom.agents.critic import Issue
+    from newsroom.agents.writer import BriefItem
+
+    sh = sheets(2)
+    drafts = [BriefItem(story_id=s.story.id, title="Old", summary="Old summary.", why_it_matters="W.") for s in sh]
+    problems = {sh[0].story.id: [Issue(text="$9 billion", problem="number not found")]}
+    llm = ScriptedLLM(json.dumps({"items": [item(sh[0].story.id, title="New")]}))
+    out = writer.revise(llm, drafts, sh, problems, "AI")
+    assert [o.title for o in out] == ["New", "Old"]
+    prompt = llm.prompts[0][1]
+    assert "PROBLEMS FOUND:\n   - \"$9 billion\": number not found" in prompt and "- fact 0a" in prompt
+
+
+def test_facts_only_uses_the_source_headline_and_verified_claims():
+    sh = sheets(1)[0]
+    safe = writer.facts_only(sh)
+    assert safe.title == sh.story.title and safe.summary == "fact 0a. fact 0b." and safe.why_it_matters == ""
+
+
 def test_retries_once_on_bad_json():
     sh = sheets(1)
     llm = ScriptedLLM("not json", json.dumps({"one_line": "Day.", "items": [item(sh[0].story.id)]}))
