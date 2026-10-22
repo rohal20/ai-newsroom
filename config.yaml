@@ -31,6 +31,10 @@ research:
   max_article_chars: 6000   # how much of each article the researcher reads
   min_facts: 2              # fewer verified facts than this → fall back to the feed text
 
+critic:
+  enabled: true
+  max_rewrites: 2           # after this many rewrites, a story is published as its verified facts only
+
 # Stories older than this are ignored (a feed can override it with its own max_age_hours).
 max_age_hours: 36
 

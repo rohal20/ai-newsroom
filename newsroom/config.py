@@ -44,6 +44,11 @@ class ResearchSettings(BaseModel):
     min_facts: int = Field(default=2, ge=1, description="Below this, fall back to the feed text")
 
 
+class CriticSettings(BaseModel):
+    enabled: bool = True
+    max_rewrites: int = Field(default=2, ge=0, le=5, description="Rewrites before a story falls back to facts only")
+
+
 class Config(BaseModel):
     topic: str
     max_age_hours: int = 36
@@ -52,6 +57,7 @@ class Config(BaseModel):
     llm: LLMSettings = LLMSettings()
     briefing: BriefingSettings = BriefingSettings()
     research: ResearchSettings = ResearchSettings()
+    critic: CriticSettings = CriticSettings()
 
 
 def load_config(path: str | Path = "config.yaml") -> Config:
