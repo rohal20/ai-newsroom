@@ -4,6 +4,7 @@
     python -m newsroom brief                 # fetch + write today's briefing to editions/
     python -m newsroom brief --dry-run       # show what would be sent to the model, no API call
     python -m newsroom brief --input data/stories-2026-10-18.json
+    python -m newsroom site                  # build the website from editions/ into site/
 """
 
 from __future__ import annotations
@@ -11,7 +12,8 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-from datetime import date
+import time
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from . import __version__, pipeline
@@ -22,6 +24,7 @@ from .config import Config, ModelSpec, load_config
 from .dedupe import dedupe
 from .llm import LLM, FallbackLLM, LLMError, OpenAICompatClient
 from .models import Story
+from .record import FetchStats, make_record, save_record
 from .sources import collect
 
 
@@ -41,7 +44,8 @@ def _config_or_exit(path: str) -> Config | None:
         return None
 
 
-def _fetch(config: Config, out_dir: str) -> tuple[list[Story], Path]:
+def _fetch(config: Config, out_dir: str) -> tuple[list[Story], FetchStats]:
+    t = time.perf_counter()
     stories, counts = collect(config)
     unique = dedupe(stories)
     out = Path(out_dir)
@@ -50,7 +54,9 @@ def _fetch(config: Config, out_dir: str) -> tuple[list[Story], Path]:
     out_file.write_text(json.dumps([s.model_dump(mode="json") for s in unique], indent=2, ensure_ascii=False), encoding="utf-8")
     ok_feeds = sum(1 for n in counts.values() if n)
     print(f"Fetched {len(stories)} stories from {ok_feeds}/{len(counts)} feeds → {len(unique)} unique → {out_file}")
-    return unique, out_file
+    stats = FetchStats(fetched=len(stories), unique=len(unique), feeds_ok=ok_feeds, feeds_total=len(counts), per_feed=counts,
+                       seconds=round(time.perf_counter() - t, 1))
+    return unique, stats
 
 
 def cmd_fetch(args: argparse.Namespace) -> int:
@@ -85,11 +91,13 @@ def cmd_brief(args: argparse.Namespace) -> int:
     if config is None:
         return 2
 
+    started = datetime.now(timezone.utc).replace(microsecond=0)
+    fetch_stats: FetchStats | None = None
     if args.input:
         stories = [Story.model_validate(s) for s in json.loads(Path(args.input).read_text(encoding="utf-8"))]
         print(f"Loaded {len(stories)} stories from {args.input}")
     else:
-        stories, _ = _fetch(config, args.data)
+        stories, fetch_stats = _fetch(config, args.data)
     if not stories:
         print("No stories to write about. Check your feeds with: python -m newsroom fetch -v")
         return 1
@@ -97,7 +105,7 @@ def cmd_brief(args: argparse.Namespace) -> int:
     if args.dry_run:
         b = config.briefing
         candidates = select_candidates(stories, max_total=b.max_candidates, max_per_source=b.max_per_source)
-        print(f"\n--- what the editor would see (dry run, nothing sent) ---\n")
+        print("\n--- what the editor would see (dry run, nothing sent) ---\n")
         print(editor.build_prompt(candidates))
         return 0
 
@@ -111,6 +119,8 @@ def cmd_brief(args: argparse.Namespace) -> int:
     today = date.today()
     md = render_markdown(run.briefing, run.sheets, config.topic, today, candidates=run.candidates, results=run.results)
     path = save_edition(md, today, args.out)
+    model_name = getattr(llm, "name", config.llm.model)
+    record_path = save_record(make_record(run, config.topic, model_name, today, fetch_stats, started), args.out)
     index_path = write_index(args.out, config.topic)
     log_path = Path(args.data) / f"run-{today.isoformat()}.json"
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -126,8 +136,8 @@ def cmd_brief(args: argparse.Namespace) -> int:
         print("\nCritic: " + ", ".join(f"{v} {k}" for k, v in counts.items() if v))
     print(f"\n{facts} facts verified, {dropped} unsupported dropped · "
           + " · ".join(f"{k} {v}s" for k, v in run.seconds.items())
-          + f" · model {getattr(llm, 'name', config.llm.model)}")
-    print(f"Saved → {path}\nIndex → {index_path}\nRun log → {log_path}")
+          + f" · model {model_name}")
+    print(f"Saved → {path}\nData → {record_path}\nIndex → {index_path}\nRun log → {log_path}")
     return 0
 
 
@@ -165,6 +175,21 @@ def cmd_eval_critic(args: argparse.Namespace) -> int:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(evaluate.report_markdown(results, getattr(llm, "name", config.llm.model), date.today()), encoding="utf-8")
     print(f"Report → {out}")
+    return 0
+
+
+def cmd_site(args: argparse.Namespace) -> int:
+    from .site import build_site
+
+    config = _config_or_exit(args.config)
+    if config is None:
+        return 2
+    try:
+        pages = build_site(config, args.editions, args.evals, args.out)
+    except FileExistsError as exc:
+        print(exc)
+        return 2
+    print(f"Built {len(pages)} pages → {args.out}/index.html")
     return 0
 
 
@@ -210,6 +235,12 @@ def main(argv: list[str] | None = None) -> int:
     ev.add_argument("--cases", default="evals/critic_cases.json")
     ev.add_argument("--out", default="evals")
     ev.set_defaults(func=cmd_eval_critic)
+
+    site = sub.add_parser("site", help="build the website from editions/ into site/", parents=[common])
+    site.add_argument("--editions", default="editions")
+    site.add_argument("--evals", default="evals")
+    site.add_argument("--out", default="site")
+    site.set_defaults(func=cmd_site)
 
     args = parser.parse_args(argv)
     verbose = getattr(args, "verbose", False)
