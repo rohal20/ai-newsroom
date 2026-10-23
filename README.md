@@ -2,10 +2,11 @@
 
 ![tests](https://github.com/rohal20/ai-newsroom/actions/workflows/tests.yml/badge.svg)
 ![daily edition](https://github.com/rohal20/ai-newsroom/actions/workflows/daily.yml/badge.svg)
+![website](https://github.com/rohal20/ai-newsroom/actions/workflows/pages.yml/badge.svg)
 
 A team of AI agents that reads the news, checks every claim against its source, and delivers one short, trusted briefing every morning.
 
-**[Read the latest briefing →](editions/README.md)** · a new edition is published automatically every day at 07:07 (Pakistan time).
+**[Read today's briefing on the website →](https://rohal20.github.io/ai-newsroom/)** · a new edition is published automatically every day at 07:07 (Pakistan time). Also in the repo: [the editions archive](editions/README.md) · [RSS](https://rohal20.github.io/ai-newsroom/feed.xml).
 
 ```
 Sources → Editor → Researcher → Writer → Critic → Publish
@@ -21,7 +22,7 @@ Sources → Editor → Researcher → Writer → Critic → Publish
 | v0.3 | Editor, researcher and writer agents; quote-checked facts | ✅ done |
 | v0.4 | Critic agent, revise loop, and a measured evaluation | ✅ done |
 | v0.5 | Publishes itself every morning with GitHub Actions | ✅ done |
-| v0.6 | Website with an archive of editions | next |
+| v0.6 | Website: run dashboard, the briefing, archive and results, on GitHub Pages | ✅ done |
 
 ## Results
 
@@ -73,6 +74,7 @@ Critic (round 2): 1 of 1 approved
 Critic: 4 approved, 1 rewritten
 23 facts verified, 2 unsupported dropped · editor 6.1s · researcher 31.0s · writer 9.4s · critic 12.0s
 Saved → editions/2026-10-19.md
+Data → editions/2026-10-19.json
 Run log → data/run-2026-10-19.json
 ```
 
@@ -83,6 +85,7 @@ python -m newsroom fetch -v          # only fetch and deduplicate, no AI
 python -m newsroom brief --dry-run   # show what the editor would see (no key needed)
 python -m newsroom eval-critic       # measure the critic on drafts with planted errors
 python -m newsroom index             # rebuild the editions archive page
+python -m newsroom site              # build the website into site/ (open site/index.html)
 pytest -q                            # run the tests (no key or internet needed)
 ```
 
@@ -95,6 +98,17 @@ The [`daily-edition`](.github/workflows/daily.yml) workflow runs the whole newsr
 3. That's it. From now on it runs every day at 02:07 UTC (07:07 in Pakistan). To change the time, edit the `cron` line in the workflow; it is always in UTC.
 
 If a run fails (a missing key, or every model out of quota), GitHub emails you and the run log is kept for 14 days under the run's **Artifacts**. Editions are committed by `github-actions[bot]`.
+
+### The website (GitHub Pages)
+
+The [`website`](.github/workflows/pages.yml) workflow builds the site after every daily edition (and whenever you push) and publishes it at `https://<your-username>.github.io/ai-newsroom/`. Turn it on once:
+
+1. Go to **Settings → Pages**, and under **Build and deployment → Source** choose **GitHub Actions**.
+2. Go to **Actions → website → Run workflow**. After about a minute the address appears on the run page.
+
+The site has today's run (the agents, a run log with every critic catch, run times for the last 14 days), the briefing itself with each story's verified facts and quotes, an archive, the feeds, and the critic's measured results. Every number on it is read from `editions/YYYY-MM-DD.json`, a compact record each run saves next to the edition. Editions from before v0.6 only have the Markdown file, so the site shows what can be read from it and says that timings were not recorded.
+
+To use a different name or time zone, edit the `site:` section of `config.yaml`.
 
 ## How it works
 
@@ -109,7 +123,8 @@ If a run fails (a missing key, or every model out of quota), GitHub emails you a
    - **AI critic:** flags added names, dates, causes, "firsts" and over-certainty ("plans to" becoming "has launched"), quoting the exact phrase.
 
    Flagged stories go back to the writer with the critic's notes, up to 2 rewrites. A story that still fails is published as its verified facts only, so nothing unverified reaches the reader. If the AI critic is unavailable, the number check still runs and the edition says so.
-8. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story, and added to the archive page `editions/README.md`. A full run log (editor reasons, every fact and quote, every critic round, timings) goes to `data/run-YYYY-MM-DD.json`.
+8. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story, and added to the archive page `editions/README.md`. A compact public record (stories, verified facts and quotes, what the critic caught, timings) is saved as `editions/YYYY-MM-DD.json` for the website. The full run log (editor reasons, every critic round, dropped facts) goes to `data/run-YYYY-MM-DD.json`.
+9. **Website:** `python -m newsroom site` turns `editions/` into a static site (no JavaScript, no build tools), which GitHub Pages publishes.
 
 ### Measuring the critic
 
@@ -131,6 +146,7 @@ Everything lives in [`config.yaml`](config.yaml):
 - **llm:** any OpenAI-compatible provider: `gemini` (free tier), `groq`, or `ollama` to run a model on your own machine. Set `fallbacks` to keep the run going when the main model is overloaded or out of free quota: the run switches once and stays on the backup. `reasoning_effort: low` keeps Gemini 3 fast, and `min_interval_seconds` spaces out calls to stay under per-minute limits.
 - **briefing:** stories per edition, candidates, per-source cap, and the paper limit.
 - **research:** how much of each article is read, and the minimum number of verified facts.
+- **site:** the briefing's name on the website, its address (for RSS), the schedule shown on the dashboard, and the time zone for clock times.
 
 ## Project layout
 
@@ -151,10 +167,12 @@ newsroom/
   evaluate.py       scores the critic on drafts with planted errors
   briefing.py       candidate selection and the Markdown edition
   archive.py        the editions archive page (editions/README.md)
-  __main__.py       command line: fetch, brief
+  record.py         the per-edition JSON record the website reads
+  site.py           the static website; site_style.css is its design
+  __main__.py       command line: fetch, brief, index, eval-critic, site
 tests/              unit and pipeline tests with fake feeds, pages and a fake model
-editions/           one Markdown file per day, plus README.md, the archive
-.github/workflows/  tests on every push; daily-edition every morning
+editions/           one Markdown file and one JSON record per day, plus README.md, the archive
+.github/workflows/  tests on every push; daily-edition every morning; website after each edition
 evals/              critic test cases and evaluation reports
 ```
 
