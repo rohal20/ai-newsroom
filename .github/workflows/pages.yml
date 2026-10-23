@@ -1,0 +1,61 @@
+name: website
+
+# Builds the website from editions/ and publishes it on GitHub Pages.
+# Runs after every daily edition, when code or editions are pushed, and on demand.
+# (Commits made by the daily workflow don't trigger "push" events, so workflow_run covers those.)
+on:
+  workflow_run:
+    workflows: [daily-edition]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ["editions/**", "evals/**", "newsroom/**", "config.yaml", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write      # publish to GitHub Pages
+  id-token: write   # proves to Pages that this workflow is allowed to deploy
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # After a daily run, only rebuild if the run succeeded.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # after a daily run, build from the commit that added today's edition
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Build the site
+        run: python -m newsroom site --out site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
