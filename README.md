@@ -1,8 +1,11 @@
 # ai-newsroom
 
-![tests](https://github.com/your-username/ai-newsroom/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/rohal20/ai-newsroom/actions/workflows/tests.yml/badge.svg)
+![daily edition](https://github.com/rohal20/ai-newsroom/actions/workflows/daily.yml/badge.svg)
 
 A team of AI agents that reads the news, checks every claim against its source, and delivers one short, trusted briefing every morning.
+
+**[Read the latest briefing →](editions/README.md)** · a new edition is published automatically every day at 07:07 (Pakistan time).
 
 ```
 Sources → Editor → Researcher → Writer → Critic → Publish
@@ -17,13 +20,26 @@ Sources → Editor → Researcher → Writer → Critic → Publish
 | v0.2 | First AI briefing (one agent, Gemini Flash) | ✅ done |
 | v0.3 | Editor, researcher and writer agents; quote-checked facts | ✅ done |
 | v0.4 | Critic agent, revise loop, and a measured evaluation | ✅ done |
-| v0.5 | Daily run on GitHub Actions | next |
-| v0.6 | Website with an archive of editions | planned |
+| v0.5 | Publishes itself every morning with GitHub Actions | ✅ done |
+| v0.6 | Website with an archive of editions | next |
+
+## Results
+
+The critic was measured on [13 test drafts](evals/critic_cases.json), 8 of them with a planted error, using `gemini-3.5-flash-lite` ([full report](evals/results-2026-10-22.md)):
+
+| | Result |
+|---|---|
+| Planted errors caught | **8 of 8**, each pointed at the exact phrase |
+| Caught by the number check (code) | 2 |
+| Caught by the AI critic | 7 (one error was caught by both) |
+| False alarms on clean drafts | **0 of 5** |
+
+The errors cover a changed number, an invented amount, an added company, "plans to" turned into "has launched", a contradiction, a wrong month, an invented "world's first" and an overclaimed result. This is a small test set, and the same model family writes and checks the drafts, so treat it as a sanity check rather than a benchmark. Run `python -m newsroom eval-critic` to measure your own model.
 
 ## Quick start
 
 ```bash
-git clone https://github.com/your-username/ai-newsroom.git
+git clone https://github.com/rohal20/ai-newsroom.git
 cd ai-newsroom
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements-dev.txt
@@ -66,8 +82,19 @@ Other commands:
 python -m newsroom fetch -v          # only fetch and deduplicate, no AI
 python -m newsroom brief --dry-run   # show what the editor would see (no key needed)
 python -m newsroom eval-critic       # measure the critic on drafts with planted errors
+python -m newsroom index             # rebuild the editions archive page
 pytest -q                            # run the tests (no key or internet needed)
 ```
+
+## Run it every morning on GitHub (free)
+
+The [`daily-edition`](.github/workflows/daily.yml) workflow runs the whole newsroom on GitHub's servers, commits the new edition and updates the [archive](editions/README.md). Your computer can be off.
+
+1. In your repository, go to **Settings → Secrets and variables → Actions → New repository secret**. Name it `GEMINI_API_KEY` and paste your key. (Optional: add `GROQ_API_KEY` too, as a second fallback.)
+2. Go to **Actions → daily-edition → Run workflow** to run it once now and check it works (about 2–3 minutes).
+3. That's it. From now on it runs every day at 02:07 UTC (07:07 in Pakistan). To change the time, edit the `cron` line in the workflow; it is always in UTC.
+
+If a run fails (a missing key, or every model out of quota), GitHub emails you and the run log is kept for 14 days under the run's **Artifacts**. Editions are committed by `github-actions[bot]`.
 
 ## How it works
 
@@ -82,7 +109,7 @@ pytest -q                            # run the tests (no key or internet needed)
    - **AI critic:** flags added names, dates, causes, "firsts" and over-certainty ("plans to" becoming "has launched"), quoting the exact phrase.
 
    Flagged stories go back to the writer with the critic's notes, up to 2 rewrites. A story that still fails is published as its verified facts only, so nothing unverified reaches the reader. If the AI critic is unavailable, the number check still runs and the edition says so.
-8. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story. A full run log (editor reasons, every fact and quote, timings) goes to `data/run-YYYY-MM-DD.json`.
+8. **Edition:** saved to `editions/YYYY-MM-DD.md`, with how many facts were checked per story, and added to the archive page `editions/README.md`. A full run log (editor reasons, every fact and quote, every critic round, timings) goes to `data/run-YYYY-MM-DD.json`.
 
 ### Measuring the critic
 
@@ -123,9 +150,11 @@ newsroom/
   pipeline.py       runs editor → researcher → writer ⇄ critic and records a run log
   evaluate.py       scores the critic on drafts with planted errors
   briefing.py       candidate selection and the Markdown edition
+  archive.py        the editions archive page (editions/README.md)
   __main__.py       command line: fetch, brief
 tests/              unit and pipeline tests with fake feeds, pages and a fake model
-editions/           one Markdown file per day
+editions/           one Markdown file per day, plus README.md, the archive
+.github/workflows/  tests on every push; daily-edition every morning
 evals/              critic test cases and evaluation reports
 ```
 
