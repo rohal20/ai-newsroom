@@ -49,6 +49,14 @@ class CriticSettings(BaseModel):
     max_rewrites: int = Field(default=2, ge=0, le=5, description="Rewrites before a story falls back to facts only")
 
 
+class SiteSettings(BaseModel):
+    title: str = Field(default="Morning Context", description="Name of the briefing on the website")
+    base_url: str = Field(default="", description="Public address of the site, used for the RSS feed")
+    repo_url: str = Field(default="", description="Link to the source code")
+    schedule: str = Field(default="", description="Shown on the dashboard, e.g. Daily · 07:07 PKT")
+    timezone: str = Field(default="UTC", description="Clock times on the site, e.g. Asia/Karachi")
+
+
 class Config(BaseModel):
     topic: str
     max_age_hours: int = 36
@@ -58,6 +66,7 @@ class Config(BaseModel):
     briefing: BriefingSettings = BriefingSettings()
     research: ResearchSettings = ResearchSettings()
     critic: CriticSettings = CriticSettings()
+    site: SiteSettings = SiteSettings()
 
 
 def load_config(path: str | Path = "config.yaml") -> Config:

@@ -27,6 +27,14 @@ briefing:
   max_per_source: 8     # stops one busy feed (arXiv) from crowding out the rest
   max_papers: 2         # at most this many research papers per edition
 
+# The website (python -m newsroom site → site/), published to GitHub Pages every morning.
+site:
+  title: Morning Context
+  base_url: https://rohal20.github.io/ai-newsroom/
+  repo_url: https://github.com/rohal20/ai-newsroom
+  schedule: Daily · 07:07 PKT
+  timezone: Asia/Karachi
+
 research:
   max_article_chars: 6000   # how much of each article the researcher reads
   min_facts: 2              # fewer verified facts than this → fall back to the feed text

@@ -12,6 +12,9 @@ venv/
 # Generated data (editions will be committed later, raw fetches are not)
 data/*.json
 
+# The website is built by GitHub Actions; build it locally with: python -m newsroom site
+site/
+
 # OS / editors
 .DS_Store
 .vscode/
