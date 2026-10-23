@@ -16,6 +16,7 @@ from pathlib import Path
 
 from . import __version__, pipeline
 from .agents import editor
+from .archive import list_editions, write_index
 from .briefing import render_markdown, save_edition, select_candidates
 from .config import Config, ModelSpec, load_config
 from .dedupe import dedupe
@@ -110,6 +111,7 @@ def cmd_brief(args: argparse.Namespace) -> int:
     today = date.today()
     md = render_markdown(run.briefing, run.sheets, config.topic, today, candidates=run.candidates, results=run.results)
     path = save_edition(md, today, args.out)
+    index_path = write_index(args.out, config.topic)
     log_path = Path(args.data) / f"run-{today.isoformat()}.json"
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.write_text(run.model_dump_json(indent=2), encoding="utf-8")
@@ -125,7 +127,16 @@ def cmd_brief(args: argparse.Namespace) -> int:
     print(f"\n{facts} facts verified, {dropped} unsupported dropped · "
           + " · ".join(f"{k} {v}s" for k, v in run.seconds.items())
           + f" · model {getattr(llm, 'name', config.llm.model)}")
-    print(f"Saved → {path}\nRun log → {log_path}")
+    print(f"Saved → {path}\nIndex → {index_path}\nRun log → {log_path}")
+    return 0
+
+
+def cmd_index(args: argparse.Namespace) -> int:
+    config = _config_or_exit(args.config)
+    if config is None:
+        return 2
+    path = write_index(args.out, config.topic)
+    print(f"Index of {len(list_editions(args.out))} editions → {path}")
     return 0
 
 
@@ -190,6 +201,10 @@ def main(argv: list[str] | None = None) -> int:
     brief.add_argument("--out", default="editions", help="where editions are written")
     brief.add_argument("--dry-run", action="store_true", help="print the prompt without calling the model")
     brief.set_defaults(func=cmd_brief)
+
+    idx = sub.add_parser("index", help="rebuild editions/README.md, the list of all editions", parents=[common])
+    idx.add_argument("--out", default="editions")
+    idx.set_defaults(func=cmd_index)
 
     ev = sub.add_parser("eval-critic", help="measure the critic on drafts with planted errors", parents=[common])
     ev.add_argument("--cases", default="evals/critic_cases.json")

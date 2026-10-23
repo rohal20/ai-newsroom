@@ -44,6 +44,18 @@ def test_brief_writes_an_edition_and_a_run_log(tmp_path, rss_bytes, atom_bytes, 
     assert {"candidates", "picks", "sheets", "briefing", "seconds"} <= set(log)
     out = capsys.readouterr().out
     assert "Editor: choosing" in out and "Researcher:" in out and "Saved →" in out
+    index = (out_dir / "README.md").read_text(encoding="utf-8")       # the archive page is updated too
+    assert "A focused day in AI." in index and "Index →" in out
+
+
+def test_index_command(tmp_path, capsys):
+    (tmp_path / "config.yaml").write_text(CONFIG)
+    eds = tmp_path / "editions"
+    eds.mkdir()
+    (eds / "2026-10-22.md").write_text("# AI briefing\n\n> A day.\n\n## 1. One\n", encoding="utf-8")
+    assert cli.main(["index", "--out", str(eds), "--config", str(tmp_path / "config.yaml")]) == 0
+    assert "Index of 1 editions" in capsys.readouterr().out
+    assert "A day." in (eds / "README.md").read_text(encoding="utf-8")
 
 
 def test_brief_reports_missing_key_cleanly(tmp_path, rss_bytes, atom_bytes, capsys, monkeypatch):
