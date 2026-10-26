@@ -1,0 +1,216 @@
+{
+  "version": 1,
+  "day": "2026-10-26",
+  "started": "2026-10-26T07:43:24Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments include older CNNs outperforming frontier LLMs in specialized medical tasks, significant price cuts across major model providers, new tools for paper autoformalization and RF circuit synthesis, and database-driven reinforcement learning methods for training agents.",
+  "fetch": {
+    "fetched": 504,
+    "unique": 436,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 169,
+      "arXiv cs.AI": 321,
+      "Hugging Face Blog": 4,
+      "TechCrunch AI": 3,
+      "MIT News AI": 2,
+      "Hacker News": 5
+    },
+    "seconds": 7.7
+  },
+  "candidates": 30,
+  "seconds": {
+    "editor": 27.0,
+    "researcher": 24.9,
+    "writer": 6.6,
+    "critic": 12.5
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "1dc75a32fc6a",
+      "title": "A 10-Year-Old CNN Outperforms Frontier LLMs in Skin Lesion Diagnosis",
+      "summary": "A fine-tuned 10-year-old convolutional neural network outperformed two frontier LLMs in diagnosing skin lesions from a biopsy-proven test set of 200 cases. Additionally, when presented with clinical photographs, both LLMs advised seeing a doctor in almost every case, including for harmless lesions.",
+      "why_it_matters": "Older, task-specific architectures can still surpass general-purpose frontier LLMs in specialized medical image classification tasks.",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "source": "lynchlab.net via Hacker News",
+      "domain": "lynchlab.net",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "A 10-year-old CNN outperforms frontier LLMs in skin cancer diagnosis.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "A 10-year-old convolutional neural network (Inception v3) outperformed two frontier LLMs (GPT-6 Astra and Claude Fable 5.1) in diagnosing skin lesions from a test set of 200 biopsy-proven cases.",
+          "quote": "A ten-year-old network, fine-tuned for about twenty minutes, beat both of them at recognising skin cancer."
+        },
+        {
+          "claim": "The fine-tuned CNN correctly diagnosed 125 out of 200 lesions (62%), whereas the two frontier LLMs named the correct diagnosis for 84 and 85 lesions (42%).",
+          "quote": "The CNN named the right diagnosis (out of 6 possiblities) for 125 of them (62%). The two frontier LLMs named it for 84 and 85 (42%)."
+        },
+        {
+          "claim": "The test set consisted of 200 random lesions drawn from the public MILK10k dataset released in 2025, with every single lesion confirmed by histopathology.",
+          "quote": "I drew 200 lesions at random, all confirmed by histopathology"
+        },
+        {
+          "claim": "When asked as a patient using only the clinical photograph whether they needed to see a doctor, both frontier LLMs advised seeing a doctor in almost every case, including for harmless lesions.",
+          "quote": "Asked as a patient instead, with the clinical photograph alone and the question “do I need to see a doctor?”, both LLMs advised seeing a doctor in almost every case, harmless lesions included"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Skin Cancer",
+          "problem": "Facts state the task was diagnosing skin lesions, not specifically skin cancer.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "86bde11cd257",
+      "title": "OpenAI Cuts GPT-5.6 Luna Prices While Anthropic Permanentizes Launch Discount",
+      "summary": "OpenAI announced an 80% price cut for its GPT-5.6 Luna model, while Anthropic made its temporary launch price cut for Claude Sonnet 5 permanent. These reductions reflect the growing commoditization of large language models driven by intense market competition and easy switching.",
+      "why_it_matters": "Intense competition and model interchangeability are rapidly driving down the inference costs of frontier models.",
+      "url": "https://minimaxir.com/2026/10/cheap-llms/",
+      "source": "minimaxir.com via Hacker News",
+      "domain": "minimaxir.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Analysis on why OpenAI and Anthropic rapidly slashed LLM prices.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "On July 30, 2026, OpenAI announced an 80% price cut for the GPT-5.6 Luna model.",
+          "quote": "OpenAI announces that they cut the price of GPT-5.6 Luna by 80% (???) to $0.20 / $1.20 / $0.02."
+        },
+        {
+          "claim": "Anthropic made its temporary launch price cut for Claude Sonnet 5 permanent on August 10, 2026.",
+          "quote": "Anthropic announces the temporary Sonnet 5 price cut for the launch is now permanent."
+        },
+        {
+          "claim": "LLMs have increasingly become commodities due to intense competition and easy switching between models.",
+          "quote": "models have become more of a commodity where it’s trivial to try a new model on your codebase"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "OpenAI and Anthropic Cut LLM Prices by Up to 80%",
+          "problem": "Facts state OpenAI cut prices by 80%, but do not state Anthropic cut prices by 80% (only that they made a temporary launch price cut permanent).",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "589eb8bb0bb3",
+      "title": "PaperFormalizer: Author-in-the-Loop Autoformalization for Lean",
+      "summary": "Researchers introduced PaperFormalizer, a pipeline that processes LaTeX source code to audit statements and generate Lean-verified proofs with author input. The system produces an annotated paper, a change report, and linked Lean code.",
+      "why_it_matters": "You can use this pipeline to semi-automate the formal verification of research papers while keeping authors in control of ambiguous statements.",
+      "url": "https://arxiv.org/abs/2610.31810",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "PaperFormalizer introduces an agentic pipeline for autoformalizing research proofs in Lean.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers introduced PaperFormalizer, a pipeline that helps authors find and close gaps in research papers and create Lean-verified versions.",
+          "quote": "We introduce PaperFormalizer, a Lean-based agentic pipeline that helps authors find and close such gaps in their own papers and turn each paper into a Lean-verified version."
+        },
+        {
+          "claim": "The pipeline starts from the LaTeX source, creates a dependency graph, audits statements, and formalizes and proves them in Lean.",
+          "quote": "Starting from the LaTeX source, PaperFormalizer transcribes the paper into a dependency graph of statements, audits each statement in natural language for faithfulness, ambiguity and correctness, and then formalizes and proves the statements in Lean against Mathlib, optional domain libraries and the author's personal toolkit."
+        },
+        {
+          "claim": "The pipeline asks the author for input when a statement has multiple readings and leaves crucial decisions to the author.",
+          "quote": "The pipeline therefore stops and asks the author whenever a statement admits more than one reading, presents every repair, in natural language and TeX symbols, as a proposal that the author can accept, decline or redirect, and leaves to the author every decision that could potentially change what the paper claims."
+        },
+        {
+          "claim": "The outputs include an annotated paper, a change report, and linked Lean code.",
+          "quote": "The output is an annotated and revised version of the paper, a report of the changes, and Lean code in which each declaration is linked to the statement it formalizes."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "306061a7bc4d",
+      "title": "TACS-RF: LLM Agentic Synthesis of RF and mmWave Modules",
+      "summary": "Researchers developed TACS-RF, a framework utilizing an LLM coding agent to directly operate electronic design automation tools for radio frequency and millimeter-wave module design. The approach successfully yielded a functional 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process.",
+      "why_it_matters": "LLM agents can now be directly coupled with electronic design automation tools to synthesize complex sub-THz hardware modules.",
+      "url": "https://arxiv.org/abs/2610.31882",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "TACS-RF uses LLM coding agents for automated RF and mmWave circuit synthesis.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers introduced TACS-RF, a framework that uses a large-language-model coding agent to design radio frequency and millimeter-wave modules.",
+          "quote": "We present the framework of TACS-RF - a Tool-driven Agentic Circuit Synthesis of RF and mmWave modules."
+        },
+        {
+          "claim": "The LLM agent, specifically Claude Opus 4.8, directly operates electronic design automation tools like Cadence Virtuoso and Ansys HFSS.",
+          "quote": "a large-language-model (LLM) coding agent (Claude Opus 4.8) directly drives industry-standard electronic-design-automation (EDA) tools"
+        },
+        {
+          "claim": "The framework was validated by designing a 240-251 GHz sub-THz transmitter using a 90 nm SiGe BiCMOS process.",
+          "quote": "We validate the framework through the agentic design of a 240-251 GHz sub-THz transmitter in a 90 nm SiGe BiCMOS process."
+        },
+        {
+          "claim": "The resulting transmitter chain delivers +5.1 to +6.3 dBm power across an 11 GHz tuning range while consuming 361 mW of DC power.",
+          "quote": "delivers +5.1 to +6.3 dBm across an 11 GHz varactor-only tuning range, phase noise of -80 to -88 dBc/Hz at 1 MHz offset while consuming a DC power of 361 mW"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "95eb6975ad24",
+      "title": "ThinkingBox Uses Database-State Evaluations for RL Rewards",
+      "summary": "Microsoft and Hugging Face released ThinkingBox-Training, which leverages database-state evaluations as reinforcement learning rewards for AI agents across 507 benchmark tasks. Training with this method improved the average success rate of the Qwen3.8-27B model from 51.70% to 60.78%.",
+      "why_it_matters": "Verifying final database states provides an effective reinforcement learning reward signal to improve the reliability of task-executing agents.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "ThinkingBox converts database grading into RL rewards for post-training agents.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Microsoft and Hugging Face released ThinkingBox-Training on GitHub, which uses database-state evaluations as reinforcement learning rewards for AI agents.",
+          "quote": "ThinkingBox-Training is now available on GitHub."
+        },
+        {
+          "claim": "The benchmarking dataset ThinkingBox-Bench consists of 507 tasks that test agents using a real backend and evaluate the final database state.",
+          "quote": "Each of its 507 tasks in ThinkingBox-Bench (our benchmark dataset) hands an agent a real backend and a set of tools, lets it work, then checks what really changed in the database."
+        },
+        {
+          "claim": "After 50 steps of GRPO training using the new reward method, the average success rate of the Qwen3.8-27B model increased from 51.70% to 60.78%.",
+          "quote": "For Qwen3.8-27B, average success rose from 51.70% to 60.78%, while tasks completed correctly on all twenty attempts rose from 38 to 107 with 50 GRPO steps."
+        },
+        {
+          "claim": "The number of tasks completed correctly by the Qwen3.8-27B model on all twenty attempted runs increased from 38 to 107 following the training.",
+          "quote": "A 27B model that initially completed 38 (7.5%) of ThinkingBox-Bench on every attempt now completes 107 (21.1%) on every attempt, almost thrice."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
