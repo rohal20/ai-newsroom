@@ -1,0 +1,228 @@
+{
+  "version": 1,
+  "day": "2026-10-29",
+  "started": "2026-10-29T08:23:22Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI updates include Google's release of Gemini 4 Carbon, new transparency regarding Microsoft and Azure financials, and Anthropic's enterprise token management tools.",
+  "fetch": {
+    "fetched": 436,
+    "unique": 436,
+    "feeds_ok": 5,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 407,
+      "Hugging Face Blog": 3,
+      "TechCrunch AI": 18,
+      "MIT News AI": 4,
+      "Hacker News": 4
+    },
+    "seconds": 5.6
+  },
+  "candidates": 27,
+  "seconds": {
+    "editor": 165.0,
+    "researcher": 34.5,
+    "writer": 19.9,
+    "critic": 10.8
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "185e559c77b9",
+      "title": "Google Announces Gemini 4 Carbon Frontier Model",
+      "summary": "Google has announced Gemini 4 Carbon, its strongest new frontier model featuring state-of-the-art cybersecurity and long-horizon capabilities. The model ranks number one on the Artificial Analysis Intelligence Index v5.0 and is initially rolling out to cyber defenders and trusted partners.",
+      "why_it_matters": "You can now access a top-ranked frontier model for cybersecurity tasks at an introductory price of $2 per million input tokens and $10 per million output tokens.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google introduces Gemini 4 Carbon model.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Google announced Gemini 4 Carbon, its strongest new frontier model featuring state-of-the-art cybersecurity and long-horizon capabilities.",
+          "quote": "Today, we’re announcing the next frontier model: Gemini 4 Carbon, our strongest model with state-of-the-art cybersecurity and long horizon capabilities."
+        },
+        {
+          "claim": "Gemini 4 Carbon ranks number one on the Artificial Analysis Intelligence Index v5.0 with a score of 59.",
+          "quote": "Carbon ranks #1 on the recently updated v5.0 of Artificial Analysis Intelligence Index at 59."
+        },
+        {
+          "claim": "The new model launches at an introductory price of $2 per million input tokens and $10 per million output tokens.",
+          "quote": "Gemini 4 Carbon will launch at the same introductory price 1 as Argon at $2 per million input tokens and $10 per million output tokens"
+        },
+        {
+          "claim": "Google is initially rolling out Carbon to a subset of cyber defenders and trusted partners through the Fairwind Program.",
+          "quote": "Starting this week, we will make Carbon available to a subset of cyber defenders and will gradually phase access to additional trusted partners through our Fairwind Program."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "advanced",
+          "problem": "Facts state 'state-of-the-art', draft says 'advanced'.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "271134257c4a",
+      "title": "Claude Code Background Agent Transcripts Consume Request Headroom",
+      "summary": "Claude Code repeatedly sends background agent transcripts to its model to update status lines, a behavior active by default since August 2026. Measurements show that these background summaries consume 18 to 26 percent of request headroom.",
+      "why_it_matters": "You need to account for background agent summaries consuming 18 to 26 percent of your request headroom when running Claude Code.",
+      "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+      "source": "gist.github.com via Hacker News",
+      "domain": "gist.github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Claude Code analysis reveals background agent transcript handling.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Claude Code repeatedly sends background agent transcripts to its model to update status lines.",
+          "quote": "Every ~30 seconds, for every background agent, Claude Code sends that agent's entire transcript to the agent's own model"
+        },
+        {
+          "claim": "This background summary behavior has been active by default since August 2026.",
+          "quote": "since 2.1.232 (August 2026) it has been on by default."
+        },
+        {
+          "claim": "Measurements show that agent summaries consume 18 to 26 percent of request headroom.",
+          "quote": "#86879 collects four independent measurements of 18–26 %."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "nearly a quarter",
+          "problem": "Facts state '18 to 26 percent', draft describes this as 'nearly a quarter'.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "b126d7721238",
+      "title": "Microsoft Publicly Discloses Azure Quarterly Revenue of $33.2 Billion",
+      "summary": "Microsoft has publicly disclosed Azure's quarterly revenue in dollars for the first time, reporting $33.2 billion. This puts Azure slightly ahead of Google Cloud, which reported $30.7 billion for the same quarter, and makes Azure Microsoft's largest and fastest-growing product line.",
+      "why_it_matters": "You can now directly compare Azure and Google Cloud financials using newly disclosed quarterly revenue data.",
+      "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Microsoft discloses Azure's actual revenue in dollars.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Microsoft publicly disclosed Azure's quarterly revenue in dollars for the first time, reporting $33.2 billion.",
+          "quote": "it reported that Azure brought in a healthy $33.2 billion in revenue for the July-September quarter"
+        },
+        {
+          "claim": "The transparency allows investors to directly compare Azure against competing cloud services.",
+          "quote": "The disclosure lets investors line up Azure’s performance more directly against Amazon Web Services and Google Cloud"
+        },
+        {
+          "claim": "Google Cloud reported $30.7 billion for the same quarter, placing it slightly behind Azure.",
+          "quote": "said Google Cloud brought in $30.7 billion in the same quarter, putting Azure slightly ahead."
+        },
+        {
+          "claim": "Azure is now Microsoft's largest and fastest-growing product line, accounting for 36% of its quarterly revenue.",
+          "quote": "It accounted for roughly 36% of Microsoft’s $92.3 billion in quarterly revenue."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "largest",
+          "problem": "Facts state 'largest and fastest-growing', draft omits 'fastest-growing' (minor, but let's check scope). Actually, facts say 'Azure is now Microsoft's largest and fastest-growing product line'. Draft says 'makes Azure Microsoft's largest product line.' This is accurate summarizing.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "90b267becbf2",
+      "title": "Microsoft Reports $10 Billion in Revenue From OpenAI",
+      "summary": "Microsoft generated $10 billion in revenue from its commercial arrangements with OpenAI in the quarter ending September 30, accounting for nearly 11% of its total quarterly revenue. During the same period, Microsoft reported $7.2 billion in outstanding receivables owed by OpenAI and a slight decrease in its ownership stake to 24%.",
+      "why_it_matters": "Understanding the scale of Microsoft's commercial ties to OpenAI helps quantify the financial interdependence of major cloud and AI providers.",
+      "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Microsoft reports $10 billion in revenue from OpenAI.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Microsoft generated $10 billion in revenue from its commercial arrangements with OpenAI in the quarter ending September 30.",
+          "quote": "Microsoft generated $10 billion in revenue from commercial arrangements with OpenAI"
+        },
+        {
+          "claim": "The $10 billion from OpenAI accounted for nearly 11% of Microsoft's total quarterly revenue of $92.3 billion.",
+          "quote": "That represents nearly 11% of Microsoft’s total quarterly revenue of $92.3 billion"
+        },
+        {
+          "claim": "Microsoft reported $7.2 billion in outstanding receivables owed by OpenAI at the end of September.",
+          "quote": "Microsoft also reported $7.2 billion in outstanding receivables from OpenAI at the end of September"
+        },
+        {
+          "claim": "Microsoft's ownership stake in OpenAI decreased slightly from about 25% in June to 24% in September.",
+          "quote": "Microsoft’s ownership stake in OpenAI has also declined slightly from about 25% in June to 24% in September."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "2ede9b7f3431",
+      "title": "Anthropic Launches Enterprise Token Spending and ROI Reporting Tools",
+      "summary": "Anthropic has announced a new suite of reporting tools and pooled group budgets to help enterprise customers track token spending and ROI, following an operating profit in the second quarter. According to a Jellyfish report, spending on Claude Code and other tools built on Anthropic models has grown 10x since the beginning of the year.",
+      "why_it_matters": "You can use these new reporting tools and pooled budgets to better monitor and manage enterprise token expenditures on Anthropic models.",
+      "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic launches usage tracking tools for enterprise AI spending.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Anthropic announced a new suite of reporting tools to help enterprise customers understand the value and ROI of their token spending.",
+          "quote": "Wednesday announced a new suite of reporting tools designed to give those customers a more granular understanding of the value they get from their token spend."
+        },
+        {
+          "claim": "Anthropic recorded an operating profit in the second quarter and achieved 900% net revenue retention.",
+          "quote": "The company recorded an operating profit in the second quarter, and 900% net revenue retention — that is, spending from the same customers in Q3 2025 grew nine times in Q3 2026."
+        },
+        {
+          "claim": "According to a Jellyfish report, spending on Claude Code and other tools built on Anthropic models has grown 10x since the beginning of the year.",
+          "quote": "spending on those tools has grown 10x since the beginning of the year, with their cost now equal to about 2% of total engineering cost."
+        },
+        {
+          "claim": "Anthropic is also creating pooled group budgets to help teams manage their token spending.",
+          "quote": "Anthropic is also creating pooled group budgets to allow teams to better manage token spending."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "10x growth in spending on tools built on its models",
+          "problem": "Facts state spending on Claude Code and other tools grew 10x according to a Jellyfish report, but the draft attributes the 10x growth directly alongside Anthropic's operating profit without mentioning Jellyfish, conflating the source of the 10x stat.",
+          "by": "critic"
+        }
+      ]
+    }
+  ]
+}
