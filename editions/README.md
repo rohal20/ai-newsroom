@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Thursday 29 October 2026](2026-10-29.md): Recent AI updates include Google's release of Gemini 4 Carbon, new transparency regarding Microsoft and Azure financials, and Anthropic's enterprise token management tools.
+**Latest:** [Friday 30 October 2026](2026-10-30.md): Recent updates include the release of Mistral Large 4 and NVIDIA's Nemotron 3.5 Transcribe, alongside new hardware-efficient training systems and agent safety evaluations.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Fri 30 Oct 2026](2026-10-30.md) | Recent updates include the release of Mistral Large 4 and NVIDIA's Nemotron 3.5 Transcribe, alongside new hardware-efficient training systems and agent safety evaluations. | 5 | 3 rewritten |
 | [Thu 29 Oct 2026](2026-10-29.md) | Recent AI updates include Google's release of Gemini 4 Carbon, new transparency regarding Microsoft and Azure financials, and Anthropic's enterprise token management tools. | 5 | 4 rewritten |
 | [Wed 28 Oct 2026](2026-10-28.md) | Today's AI updates cover new world models and drug discovery applications, alongside legal, financial, and security developments. | 5 | 1 rewritten |
 | [Tue 27 Oct 2026](2026-10-27.md) | Anthropic files for an IPO, SpaceX secures a $40 billion GPU financing deal, Cohere investigates unexpected data transmission by an Alibaba model, and new tools advance Lean formalization and linear-time context compression. | 5 | all approved |

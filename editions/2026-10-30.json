@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "day": "2026-10-30",
+  "started": "2026-10-30T08:31:57Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent updates include the release of Mistral Large 4 and NVIDIA's Nemotron 3.5 Transcribe, alongside new hardware-efficient training systems and agent safety evaluations.",
+  "fetch": {
+    "fetched": 916,
+    "unique": 797,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 279,
+      "arXiv cs.AI": 605,
+      "Hugging Face Blog": 7,
+      "TechCrunch AI": 17,
+      "MIT News AI": 3,
+      "Hacker News": 5
+    },
+    "seconds": 29.7
+  },
+  "candidates": 39,
+  "seconds": {
+    "editor": 32.7,
+    "researcher": 313.6,
+    "writer": 5.9,
+    "critic": 13.1
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "779b541ff77b",
+      "title": "Mistral Releases Weights for 1-Trillion-Parameter Mistral Large 4",
+      "summary": "Mistral has released the weights for Mistral Large 4, a 1-trillion-parameter multimodal model trained entirely on European infrastructure. The model matches leading open-weight coding performance while using 47% fewer tokens and blocking 96.6% of malicious cyber requests.",
+      "why_it_matters": "You can deploy a high-performing sovereign open-weight model that reduces token overhead for coding and offers robust cybersecurity defenses.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "source": "mistral.ai via Hacker News",
+      "domain": "mistral.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Mistral releases weights for Mistral Large 4, an open frontier-class LLM release.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Mistral has officially released the weights for Mistral Large 4 (known as Le Chonk), a 1-trillion-parameter multimodal model.",
+          "quote": "Mistral released Mistral Large 4 (Le Chonk), a 1-trillion-parameter multimodal model, now available with improved coding, cybersecurity, and reasoning efficiency."
+        },
+        {
+          "claim": "The model has been developed and trained entirely on European infrastructure to support sovereign AI.",
+          "quote": "Trained from scratch on European infrastructure with clear lineage from inception to release, it gives organizations a trusted foundation for Sovereign AI"
+        },
+        {
+          "claim": "Mistral Large 4 achieved a 48% score on the Artificial Analysis Coding Agent Index, matching the leading open-weight model while utilizing 47% fewer tokens.",
+          "quote": "On the Artificial Analysis Coding Agent Index, Mistral Large 4 scores 48%, effectively tied with the leading open-weight model, GLM-5.3, while using 47% fewer tokens per task on average."
+        },
+        {
+          "claim": "In cybersecurity evaluation, the model scores 51% on defensive tasks and blocks 96.6% of malicious cyber requests.",
+          "quote": "It retains strong performance on Cyber benchmarks, while achieving an average refusal rate of 96.6% on malicious cyber requests, the highest we measure among open models."
+        },
+        {
+          "claim": "Vetted enterprise partners are receiving preview access to a specialized version of the model built for advanced security workflows.",
+          "quote": "We are also providing enterprise design partners such as Orange Cyberdefense, with preview access to a specialized variant of Mistral Large 4 optimized for advanced cybersecurity workflows"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "56fa7327f2b2",
+      "title": "Thrive Holdings Acquires ADT for $15.3 Billion Enterprise Value",
+      "summary": "Thrive Holdings, a holding company spinout from Thrive Capital that partners with OpenAI to revitalize companies with AI, has acquired ADT for $10 per share. ADT will now serve as the foundation for Thrive Holdings' smart home security business to develop new AI-powered products.",
+      "why_it_matters": "Thrive Holdings' acquisition of ADT for $15.3 billion enterprise value means the company will use ADT as the foundation for its smart home security business to release new AI-powered products.",
+      "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Thrive Holdings acquires ADT for $15.3B to integrate AI into physical security infrastructure.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Thrive Holdings acquired ADT for $10 per share, representing approximately $7.6 billion in equity.",
+          "quote": "Thrive Holdings has acquired physical security company ADT for $10 per share or about $7.6 billion in equity"
+        },
+        {
+          "claim": "The total enterprise value of the acquisition deal is $15.3 billion.",
+          "quote": "Beyond equity, the total enterprise value of the deal is $15.3 billion"
+        },
+        {
+          "claim": "Thrive Holdings is a holding company spinout from Thrive Capital that partners with OpenAI to revitalize companies with AI.",
+          "quote": "Thrive Holdings is the holding company spinout from Josh Kushner’s powerhouse VC firm Thrive Capital. It also counts OpenAI as its partner, as well as an investor."
+        },
+        {
+          "claim": "As a result of the acquisition, ADT will become the foundation of Thrive Holdings' smart home security business and will release new AI-powered products.",
+          "quote": "ADT will form the foundation of Thrive Holdings’ smart home security business"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "OpenAI-backed",
+          "problem": "Facts state Thrive Holdings 'partners with OpenAI', but do not state it is backed by OpenAI.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "7ae8eb20550e",
+      "title": "NVIDIA Releases Nemotron 3.5 Transcribe for Multilingual Audio Processing",
+      "summary": "NVIDIA has released Nemotron 3.5 Transcribe, a promptable open-weight model supporting transcription across 40 languages, translation, and speaker attribution. The model ranks first among open-weight options on the Hugging Face Open ASR Leaderboard for English with a 5.33% average word error rate.",
+      "why_it_matters": "You can leverage a top-tier open-weight model for accurate multilingual transcription and domain-specific audio fine-tuning.",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "NVIDIA releases Nemotron 3.5 Transcribe, providing customizable multilingual speech-to-text models.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "NVIDIA released Nemotron 3.5 Transcribe, an open-weight, promptable model for multilingual transcription, translation, speaker attribution, and audio Q&A.",
+          "quote": "NVIDIA Nemotron 3.5 Transcribe is an open-weight, promptable model that turns recorded speech into useful text"
+        },
+        {
+          "claim": "The model supports 40 languages for transcription, translates 31 of them to or from English, and performs speaker attribution in 13 languages for up to eight speakers.",
+          "quote": "it transcribes 40 languages, translates 31 of them to or from English, and attributes speakers in 13. It handles recordings up to an hour long and labels up to eight speakers."
+        },
+        {
+          "claim": "Nemotron 3.5 Transcribe ranks first among open-weight models on the Hugging Face Open ASR Leaderboard for English with a 5.33% average word error rate.",
+          "quote": "English: first among open-weight models at 5.33% average WER"
+        },
+        {
+          "claim": "Fine-tuning using Granary v2 data and NeMo Speech tools reduced the word error rate by 45.8% in a medical case study.",
+          "quote": "In a medical case study, fine-tuning cut word error rate (WER) on held-out speakers by 45.8% relative to the best prompt."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "launched",
+          "problem": "Facts say 'released', draft says 'launched', which slightly changes the scope/certainty regarding product availability.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "ea36b5ffc5dc",
+      "title": "LRMoE Reduces Mixture-of-Experts Training Time on Memory-Constrained Nodes",
+      "summary": "Researchers introduced LRMoE, a memory-aware MoE training system that recalibrates backward demand and balances workloads to mitigate GPU memory bottlenecks. Experiments show LRMoE reduces cumulative training time to fixed-loss targets by 21.2-44.8% relative to SYMI.",
+      "why_it_matters": "You can train large Mixture-of-Experts models more efficiently on hardware with constrained memory by eliminating expert replication bottlenecks.",
+      "url": "https://arxiv.org/abs/2610.37720",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Introduces LRMoE for demand-side load re-calibration, optimizing MoE training on memory-constrained hardware.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Uneven routing in Sparse Mixture-of-Experts (MoE) models creates bottlenecks, and additional expert copies compete with token-related buffers for limited GPU memory.",
+          "quote": "uneven routing creates computation and communication bottlenecks. Existing placement and replication methods redistribute this workload, yet additional expert copies compete with token-related buffers for limited GPU memory."
+        },
+        {
+          "claim": "The researchers present LRMoE, a memory-aware MoE training system that jointly recalibrates backward demand and balances the retained workload.",
+          "quote": "We present LRMoE, a memory-aware MoE training system that jointly recalibrates backward demand and balances the retained workload."
+        },
+        {
+          "claim": "During backpropagation, a load recalibration metric estimates token-expert pairs' contributions and selects pairs within specific quotas.",
+          "quote": "During backpropagation, a load recalibration metric estimates each token-expert pair's contribution to the expert update and selects pairs within these quotas."
+        },
+        {
+          "claim": "LRMoE reduces cumulative MoE-layer training time to fixed-loss targets by 21.2-44.8% relative to SYMI based on experiments with Qwen3-30B-A3B and GLM4.5-106B-A12B.",
+          "quote": "Experiments on Qwen3-30B-A3B and GLM4.5-106B-A12B show that LRMoE reduces cumulative MoE-layer training time to fixed-loss targets by 21.2-44.8% relative to SYMI."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "21.2%",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        }
+      ]
+    },
+    {
+      "id": "8c17535d2711",
+      "title": "Double-Stratified Evaluation Protocol Improves Detection of Unsafe Tool Calls",
+      "summary": "Researchers proposed a double-stratification protocol separating injection exposure from behavioral commitment to evaluate latent monitors in tool-using agents. Retrained probe families using this approach can predict a model's unsafe tool calls up to two steps early.",
+      "why_it_matters": "You can implement more reliable internal monitoring to intercept indirect prompt injections and unsafe tool use in language agents.",
+      "url": "https://arxiv.org/abs/2610.37679",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Presents rigorous double-stratified evaluation for latent monitors guarding tool-using agents against injection attacks.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Tool-using language agents are susceptible to indirect prompt injection, leading researchers to examine model internals to intercept unsafe actions.",
+          "quote": "Tool-using language agents are vulnerable to indirect prompt injection, and a growing literature probes model internals to catch unsafe actions before they execute"
+        },
+        {
+          "claim": "The authors propose a double-stratification protocol that separates injection exposure from behavioral commitment.",
+          "quote": "propose a double-stratification protocol: separate injection exposure from behavioral commitment, in both the evaluation and the training population."
+        },
+        {
+          "claim": "When retrained exclusively on exposed cases, probe families can predict a model's unsafe tool call up to two steps early.",
+          "quote": "Retrained on exposed cases only, the same probe families predict the model's own unsafe tool call up to two steps early"
+        },
+        {
+          "claim": "Specific models achieve high logistic AUROC scores when evaluated under the new approach, such as Mistral-7B reaching 0.896 and OLMo-2-7B reaching 0.912.",
+          "quote": "Mistral-7B reaches 0.896 and OLMo-2-7B 0.912"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
