@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "day": "2026-10-31",
+  "started": "2026-10-31T08:21:52Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments highlight security risks in AI extensions, deskilling concerns from automation, massive legacy code rewrites using unlimited AI tokens, and growing financial strain and debt accumulation driven by the AI infrastructure spending boom.",
+  "fetch": {
+    "fetched": 634,
+    "unique": 634,
+    "feeds_ok": 5,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 605,
+      "Hugging Face Blog": 7,
+      "TechCrunch AI": 15,
+      "MIT News AI": 3,
+      "Hacker News": 4
+    },
+    "seconds": 3.2
+  },
+  "candidates": 30,
+  "seconds": {
+    "editor": 262.6,
+    "researcher": 25.2,
+    "writer": 5.8,
+    "critic": 13.1
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "1925bee6805a",
+      "title": "Persistent SSH Backdoor Found in Claude Code Extension on Cursor Marketplace",
+      "summary": "A persistent SSH backdoor was discovered in versions 2.1.312 and 2.1.313 of the official Claude Code for VS Code extension on the Cursor Marketplace. The malicious payload executes automatically when Node loads the file without needing user interaction, prompting Cursor to remove the affected versions.",
+      "why_it_matters": "You must immediately audit your development environments for these specific extension versions and initiate incident response protocols.",
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "source": "phorion.io via Hacker News",
+      "domain": "phorion.io",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Security vulnerability discovered in Claude Code extension on Cursor Marketplace.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "A persistent SSH backdoor was detected in the official Claude Code for VS Code extension on the Cursor Marketplace.",
+          "quote": "Phorion has detected a backdoor in the official Claude Code for VS Code extension bundle on the Cursor Marketplace that drops a persistent SSH backdoor across macOS, Linux, and Windows."
+        },
+        {
+          "claim": "Cursor removed the affected extension versions, 2.1.312 and 2.1.313, from its marketplace.",
+          "quote": "Cursor has removed the affected versions, 2.1.312 and 2.1.313, from its marketplace."
+        },
+        {
+          "claim": "Organisations are advised to review environments for the specific extension versions and engage incident response.",
+          "quote": "Organisations should immediately review their environments for use of Claude Code for VSCode 2.1.312 or 2.1.313 and engage incident response where use of the extension is discovered."
+        },
+        {
+          "claim": "The malicious payload executes automatically as soon as Node loads the file, without requiring user interaction.",
+          "quote": "The user doesn’t need to interact with the extension for the payload to fire."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "9e37c40a85b3",
+      "title": "Research Indicates AI and Automation Lead to Human Skill Degradation",
+      "summary": "Research in fields like medicine and aviation shows that relying on AI or automation leads to a measurable degradation in human skills and situational awareness. This finding highlights the impact of automation systems on human operational capabilities.",
+      "why_it_matters": "Teams relying on automation must account for the measurable degradation of human skills and situational awareness in critical fields.",
+      "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+      "source": "newsletter.signoz.io via Hacker News",
+      "domain": "newsletter.signoz.io",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Discussion on how AI tools are impacting and deskilling SRE roles.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Research in fields like medicine and aviation shows that relying on AI or automation leads to a measurable degradation in human skills and situational awareness.",
+          "quote": "endoscopists who used AI assistance for polyp detection saw their unassisted detection rates drop from 28% to 22%"
+        },
+        {
+          "claim": "Article URL: https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling Comments URL: https://news.ycombinator.com/item?id=50305693 Points: 575 # Comments: 422",
+          "quote": "Article URL: https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling Comments URL: https://news.ycombinator.com/item?id=50305693 Points: 575 # Comments: 422"
+        }
+      ],
+      "dropped_facts": 3,
+      "first_issues": [
+        {
+          "text": "This trend suggests that AI is actively deskilling professionals rather than simply replacing them.",
+          "problem": "Introduces interpretation/comparison not directly stated in the verified facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "5d1e722469ff",
+      "title": "Cisco Engineer Given Unlimited AI Tokens to Rewrite Legacy Code",
+      "summary": "Cisco provided engineer Padmanabhan Krishnamurthy with unlimited AI tokens to refactor the company's legacy codebase. Krishnamurthy, who joined Cisco following its acquisition of his startup EzDubs, aims to refactor 98% of Cisco's legacy code within 24 months.",
+      "why_it_matters": "Engineers can now leverage high-allocation token budgets to tackle massive, multi-year enterprise legacy refactoring initiatives.",
+      "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+      "source": "fortune.com via Hacker News",
+      "domain": "fortune.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Cisco gives engineer unlimited tokens to rewrite legacy codebases.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Cisco president Jeetu Patel gave 27-year-old engineer Padmanabhan Krishnamurthy unlimited AI tokens to rewrite the company's legacy code.",
+          "quote": "I’ve given him unlimited tokens because he’s going to refactor code"
+        },
+        {
+          "claim": "Krishnamurthy aims to refactor 98% of Cisco's legacy code within 24 months, starting with a four-week proof of concept.",
+          "quote": "he has given himself four weeks to prove it, with the final goal of refactoring 98% of Cisco’s legacy code within 24 months."
+        },
+        {
+          "claim": "Krishnamurthy joined Cisco in 2025 after Cisco acquired EzDubs, the real-time translation startup he cofounded in 2023.",
+          "quote": "He joined Cisco in 2025 after the $429 billion tech giant acquired EzDubs, the real-time translation startup Krishnamurthy cofounded in 2023."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "6336aff37e57",
+      "title": "Nvidia Considers Guaranteeing Debt Financing for Nscale AI Data Center",
+      "summary": "Nvidia is in discussions to guarantee billions in debt financing for Nscale's West Virginia AI data center project, where Anthropic has already committed to a $44.6 billion contract. Under the proposal, Nvidia would temporarily take over the facility if Nscale defaults, while talks for a second $45 billion building are also underway.",
+      "why_it_matters": "Hardware vendors are directly stepping in to financially back massive infrastructure buildouts to secure future deployment scale for major AI labs.",
+      "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Nvidia weighs cosigning loans for AI data center expansion.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Nvidia is discussing guaranteeing billions in debt financing for Nscale's AI data center in West Virginia.",
+          "quote": "Nvidia is in talks to guarantee billions in debt financing for AI cloud provider Nscale’s planned Anthropic data center"
+        },
+        {
+          "claim": "Anthropic has committed to a $44.6 billion contract for the first building of the project.",
+          "quote": "Anthropic has signed a $44.6 billion contract for the project’s first building alone"
+        },
+        {
+          "claim": "Under the proposed arrangement, Nvidia would take over the facility temporarily if Nscale defaults on payments.",
+          "quote": "Nvidia would step in if Nscale defaulted on construction payments, temporarily take over the facility"
+        },
+        {
+          "claim": "Nscale and its partners are also discussing a second deal worth approximately $45 billion for another building.",
+          "quote": "The companies are also discussing a second deal worth roughly $45 billion for another building."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "f1f6194d2036",
+      "title": "Financial Strain and Investor Anxiety Surface Amid Massive AI Infrastructure Spending",
+      "summary": "Big Tech firms including Alphabet, Amazon, Meta, and Microsoft plan to spend over $740 billion on capital expenditures this year for AI infrastructure, leading to negative free cash flow and investor anxiety that dropped the Nasdaq. To fund these investments, major tech firms raised a combined $326 billion in debt in 2026.",
+      "why_it_matters": "Mounting debt and negative free cash flow across major tech spenders could soon trigger tighter budget constraints and scrutiny on enterprise AI project funding.",
+      "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Analysis of mounting financial pressure and cracks in the AI spending boom.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Big Tech companies including Alphabet, Amazon, Meta, and Microsoft plan to spend over $740 billion on capital expenditures this year, primarily for AI infrastructure.",
+          "quote": "Alphabet, Amazon, Meta, and Microsoft have outlined plans to spend more than $740 billion on capital expenditures this year"
+        },
+        {
+          "claim": "Investor anxiety over massive AI spending and negative free cash flow caused market drops, including a 2.9% fall in the Nasdaq on Friday.",
+          "quote": "The anxiety spilled across the market on Friday. The Nasdaq fell 2.9%, and chip stocks took a drubbing, too"
+        },
+        {
+          "claim": "Alphabet reported negative free cash flow of $9.1 billion in the third quarter as its AI investments grew.",
+          "quote": "Google’s parent company reported negative free cash flow of $9.1 billion in the third quarter"
+        },
+        {
+          "claim": "Amazon expects to spend $220 billion in capital expenditures this year and reported negative free cash flow of $42.4 billion over the past 12 months.",
+          "quote": "The company says it expects to spend $220 billion in capex this year. Even though revenue at its cloud business"
+        },
+        {
+          "claim": "Major tech firms such as Microsoft, Alphabet, Amazon, Meta, and Oracle raised a combined $326 billion in debt in 2026 to help pay for AI infrastructure.",
+          "quote": "Microsoft, Alphabet, Amazon, Meta, and Oracle raised a combined $326 billion in debt in 2026"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

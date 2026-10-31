@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Friday 30 October 2026](2026-10-30.md): Recent updates include the release of Mistral Large 4 and NVIDIA's Nemotron 3.5 Transcribe, alongside new hardware-efficient training systems and agent safety evaluations.
+**Latest:** [Saturday 31 October 2026](2026-10-31.md): Recent developments highlight security risks in AI extensions, deskilling concerns from automation, massive legacy code rewrites using unlimited AI tokens, and growing financial strain and debt accumulation driven by the AI infrastructure spending boom.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Sat 31 Oct 2026](2026-10-31.md) | Recent developments highlight security risks in AI extensions, deskilling concerns from automation, massive legacy code rewrites using unlimited AI tokens, and growing financial strain and debt accumulation driven by the AI infrastructure spending boom. | 5 | 1 rewritten |
 | [Fri 30 Oct 2026](2026-10-30.md) | Recent updates include the release of Mistral Large 4 and NVIDIA's Nemotron 3.5 Transcribe, alongside new hardware-efficient training systems and agent safety evaluations. | 5 | 3 rewritten |
 | [Thu 29 Oct 2026](2026-10-29.md) | Recent AI updates include Google's release of Gemini 4 Carbon, new transparency regarding Microsoft and Azure financials, and Anthropic's enterprise token management tools. | 5 | 4 rewritten |
 | [Wed 28 Oct 2026](2026-10-28.md) | Today's AI updates cover new world models and drug discovery applications, alongside legal, financial, and security developments. | 5 | 1 rewritten |
