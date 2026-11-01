@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "day": "2026-11-01",
+  "started": "2026-11-01T09:06:57Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent updates include the release of Mistral Large 4, a major ChatGPT account takeover vulnerability fix, a revised OpenAI funding target, and new modular models and patches for speech and decision tasks.",
+  "fetch": {
+    "fetched": 20,
+    "unique": 20,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 10,
+      "MIT News AI": 2,
+      "Hacker News": 3
+    },
+    "seconds": 2.1
+  },
+  "candidates": 18,
+  "seconds": {
+    "editor": 191.4,
+    "researcher": 267.5,
+    "writer": 5.1,
+    "critic": 11.5
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "a1765f446c5b",
+      "title": "Mistral Releases Mistral Large 4 with One Million Token Context Window",
+      "summary": "Mistral has launched Mistral Large 4, a multimodal, multilingual Mixture-of-Experts model featuring roughly 1 trillion total parameters and a 1 million token context window. Distributed under the Mistral Ecosystem Open-Weight License, the model achieves an 82% score on the Artificial Analysis Cyber Index test.",
+      "why_it_matters": "Engineers can leverage a massive 1 million token context window and strong vulnerability-patching capabilities in an open-weight model.",
+      "url": "https://huggingface.co/blog/mistral-large4",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Mistral Large 4 release brings an updated flagship open-weight model to Hugging Face.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Mistral has released Mistral Large 4, a multimodal, multilingual, Mixture-of-Experts model with approximately 1 trillion total parameters and 49 billion active parameters.",
+          "quote": "Mistral Large 4 (aka Le Chonk) is a multimodal, multilingual, Mixture-of-Experts (MoE) model from Mistral."
+        },
+        {
+          "claim": "The model features a context window of 1 million tokens and is distributed under the Mistral Ecosystem Open-Weight License.",
+          "quote": "It has about 1T total, 49B active parameter, and a context window of 1M tokens."
+        },
+        {
+          "claim": "Mistral Large 4 achieves an 82% score on the Artificial Analysis Cyber Index test for reproducing and patching software vulnerabilities.",
+          "quote": "Mistral Large 4 scores 82% on the Artificial Analysis Cyber Index test that asks a model to reproduce a real vulnerability in open-source software and then patch the software."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "381223935ae3",
+      "title": "ChatGPT Account Takeover Vulnerability Patched by OpenAI",
+      "summary": "Researchers discovered a vulnerability that allowed attackers to take over ChatGPT accounts by having a user open a malicious public shared link. The exploit bypassed sandboxes and content security policies using an HTML preview feature, a math library message listener, and a YouTube JSONP callback, prompting OpenAI to fix the issue on October 26, 2026.",
+      "why_it_matters": "This highlights critical security risks in complex web integrations that combine HTML previews with external message listeners and JSONP callbacks.",
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "source": "parameter.ai via Hacker News",
+      "domain": "parameter.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Critical security post-mortem detailing vulnerability allowing account takeover in ChatGPT.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers found a vulnerability allowing them to take over ChatGPT accounts simply by having a user open a malicious public shared link.",
+          "quote": "our research team was able to take over anyone's account simply by sending them a link."
+        },
+        {
+          "claim": "The exploit bypassed ChatGPT's sandbox and content security policy by combining an HTML preview feature, a math library message listener, and a YouTube JSONP callback.",
+          "quote": "By bypassing ChatGPT's sandbox and content security policy, our research team was able to take over anyone's account simply by sending them a link."
+        },
+        {
+          "claim": "OpenAI fixed the security issue on October 26, 2026, and classified the report as P1.",
+          "quote": "OpenAI fixed the issue on October 26 and classified the report as P1."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "344dcf79744a",
+      "title": "OpenAI Lowers Latest Funding Round Target to $20 Billion",
+      "summary": "OpenAI has reduced its current fundraising target to $20 billion, down from previous higher expectations. The round is led by investors from the United Arab Emirates and has secured $11 billion so far.",
+      "why_it_matters": "Shifting capital targets from major enterprise backers can alter resource availability and scaling timelines across the industry.",
+      "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OpenAI reportedly cuts funding target, signaling shifts in mega-round AI venture capital appetite.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "OpenAI has reduced its funding target for its latest round from previous higher expectations down to $20 billion.",
+          "quote": "the company has subsequently lowered its funding target to $20 billion"
+        },
+        {
+          "claim": "The funding round is being led by a group of investors from the United Arab Emirates.",
+          "quote": "The round will be led by a group of investors from the United Arab Emirates"
+        },
+        {
+          "claim": "So far, OpenAI has successfully secured $11 billion in this fundraising effort.",
+          "quote": "the company has secured $11 billion so far"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "85d975255b4f",
+      "title": "AnySpeechRecognizer and AnyDecisionModel Update",
+      "summary": "AnySpeechRecognizer implements Apple's speech-to-text API while allowing developers to choose alternative recognition engines like NVIDIA's Parakeet and Alibaba's Qwen3-ASR running locally. Meanwhile, AnyDecisionModel answers various question types with probabilities and typed results using on-device models or external decision providers.",
+      "why_it_matters": "Developers can integrate flexible speech recognition and decision-making capabilities using either local engines or external providers.",
+      "url": "https://huggingface.co/blog/anydecisionmodel",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Open models for speech and decision-making specifically optimized for Apple platforms.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "AnySpeechRecognizer implements Apple's speech-to-text API while allowing developers to choose alternative recognition engines like NVIDIA's Parakeet and Alibaba's Qwen3-ASR running locally.",
+          "quote": "AnySpeechRecognizer implements Apple's new speech-to-text API with a choice of recognition engine, including NVIDIA's Parakeet and Alibaba's Qwen3-ASR running locally on Core ML"
+        },
+        {
+          "claim": "AnyDecisionModel answers various question types with probabilities and typed results using on-device models or external decision providers.",
+          "quote": "AnyDecisionModel answers yes-or-no, multiple-choice, and rating-scale questions with typed results and probabilities."
+        }
+      ],
+      "dropped_facts": 2,
+      "first_issues": [
+        {
+          "text": "Released for Apple Platforms",
+          "problem": "Facts do not mention Apple platforms, only that AnySpeechRecognizer implements Apple's speech-to-text API.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "f3538b6fb36f",
+      "title": "Hugging Face Releases Granite Switch 4.1.1 Patch",
+      "summary": "Hugging Face has released Granite Switch 4.1.1, a backwards-compatible patch featuring an upgraded Granite Speech ASR model supporting 10 languages and an improved Decision adapter. Because of the modular architecture, the base model required no recomputation beyond training the new components.",
+      "why_it_matters": "Modular architectures allow developers to seamlessly drop in upgraded speech and decision components without retraining base models.",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Introduces Granite Switch 4.1.1 framework to streamline and modularize continuous model updates.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Hugging Face released Granite Switch 4.1.1 as a patch release that is fully backwards compatible with version 4.1.",
+          "quote": "Granite Switch 4.1.1 is a patch release. The version number means what it means in software: fully backwards compatible with 4.1"
+        },
+        {
+          "claim": "The update includes an upgraded Granite Speech ASR model that supports multilingual speech-to-text across 10 languages.",
+          "quote": "Updated Granite Speech ASR model — multilingual speech-to-text across 10 languages with native punctuation and capitalization"
+        },
+        {
+          "claim": "The patch also features an updated Decision adapter in granitelib-core with improved performance on the Jev Decision Index test set.",
+          "quote": "Updated Decision adapter in granitelib-core — featuring improved overall performance on the Jev Decision Index test set."
+        },
+        {
+          "claim": "Because of the modular architecture, the base model remained untouched and no recomputation was required other than training the new components.",
+          "quote": "Apart from training the new ASR model and Decision adapter, nothing was recomputed: the base model is untouched."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
