@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "day": "2026-11-02",
+  "started": "2026-11-02T09:21:17Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments include China's proposed AI export controls, a new 4B hybrid computer-use agent training recipe, asynchronous RL optimization for LLMs, an open-source Rust Git difftool, and a modular Hugging Face patch release.",
+  "fetch": {
+    "fetched": 447,
+    "unique": 396,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 138,
+      "arXiv cs.AI": 297,
+      "Hugging Face Blog": 2,
+      "TechCrunch AI": 4,
+      "MIT News AI": 2,
+      "Hacker News": 4
+    },
+    "seconds": 9.6
+  },
+  "candidates": 28,
+  "seconds": {
+    "editor": 164.9,
+    "researcher": 158.7,
+    "writer": 30.3,
+    "critic": 78.5
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "4e84ca416d4f",
+      "title": "China Proposes Frontier AI Export Controls",
+      "summary": "China's Ministry of Commerce and Ministry of Science and Technology issued Announcement No. 48, proposing 40 new technologies added to the export control catalogue, with 23 focused on artificial intelligence. Model weights and related technologies meeting specific thresholds like 10^26 FLOPs or 2 trillion parameters are restricted, while high-performance AI agents for critical infrastructure are prohibited outright.",
+      "why_it_matters": "Engineers and researchers working with large-scale model weights or high-performance AI agents must prepare for strict compliance measures if these draft export controls are finalized.",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+      "source": "labs.cloudsecurityalliance.org via Hacker News",
+      "domain": "labs.cloudsecurityalliance.org",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New Chinese frontier AI export controls detailed in Mofcom Announcement No. 48.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 10,
+      "facts": [
+        {
+          "claim": "China's Ministry of Commerce and Ministry of Science and Technology issued Announcement No. 48, proposing 40 new technologies added to the export control catalogue, with 23 focused on artificial intelligence.",
+          "quote": "issued Announcement No. 48 of 2026. The announcement proposes adding 40 technologies to the Catalogue of Technologies Prohibited or Restricted from Export, 23 of them in artificial intelligence"
+        },
+        {
+          "claim": "Model weights and related technologies are restricted if they meet specific technical tests, including training compute of at least 10^26 FLOPs, 2 trillion parameters, or a global top-10 position.",
+          "quote": "Weights, key checkpoints, source code, architecture, and training and inference optimization know-how are restricted if a model meets any one of three tests: at least 10^26 FLOPs of training compute, at least 2 trillion parameters, or a global top-10 position on public evaluation rankings"
+        },
+        {
+          "claim": "High-performance AI agents built for critical infrastructure, defense, or core government use are prohibited outright under the new draft.",
+          "quote": "high-performance agents built for critical infrastructure, defense, or core government use are prohibited outright"
+        },
+        {
+          "claim": "The draft catalogue additions remain open for public comment until November 15, 2026.",
+          "quote": "The catalogue additions are a draft open for comment until November 15, 2026"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "First",
+          "problem": "The facts do not state that this is the first frontier AI export control.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "92288ee90d9c",
+      "title": "Mage-VL-Cowork: Hybrid Computer-Use Agent Training Recipe",
+      "summary": "Researchers introduced Mage-VL-Cowork, a 4B hybrid computer-use agent trained using a progressive five-stage curriculum. The accompanying Mage-CUA-Forge synthesized 293,806 desktop and web tasks across 6,915 skills while cutting recurring per-task expenditure by 82.6%, helping the model achieve a score of 66.0% on OSWorld-Verified.",
+      "why_it_matters": "You can leverage this new training recipe and synthetic task generation approach to build more cost-effective and capable desktop automation agents.",
+      "url": "https://arxiv.org/abs/2610.40747",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Mage-VL-Cowork presents a full training recipe for hybrid computer-use agents.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers introduced Mage-VL-Cowork, a 4B hybrid computer-use agent trained using a progressive five-stage curriculum.",
+          "quote": "We present Mage-VL-Cowork, a 4B hybrid CUA trained from a general multimodally aligned checkpoint through an end-to-end, progressive five-stage curriculum"
+        },
+        {
+          "claim": "Mage-CUA-Forge synthesized 293,806 desktop and web tasks across 6,915 skills while cutting recurring per-task expenditure by 82.6%.",
+          "quote": "synthesizing 293,806 desktop and web tasks across 6,915 skills while reducing recurring per-task expenditure by 82.6%."
+        },
+        {
+          "claim": "Mage-VL-Cowork-4B achieved a score of 66.0% on OSWorld-Verified.",
+          "quote": "Mage-VL-Cowork-4B finally climbs to 66.0% on OSWorld-Verified through different training stages"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "300,000",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        },
+        {
+          "text": "nearly 300,000",
+          "problem": "The facts state a specific number of 293,806, not 'nearly 300,000'.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "a98fb4b47270",
+      "title": "Li2SAO Enhances Asynchronous Reinforcement Learning for LLMs",
+      "summary": "The authors introduce Li2SAO to improve lightweight single-rollout asynchronous reinforcement learning optimization by using group-relative actor-critic bootstrapping. Experiments demonstrate that Li2SAO successfully matches or exceeds GRPO in early training stages and improves the final performance ceiling.",
+      "why_it_matters": "This optimization technique gives you a way to improve post-training efficiency and final performance for large language models.",
+      "url": "https://arxiv.org/abs/2610.40726",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "New asynchronous RL optimization method using group-relative actor-critic bootstrapping for LLMs.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Asynchronous reinforcement learning is increasingly used for post-training large language models to enhance training efficiency.",
+          "quote": "Asynchronous reinforcement learning (RL) is becoming a mainstream paradigm for post-training large language models (LLMs), as it improves training efficiency"
+        },
+        {
+          "claim": "The authors introduce Li2SAO, which improves upon lightweight single-rollout asynchronous optimization by using group-relative actor-critic bootstrapping.",
+          "quote": "we propose Li$^{2}$SAO, which Lifts Light Single-rollout Asynchronous Optimization with group-relative actor-critic bootstrapping"
+        },
+        {
+          "claim": "Experiments demonstrate that Li2SAO successfully matches or exceeds GRPO in early training stages and improves the final performance ceiling.",
+          "quote": "Experiments show that Li$^{2}$SAO catches up with or surpasses GRPO in early training and further raises the later performance ceiling."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "89307f734cfd",
+      "title": "OmniDiff Installation and Git Difftool Integration",
+      "summary": "Users can install OmniDiff using Cargo, Homebrew, .deb packages, or Nix. It features a headless or batch mode that prints the diff as plain text for use in scripts or CI, and can be configured as a git difftool backend by running an interactive setup wizard or specific git config commands.",
+      "why_it_matters": "You can integrate this tool into your CI pipelines and local workflows using flexible installation options and automated git configuration.",
+      "url": "https://github.com/ivankovic/omnidiff",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OmniDiff offers a fast, content-aware open-source Git difftool built in Rust.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Users can install OmniDiff using Cargo, Homebrew, .deb packages, or Nix.",
+          "quote": "Prebuilt binaries for Linux, macOS (Intel and Apple Silicon), and Windows are attached to every GitHub release."
+        },
+        {
+          "claim": "OmniDiff features a headless or batch mode that prints the diff as plain text for use in scripts or CI.",
+          "quote": "omnidiff --headless BEFORE AFTER, or its synonym --batch, prints the diff as plain text, with optional color, instead of opening the TUI."
+        },
+        {
+          "claim": "Users can configure OmniDiff as a git difftool backend by running an interactive setup wizard or specific git config commands.",
+          "quote": "OmniDiff is a git difftool backend. Run the interactive setup wizard, which asks whether to configure it globally or for the current repository only"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "Open-Source Content-Aware Git Difftool in Rust",
+          "problem": "The facts do not state that OmniDiff is open-source, content-aware, or written in Rust.",
+          "by": "critic"
+        },
+        {
+          "text": "open-source, super fast, content-aware Git difftool written in Rust",
+          "problem": "The facts do not mention open-source, 'super fast', content-aware, or written in Rust.",
+          "by": "critic"
+        },
+        {
+          "text": "fast, Rust-based",
+          "problem": "The facts do not state the tool is fast or Rust-based.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "f3538b6fb36f",
+      "title": "Granite Switch 4.1.1 Patch Release Updates ASR and Decision Adapter",
+      "summary": "Granite Switch 4.1.1 was released as a fully backwards compatible patch release that keeps the base model untouched. The update includes an improved Granite Speech ASR model supporting multilingual speech-to-text across 10 languages and an updated Decision adapter in granitelib-core that improves performance on the Jev Decision Index test set.",
+      "why_it_matters": "You can drop in this patch update to gain multilingual speech-to-text and better decision-making capabilities without retraining your base models.",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Granite Switch 4.1.1 introduces modular software-like updates for LLMs.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Hugging Face released Granite Switch 4.1.1 as a patch release that is fully backwards compatible.",
+          "quote": "Granite Switch 4.1.1 is a patch release. The version number means what it means in software: fully backwards compatible with 4.1"
+        },
+        {
+          "claim": "The update includes an improved Granite Speech ASR model supporting multilingual speech-to-text across 10 languages.",
+          "quote": "Updated Granite Speech ASR model — multilingual speech-to-text across 10 languages with native punctuation and capitalization"
+        },
+        {
+          "claim": "The Decision adapter in granitelib-core was updated to improve overall performance on the Jev Decision Index test set.",
+          "quote": "Updated Decision adapter in granitelib-core — featuring improved overall performance on the Jev Decision Index test set."
+        },
+        {
+          "claim": "The base model remained untouched during this update, as only the new ASR model and Decision adapter were trained.",
+          "quote": "Apart from training the new ASR model and Decision adapter, nothing was recomputed: the base model is untouched."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Hugging Face released Granite Switch 4.1.1",
+          "problem": "The facts state Granite Switch 4.1.1 was released, but do not state that Hugging Face released it.",
+          "by": "critic"
+        }
+      ]
+    }
+  ]
+}
