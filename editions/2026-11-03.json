@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "day": "2026-11-03",
+  "started": "2026-11-03T09:27:05Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "AI developments span antibiotic discovery awards, wearable audio features, recursive self-improvement warnings, automated fine-tuning funding, and subvocal interface hardware.",
+  "fetch": {
+    "fetched": 1218,
+    "unique": 1056,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 381,
+      "arXiv cs.AI": 816,
+      "Hugging Face Blog": 2,
+      "TechCrunch AI": 14,
+      "MIT News AI": 2,
+      "Hacker News": 3
+    },
+    "seconds": 61.2
+  },
+  "candidates": 31,
+  "seconds": {
+    "editor": 140.4,
+    "researcher": 24.7,
+    "writer": 6.2,
+    "critic": 13.1
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "624e23d0cdf0",
+      "title": "Researchers Recognized for AI-Enabled Antibiotic Discovery",
+      "summary": "An award honors researchers for their work in AI-enabled antibiotic discovery to fight drug-resistant pathogens. Their notable breakthroughs include publishing the discovery of halicin in 2020 and identifying the narrow-spectrum antibiotic abaucin using machine learning in 2023.",
+      "why_it_matters": "These machine learning methods provide a practical approach for discovering new antibiotics to combat drug-resistant pathogens.",
+      "url": "https://news.mit.edu/2026/regina-barzilay-jim-collins-win-pritzker-prize-ai-and-science-research-excellence-1102",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Regina Barzilay and Jim Collins win Pritzker Prize for AI-enabled antibiotic discovery.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "The award honors their work in AI-enabled antibiotic discovery to fight drug-resistant pathogens.",
+          "quote": "pioneering AI-enabled antibiotic discovery, integrating deep learning, bioengineering, and experimental validation to identify novel antibacterial candidates against drug-resistant pathogens."
+        },
+        {
+          "claim": "In 2020, they published a breakthrough describing halicin, the first AI-discovered antibiotic.",
+          "quote": "The paper described the first artificial intelligence-discovered antibiotic, called halicin"
+        },
+        {
+          "claim": "The researchers later used machine learning to identify abaucin in 2023, a narrow-spectrum antibiotic.",
+          "quote": "use machine learning to identify abaucin in 2023, a narrow-spectrum antibiotic demonstrating effectiveness against A. baumannii"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "Pritzker Prize for AI and Science Research Excellence",
+          "problem": "Name of the prize/award is not mentioned in the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "0e5b1d74afc9",
+      "title": "Apple Watch Begins Beta Testing Audio Intelligence Features",
+      "summary": "Apple is beta testing new 'Audio Intelligence' features on the Apple Watch, including sound recognition, song recognition, Live Rewind, and Siri Recaps. Live Rewind provides a text snippet of the last 15 seconds, while Siri Recaps summarizes conversations without saving raw audio.",
+      "why_it_matters": "Engineers building ambient audio applications must account for privacy-preserving, on-device summarization patterns similar to Apple's implementation.",
+      "url": "https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Apple Watch AI features for conversation recap enter beta testing.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Apple is rolling out beta testing for its new 'Audio Intelligence' AI features on the Apple Watch.",
+          "quote": "Apple’s AI-powered “Audio Intelligence” technology for the Apple Watch is now rolling out into beta testing"
+        },
+        {
+          "claim": "The new suite includes four opt-in features: sound recognition, song recognition, Live Rewind, and Siri Recaps.",
+          "quote": "The technology includes a set of four opt-in AI features that allow Apple Watch Series 12 wearers to detect important sounds, identify songs, catch up on conversations, and take notes."
+        },
+        {
+          "claim": "Live Rewind lets users double-press the digital crown to view a text snippet of what was said in the last 15 seconds.",
+          "quote": "you could double-press on the Watch’s digital crown to see what was said in the last 15 seconds as a text snippet"
+        },
+        {
+          "claim": "Siri Recaps summarizes conversations with a short sentence and bullet points without saving raw audio or identifying speakers.",
+          "quote": "Apple says it’s not identifying speakers, saving the raw audio, or providing word-for-word transcriptions. Instead, the feature summarizes a conversation with a short sentence and some bullet points"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "55dd7e97ced5",
+      "title": "Anthropic Warns It Is Approaching Recursive Self-Improvement Capability",
+      "summary": "Anthropic disclosed in a regulatory filing that it is nearing the threshold of creating AI capable of recursive self-improvement (RSI). While current models have not crossed this threshold, the company noted it previously used AI to develop models with unrecognized capability leaps.",
+      "why_it_matters": "Approaching RSI capabilities necessitates stricter internal safety protocols and automated monitoring frameworks for advanced model development.",
+      "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic warns industry is nearing recursive self-improvement capability.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic disclosed in a regulatory filing that it is approaching the capability to create AI that performs recursive self-improvement (RSI).",
+          "quote": "The filing seems to warn that the company is on the cusp of creating a model capable of recursive self-improvement (RSI)."
+        },
+        {
+          "claim": "The company admitted it has previously used AI to develop models with capability leaps it did not immediately recognize.",
+          "quote": "it has already used AI to develop new models whose leaps in capability it didn’t recognize at the time"
+        },
+        {
+          "claim": "Anthropic's internal estimates indicate it may soon meet its Responsible Scaling Policy's definition of dramatically accelerated progress.",
+          "quote": "our internal estimates and our expectations regarding future models, rather than our current models, indicate that we may imminently meet our Responsible Scaling Policy’s definition of “dramatically accelerated progress attributable to AI.”"
+        },
+        {
+          "claim": "The company stated that none of its current models have crossed the RSI threshold yet.",
+          "quote": "We have not designated any of our current models as exceeding this threshold, and we continue to assess the underlying data."
+        },
+        {
+          "claim": "Anthropic promised to maintain human supervision in the development of successive model generations.",
+          "quote": "We do not anticipate being able to safely use Claude to fully autonomously design and build successive generations of frontier models without meaningful human supervision or understanding"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "19ce29ebfa96",
+      "title": "Trajectory Raises $45 Million to Automate AI Model Fine-Tuning",
+      "summary": "Startup Trajectory has raised $45 million in a Series A round led by Sequoia at a $300 million valuation. The platform automates fine-tuning and continual learning to allow nontechnical professionals like lawyers and doctors to improve AI models.",
+      "why_it_matters": "Automated fine-tuning platforms lower the barrier for domain experts to customize models without relying on dedicated machine learning engineers.",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Trajectory raises $45M at a $300M valuation for accessible AI model training.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Startup Trajectory raised $45 million in a Series A funding round.",
+          "quote": "The 18-person company just announced that it raised $45 million in a Series A round"
+        },
+        {
+          "claim": "The funding values Trajectory at $300 million.",
+          "quote": "raised $45 million in a Series A round at a $300 million valuation"
+        },
+        {
+          "claim": "The Series A round was led by Sequoia.",
+          "quote": "led by Sequoia, with participation from Nvidia, Bessemer Venture Partners, and Bain Capital Ventures."
+        },
+        {
+          "claim": "Trajectory aims to automate the AI model fine-tuning and continual learning process.",
+          "quote": "Trajectory, a startup founded about a year ago by three Stanford classmates with experience at Google DeepMind and Apple, wants to automate that process"
+        },
+        {
+          "claim": "The platform allows nontechnical professionals like lawyers and doctors to improve AI models automatically.",
+          "quote": "With Trajectory, lawyers, doctors, and other specialists can improve the models near automatically themselves"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "a31b3b7224a8",
+      "title": "Subvocal Introduces RF-Based Smart Glasses for Silent Speech-to-Text",
+      "summary": "The Subvocal Company is building smart glasses that use radio frequency technology to decode silently mouthed words into text by tracking tongue, lip, and soft palate movements. The startup opened preorders for an initial batch of 500 units and plans to ship in early 2027.",
+      "why_it_matters": "RF sensing embedded in standard form-factor wearables introduces a novel hardware-level input modality for hands-free computing.",
+      "url": "https://news.ycombinator.com/item?id=50340088",
+      "source": "news.ycombinator.com via Hacker News",
+      "domain": "news.ycombinator.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Show HN: Subvocal smart glasses enable silent speech computer interaction.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Aarush and Arnav from The Subvocal Company are building smart glasses that allow users to silently mouth words and have them decoded into text.",
+          "quote": "We’re building smart glasses that let you talk to your computer without talking out loud."
+        },
+        {
+          "claim": "The founders started the project at Stanford’s TreeHacks in February after previously studying computer science at Georgia Tech.",
+          "quote": "At Stanford’s TreeHacks in February, we decided to build the most technically ridiculous thing we could think of."
+        },
+        {
+          "claim": "The device uses radio frequency (RF) technology embedded in glasses frames to detect movements of the tongue, lips, and soft palate.",
+          "quote": "So we switched to RF and built the glasses you see now. They emit radio waves, similar to Bluetooth, that pass through your face."
+        },
+        {
+          "claim": "The company plans to ship its first batch of product in the first quarter of 2027.",
+          "quote": "turn our prototype glasses into the slick product on our website and ship in Q1 2027."
+        },
+        {
+          "claim": "Preorders have been opened for an initial batch of 500 units featuring a $200 discount.",
+          "quote": "we’ve opened preorders for our first batch of 500 units, with a $200 discount off the final price."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

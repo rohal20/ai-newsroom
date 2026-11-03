@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Monday 02 November 2026](2026-11-02.md): Recent developments include China's proposed AI export controls, a new 4B hybrid computer-use agent training recipe, asynchronous RL optimization for LLMs, an open-source Rust Git difftool, and a modular Hugging Face patch release.
+**Latest:** [Tuesday 03 November 2026](2026-11-03.md): AI developments span antibiotic discovery awards, wearable audio features, recursive self-improvement warnings, automated fine-tuning funding, and subvocal interface hardware.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Tue 03 Nov 2026](2026-11-03.md) | AI developments span antibiotic discovery awards, wearable audio features, recursive self-improvement warnings, automated fine-tuning funding, and subvocal interface hardware. | 5 | 1 rewritten |
 | [Mon 02 Nov 2026](2026-11-02.md) | Recent developments include China's proposed AI export controls, a new 4B hybrid computer-use agent training recipe, asynchronous RL optimization for LLMs, an open-source Rust Git difftool, and a modular Hugging Face patch release. | 5 | 4 rewritten |
 | [Sun 01 Nov 2026](2026-11-01.md) | Recent updates include the release of Mistral Large 4, a major ChatGPT account takeover vulnerability fix, a revised OpenAI funding target, and new modular models and patches for speech and decision tasks. | 5 | 1 rewritten |
 | [Sat 31 Oct 2026](2026-10-31.md) | Recent developments highlight security risks in AI extensions, deskilling concerns from automation, massive legacy code rewrites using unlimited AI tokens, and growing financial strain and debt accumulation driven by the AI infrastructure spending boom. | 5 | 1 rewritten |
