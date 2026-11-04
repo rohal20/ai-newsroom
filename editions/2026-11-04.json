@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "day": "2026-11-04",
+  "started": "2026-11-04T09:00:50Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "AI developments span soaring startup valuations, silent plugin installations, cryptographic model verification, award-winning drug discovery, and cost-saving reasoning compaction.",
+  "fetch": {
+    "fetched": 606,
+    "unique": 544,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 162,
+      "arXiv cs.AI": 413,
+      "Hugging Face Blog": 4,
+      "TechCrunch AI": 17,
+      "MIT News AI": 3,
+      "Hacker News": 7
+    },
+    "seconds": 13.2
+  },
+  "candidates": 38,
+  "seconds": {
+    "editor": 58.9,
+    "researcher": 25.9,
+    "writer": 5.1,
+    "critic": 28.3
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "c69664e34de2",
+      "title": "Fal Announces Series E and F Rounds Raising $1.65 Billion",
+      "summary": "Fal announced its Series E and F rounds simultaneously, having raised a combined $1.65 billion across both. The company, co-founded in 2021 by Burkay Gur and Gorkem Yurtseven, surpassed $800 million in annualized revenue earlier this year.",
+      "why_it_matters": "Fal now has $1.65 billion in new capital from its simultaneous Series E and F rounds to support its operations.",
+      "url": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "AI inference startup Fal doubles valuation to $16B in massive funding round.",
+      "status": "rewritten",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "The company announced its Series E and F rounds simultaneously, having raised a combined $1.65 billion across both.",
+          "quote": "The startup announced its Series E and F rounds at the same time, noting that a combined $1.65 billion was raised across both."
+        },
+        {
+          "claim": "Fal surpassed $800 million in annualized revenue earlier this year.",
+          "quote": "Fal surpassed $800 million in annualized revenue earlier this year, Bloomberg’s report noted."
+        },
+        {
+          "claim": "Fal was co-founded in 2021 by Burkay Gur and Gorkem Yurtseven.",
+          "quote": "Fal was co-founded in 2021 by Burkay Gur, a former Coinbase machine learning leader and Oracle engineer, and Gorkem Yurtseven"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "$16B Valuation",
+          "problem": "Valuation amount is not in the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "following a surge in demand",
+          "problem": "Cause is not in the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "to $16 billion",
+          "problem": "Valuation amount is not in the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "da9a5824109f",
+      "title": "Postman Desktop Application Auto-Installs Codex and Claude AI Plugins",
+      "summary": "The Postman desktop application automatically installs Codex and Claude AI plugins. Details of this behavior were discussed in a GitHub issue and a Hacker News submission.",
+      "why_it_matters": "Users of the Postman desktop application need to check their environments for these automatically installed AI plugins.",
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Postman sparks major backlash for silently auto-installing AI plugins sharing API data.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Postman desktop application auto-installs Codex and Claude AI plugins.",
+          "quote": "[SEVERE] Desktop auto-installs Codex/Claude plugins"
+        },
+        {
+          "claim": "Article URL: https://github.com/postmanlabs/postman-app-support/issues/14370 Comments URL: https://news.ycombinator.com/item?id=50354960 Points: 1247 # Comments: 410",
+          "quote": "Article URL: https://github.com/postmanlabs/postman-app-support/issues/14370 Comments URL: https://news.ycombinator.com/item?id=50354960 Points: 1247 # Comments: 410"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "silently",
+          "problem": "Scope/manner is not in the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "These plugins attempt to share all API data from the user environment.",
+          "problem": "Statement is not supported by the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "f901cc10a3c4",
+      "title": "Anthropic Develops FlashProve to Cryptographically Verify AI Model Outputs",
+      "summary": "Anthropic is developing an open-source system called FlashProve to cryptographically verify which AI model generated a specific output using model fingerprints. The approach prevents labs from secretly substituting models without exposing private internal weights, though deployment plans do not currently exist.",
+      "why_it_matters": "You will eventually have cryptographic tooling available to independently verify model provenance and prevent covert model substitution.",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic is developing 'FlashProve' to cryptographically verify AI model identity responses.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic is developing an open-source system called FlashProve to cryptographically verify which AI model generated a specific output.",
+          "quote": "Anthropic is working on an open source system to verify which AI model produced a given output"
+        },
+        {
+          "claim": "The system is designed to stop AI labs from secretly substituting models to save money or fake better performance.",
+          "quote": "prevent an AI company from secretly swapping in a cheaper model to cut costs, or a more expensive model to inflate its performance results"
+        },
+        {
+          "claim": "FlashProve relies on model 'fingerprints' that enable verification without exposing the companies' private internal weights.",
+          "quote": "Crucially, the fingerprints don’t reveal a model’s weights, the internal numbers that define how it behaves and which closed-model makers like Anthropic and OpenAI keep private."
+        },
+        {
+          "claim": "Researchers have published the technical details and working code on GitHub, though there are no current plans to deploy it.",
+          "quote": "researchers released a detailed technical specification and working code for various elements of the system, which is publicly available under an open source license on GitHub."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "624e23d0cdf0",
+      "title": "Regina Barzilay and James Collins Win Pritzker Prize for AI-Enabled Antibiotic Discovery",
+      "summary": "Regina Barzilay and James Collins won the 2026 Pritzker Prize for AI in Science Research Excellence for their work in AI-enabled antibiotic discovery. Their integration of deep learning and experimental validation previously led to the identification of antibacterial candidates such as halicin and abaucin.",
+      "why_it_matters": "Generative AI tools are actively transforming drug discovery into a systematic design discipline capable of targeting drug-resistant pathogens.",
+      "url": "https://news.mit.edu/2026/regina-barzilay-jim-collins-win-pritzker-prize-ai-and-science-research-excellence-1102",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "MIT professors win Pritzker Prize for groundbreaking AI-enabled antibiotic discovery.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Regina Barzilay and James Collins won the 2026 Pritzker Prize for AI in Science Research Excellence for their work in AI-enabled antibiotic discovery.",
+          "quote": "Regina Barzilay, MIT’s School of Engineering Distinguished Professor of AI and Health, and James Collins, MIT’s Termeer Professor of Medical Engineering and Science, are the recipients of the 2026 Pritzker Prize for AI in Science Research Excellence."
+        },
+        {
+          "claim": "The award acknowledges their integration of deep learning, bioengineering, and experimental validation to find new antibacterial candidates against drug-resistant pathogens.",
+          "quote": "pioneering AI-enabled antibiotic discovery, integrating deep learning, bioengineering, and experimental validation to identify novel antibacterial candidates against drug-resistant pathogens."
+        },
+        {
+          "claim": "Their notable discoveries include halicin, identified in 2020 using a deep learning model trained on 2,500 molecules.",
+          "quote": "The paper described the first artificial intelligence-discovered antibiotic, called halicin, named for the fictional AI system HAL 9000 in Stanley Kubrick’s 1968 film 2001: A Space Odyssey."
+        },
+        {
+          "claim": "They also used machine learning to identify abaucin in 2023, which is a narrow-spectrum antibiotic effective against A. baumannii.",
+          "quote": "use machine learning to identify abaucin in 2023, a narrow-spectrum antibiotic demonstrating effectiveness against A. baumannii"
+        },
+        {
+          "claim": "Generative AI is shifting antibiotic discovery from a trial-and-error strategy to a design tool that could yield lifesaving drugs.",
+          "quote": "With generative AI, we're now seeing a shift from AI being used as a tool for discovery to AI being used as a design tool."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "ebfc3ec6a24e",
+      "title": "Compacting Reasoning Histories Reduces Costs and Verbosity in Open-Weight Models",
+      "summary": "Researchers tested whether open-weight models can use rewritten, compact state records of prior reasoning to reduce verbosity without retraining. The results show that accepted compact histories lower financial costs in software-agents, though effectiveness varies by model and compressor.",
+      "why_it_matters": "You can potentially lower operational inference costs for software agents by implementing compact reasoning history rewrites.",
+      "url": "https://arxiv.org/abs/2611.03852",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "New research explores causal effects of reasoning history compaction on agent costs.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers tested whether open-weight models can use rewritten, compact state records of prior reasoning to reduce verbosity without retraining.",
+          "quote": "Our intervention rewrites prior reasoning into compact state records before pending tool results are revealed"
+        },
+        {
+          "claim": "Using accepted compact histories generally leads to shorter future reasoning processes in the tested models.",
+          "quote": "accepted compact histories usually shorten future reasoning"
+        },
+        {
+          "claim": "Compacting reasoning histories can lower overall financial costs when deployed in software-agents.",
+          "quote": "In software-agent deployments, compaction can reduce total spending"
+        },
+        {
+          "claim": "The overall effectiveness, including task quality and time, varies based on the specific model and compressor used.",
+          "quote": "task quality and rewrite-inclusive time depend on the target and compressor"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
