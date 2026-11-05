@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "day": "2026-11-05",
+  "started": "2026-11-05T09:22:36Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Meta acquires AI coding startup Conductor, while new releases include Qualcomm's AI accelerator, a document-to-JSON field extractor, StateBench for long-document tracking, and Palette for automated slide generation.",
+  "fetch": {
+    "fetched": 544,
+    "unique": 490,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 159,
+      "arXiv cs.AI": 359,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 16,
+      "MIT News AI": 3,
+      "Hacker News": 2
+    },
+    "seconds": 15.6
+  },
+  "candidates": 34,
+  "seconds": {
+    "editor": 52.0,
+    "researcher": 120.0,
+    "writer": 12.7,
+    "critic": 22.4
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "70e60e39b208",
+      "title": "Meta Acquires AI Coding Startup Conductor",
+      "summary": "Meta has acquired the AI coding startup Conductor, which was founded in 2024 by Charlie Holtz. Following the acquisition, Conductor's cloud service is scheduled to shut down on November 20.",
+      "why_it_matters": "Developers relying on Conductor's cloud service must migrate away before it shuts down on November 20.",
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Meta acquires AI coding startup Conductor to boost agentic software engineering.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Meta has acquired the AI coding startup Conductor.",
+          "quote": "Meta has acquired Conductor, an AI coding startup that allows users to spin up software projects"
+        },
+        {
+          "claim": "Conductor was founded in 2024 by Charlie Holtz.",
+          "quote": "Conductor, founded in 2024, only launched its core product just last summer."
+        },
+        {
+          "claim": "Conductor's cloud service is scheduled to shut down on November 20.",
+          "quote": "Conductor’s cloud service, which will shut down on November 20, after which the company will begin deleting user cloud data."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "9082a853a58f",
+      "title": "Qualcomm Cloud AI 100 Ultra Product Page",
+      "summary": "Qualcomm provides information on its Cloud AI 100 Ultra product page for data center applications. The submission has garnered 143 points and 56 comments on Hacker News.",
+      "why_it_matters": "You can review the official Qualcomm product page to see the currently available details regarding the Cloud AI 100 Ultra.",
+      "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+      "source": "qualcomm.com via Hacker News",
+      "domain": "qualcomm.com",
+      "is_paper": false,
+      "text_source": "feed",
+      "editor_reason": "Qualcomm announces Cloud AI 100 Ultra, a 150W accelerator with 128GB memory.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Article URL: https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra Comments URL: https://news.ycombinator.com/item?id=50370654 Points: 143 # Comments: 56",
+          "quote": "Article URL: https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra Comments URL: https://news.ycombinator.com/item?id=50370654 Points: 143 # Comments: 56"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Qualcomm released details on its Cloud AI 100 Ultra, a 150W AI accelerator card equipped with 128GB of memory running at 548GB/s.",
+          "problem": "Introduces specifications (150W, 128GB, 548GB/s) and product details not present in the verified facts.",
+          "by": "critic"
+        },
+        {
+          "text": "The hardware targets data center workloads requiring high-bandwidth acceleration.",
+          "problem": "States target use cases not supported by the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "You can now evaluate a 150W data center accelerator option featuring 128GB of capacity at 548GB/s for your server deployments.",
+          "problem": "Introduces unverified hardware specs and advice not supported by the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "5afc49da7bd4",
+      "title": "Dharma Field Extractor Converts Document Images to Structured JSON",
+      "summary": "Developers built a 2-billion-parameter model called the Field Extractor that takes document images and returns structured JSON based on open requests or specific schemas. The base model used is DharmaOCR-LITE v1.1, which was trained with a LoRA adapter on 43,384 training examples across three data streams.",
+      "why_it_matters": "You can use this model to extract structured JSON directly from document images based on specific schemas.",
+      "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face releases Dharma Field Extractor for structured JSON output from documents.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "The developers built a 2-billion-parameter model called the Field Extractor that takes document images and returns structured JSON based on open requests or specific schemas.",
+          "quote": "A 2-billion-parameter model that extracts exactly the fields you ask for, from any document type"
+        },
+        {
+          "claim": "The base model used is DharmaOCR-LITE v1.1, which was trained with a LoRA adapter on 43,384 training examples across three data streams.",
+          "quote": "The base model is DharmaOCR-LITE v1.1, a new 2-billion-parameter version optimized from the one in the paper and already specialized for OCR through supervised fine-tuning and DPO."
+        }
+      ],
+      "dropped_facts": 2,
+      "first_issues": [
+        {
+          "text": "2B",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        }
+      ]
+    },
+    {
+      "id": "a55665cf4895",
+      "title": "Hugging Face Introduces StateBench for Long-Document Tracking",
+      "summary": "Hugging Face introduced StateBench, a new benchmark with four difficulty levels designed to evaluate how language models track evolving entity information in long documents. Researchers found that frontier models, including specific versions of Gemini, Claude, and GPT, still struggle and break down on harder forms of state tracking as input lengths increase.",
+      "why_it_matters": "You need to be aware that current frontier language models struggle with complex state tracking over long inputs when building or using AI applications.",
+      "url": "https://huggingface.co/blog/allenai/statebench",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New StateBench evaluates how language models track state changes over long documents.",
+      "status": "rewritten",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "Hugging Face introduced StateBench, a new benchmark designed to evaluate how well language models track information about entities as they evolve in long documents.",
+          "quote": "We’re introducing StateBench, a benchmark for long-context state tracking—how well language models keep track of information about entities in long documents as they evolve."
+        },
+        {
+          "claim": "StateBench features four distinct difficulty levels for state update operations: r-trivial, aperiodic, soluble, and general finite.",
+          "quote": "StateBench consists of four difficulty levels that permit increasingly complex state update operations."
+        },
+        {
+          "claim": "Researchers found that frontier models, including specific versions of Gemini, Claude, and GPT, still struggle and break down on harder forms of state tracking as input lengths increase.",
+          "quote": "frontier models including Gemini 3.8 Flash, Claude Opus 5.5, and GPT-6 Sol and Luna still break down on harder forms of state tracking as inputs grow longer."
+        },
+        {
+          "claim": "The evaluation tested open pretrained models including 7-billion-parameter models Olmo 3 (a transformer) and Olmo Hybrid (featuring Gated DeltaNet layers).",
+          "quote": "These included two 7-billion-parameter models, Olmo 3 (a transformer) and Olmo Hybrid (which adds Gated DeltaNet layers), along with smaller models with 275 million and 2.7 billion parameters."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "7B",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        }
+      ]
+    },
+    {
+      "id": "bc4177032a04",
+      "title": "Palette Fine-Tunes 20B Model for Design-Compliant Slide Generation",
+      "summary": "Researchers fine-tuned a 20B open-weight model named Palette on synthetic data following the IBM Design Language, allowing it to rank first on two of three PresentBench domains. Because slide contexts are fixed beforehand, its parallelized coding stage runs roughly 6 to 7 times faster.",
+      "why_it_matters": "You can leverage Palette to generate design-compliant slide decks efficiently using a 20B open-weight model trained on specific styling rules.",
+      "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Palette teaches small models to build presentation decks in custom design languages.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers fine-tuned a 20B open-weight model called Palette to build slide decks following a specific design language.",
+          "quote": "We fine-tuned a 20B model to build decks the way people do: a designer plans the deck and a coder draws each slide."
+        },
+        {
+          "claim": "Palette's training data follows the IBM Design Language, allowing it to rank first on two out of three domains on PresentBench.",
+          "quote": "Its training data follows the IBM Design Language, and on PresentBench it ranks first on two of the three domains we measured."
+        },
+        {
+          "claim": "Because slide contexts are fixed beforehand, the coding stage runs in parallel and is approximately 6 to 7 times faster.",
+          "quote": "the coder calls run in parallel, one per slide, which makes the coding stage about 6–7× faster."
+        },
+        {
+          "claim": "The researchers generated synthetic training data consisting of around 1,000 decks covering roughly 10,000 slides using a large open teacher.",
+          "quote": "We generated around 1000 decks covering roughly 10,000 slides."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    }
+  ]
+}
