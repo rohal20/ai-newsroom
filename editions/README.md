@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Thursday 05 November 2026](2026-11-05.md): Meta acquires AI coding startup Conductor, while new releases include Qualcomm's AI accelerator, a document-to-JSON field extractor, StateBench for long-document tracking, and Palette for automated slide generation.
+**Latest:** [Friday 06 November 2026](2026-11-06.md): Recent developments cover privacy issues in developer tools, major security acquisitions, new open-weight world simulation models, and methods to improve LLM inference reproducibility and reinforcement learning efficiency.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Fri 06 Nov 2026](2026-11-06.md) | Recent developments cover privacy issues in developer tools, major security acquisitions, new open-weight world simulation models, and methods to improve LLM inference reproducibility and reinforcement learning efficiency. | 5 | 1 rewritten |
 | [Thu 05 Nov 2026](2026-11-05.md) | Meta acquires AI coding startup Conductor, while new releases include Qualcomm's AI accelerator, a document-to-JSON field extractor, StateBench for long-document tracking, and Palette for automated slide generation. | 5 | 3 rewritten |
 | [Wed 04 Nov 2026](2026-11-04.md) | AI developments span soaring startup valuations, silent plugin installations, cryptographic model verification, award-winning drug discovery, and cost-saving reasoning compaction. | 5 | 2 rewritten |
 | [Tue 03 Nov 2026](2026-11-03.md) | AI developments span antibiotic discovery awards, wearable audio features, recursive self-improvement warnings, automated fine-tuning funding, and subvocal interface hardware. | 5 | 1 rewritten |
