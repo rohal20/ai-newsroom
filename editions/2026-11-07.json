@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "day": "2026-11-07",
+  "started": "2026-11-07T08:40:42Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments include Google's release of Gemini Omni 1.2 Flash with lower pricing and native video creation, a massive funding round and valuation for OpenAI, NVIDIA's new Cosmos 3 open models for interactive world simulation, advancements in agent memory architectures by Anthropic and researchers, and the demonstration of a Firecracker VM escape vulnerability.",
+  "fetch": {
+    "fetched": 26,
+    "unique": 26,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 6,
+      "TechCrunch AI": 12,
+      "MIT News AI": 2,
+      "Hacker News": 6
+    },
+    "seconds": 2.4
+  },
+  "candidates": 22,
+  "seconds": {
+    "editor": 109.1,
+    "researcher": 369.2,
+    "writer": 7.1,
+    "critic": 38.9
+  },
+  "critic_rounds": 1,
+  "stories": [
+    {
+      "id": "63c3d56bc72b",
+      "title": "Google Releases Gemini Omni 1.2 Flash with Lower Pricing and Native Video Creation",
+      "summary": "Google has made Gemini Omni 1.2 Flash generally available across the Gemini API and Gemini for business with a 30% price drop. The updated model also introduces native video creation for clips up to 15 seconds long.",
+      "why_it_matters": "You can now generate longer video clips and integrate multimodal capabilities at a lower cost of $0.07 per second for 720p video.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google introduces Gemini Omni 1.2 Flash, a major new model release for developers.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google rolled out Gemini Omni 1.2 Flash, making it generally available across the Gemini API and Gemini for business.",
+          "quote": "Today, we’re rolling out Gemini Omni 1.2 Flash, and making it generally available across the Gemini API and Gemini for business."
+        },
+        {
+          "claim": "The price has been dropped by 30% compared to Gemini Omni 1.1, now priced at $0.07 per second for 720p video.",
+          "quote": "We have dropped the price 30% from Gemini Omni 1.1 making it available at $0.07 per second for 720p video."
+        },
+        {
+          "claim": "The updated model introduces native video creation for clips up to 15 seconds long, increasing from the previous 10-second limit.",
+          "quote": "You can now generate and edit videos natively up to 15 seconds long, up from 10 seconds with Omni 1.1."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "314bd089789a",
+      "title": "OpenAI Raises $11 Billion at a $1.25 Trillion Valuation",
+      "summary": "OpenAI has secured $11 billion in a new funding round that values the company at $1.25 trillion. The organization is currently expected to hold an IPO next year following a delay from this year.",
+      "why_it_matters": "This massive capital injection supports OpenAI's continued scaling as it prepares for a public market debut.",
+      "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OpenAI reportedly raises $11B in massive funding round at a historic $1.25T valuation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "OpenAI has raised $11 billion in a new funding round.",
+          "quote": "OpenAI has reportedly raised $11 billion so far in a new funding round"
+        },
+        {
+          "claim": "The funding round values OpenAI at $1.25 trillion.",
+          "quote": "that values the AI lab at $1.25 trillion."
+        },
+        {
+          "claim": "OpenAI is currently expected to hold an IPO next year after delaying plans to go public this year.",
+          "quote": "There are expectations that the company will IPO next year at some point."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "e8690f74b67f",
+      "title": "NVIDIA Introduces New Cosmos 3 Open Models for Interactive World Simulation",
+      "summary": "NVIDIA released four new open-weight checkpoints for the Cosmos 3 model family, tailored for interactive world simulation and driving scenes. These post-trained Nano models feature 16 billion trainable parameters and use OpenMDW1.1 for commercial and non-commercial licensing.",
+      "why_it_matters": "You can utilize these open-weight models under OpenMDW1.1 terms for building simulation and driving applications.",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "NVIDIA releases Cosmos 3 open models for interactive physical world simulation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "NVIDIA introduced four new open-weight checkpoints to its Cosmos 3 model family for interactive world simulation and driving scenes.",
+          "quote": "NVIDIA Cosmos world model development platform adds four new open-weight checkpoints to its Cosmos 3 model family"
+        },
+        {
+          "claim": "All four new models are post-trained examples of Cosmos 3 Nano and feature 16 billion trainable parameters.",
+          "quote": "All four models are post-trained examples of Cosmos 3 Nano and have 16B trainable parameters."
+        },
+        {
+          "claim": "The models utilize OpenMDW1.1, which permits both commercial and non-commercial use under its terms.",
+          "quote": "The models use OpenMDW1.1, permitting commercial and non-commercial use under its terms."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "594105e3c519",
+      "title": "New Research Details Agent Memory and Offline Processing Techniques",
+      "summary": "Researchers proposed sleep-time compute and Anthropic implemented dreaming to help models like Claude reorganize context and maintain effective memory during offline periods. In testing, Claude Opus 5 closed the learning loop on the Continual Learning Bench 1.0, while Claude Sonnet 3.7 successfully managed hundreds of memory files while playing Pokémon Red.",
+      "why_it_matters": "These memory architectures and offline processing methods enable your AI agents to maintain persistent, long-term state across complex, multi-session tasks.",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "source": "anthropic.com via Hacker News",
+      "domain": "anthropic.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic publishes foundational research outlining the architectural components of agent memory.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers at Letta and UC Berkeley proposed sleep-time compute as a way for models to use idle time to reorganize context.",
+          "quote": "Researchers at Letta and UC Berkeley proposed sleep-time compute as a way for models to use idle time between interactions to reorganize their existing context."
+        },
+        {
+          "claim": "Anthropic uses a process called dreaming to help give Claude effective memory by reflecting on logs during offline periods.",
+          "quote": "We’ve found that dreaming has been a useful tool for helping us give Claude effective memory."
+        },
+        {
+          "claim": "In tests on the Continual Learning Bench 1.0, Claude Opus 5 was the first model to successfully close the learning loop using memory.",
+          "quote": "Claude Opus 5 was the first of these models to close the loop."
+        },
+        {
+          "claim": "During a test playing Pokémon Red, Claude Sonnet 3.7 wrote 413 memory files across 225 folders and earned one badge.",
+          "quote": "Ultimately, Sonnet 3.7 wrote 413 memory files across 225 folders and earned one badge"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "f441801c064c",
+      "title": "Researchers Demonstrate Firecracker VM Escape via KVM_RUN Vulnerability",
+      "summary": "Researchers achieved a virtual machine escape from Firecracker, resulting in root code execution on the host system. The exploit, designated as CVE-2026-99999, targets the return from the KVM_RUN system call to hijack saved registers.",
+      "why_it_matters": "If you rely on Firecracker microVMs for isolation, you must account for this host-level escape vector targeting KVM_RUN.",
+      "url": "https://pwn.ai/blog/firecracker-escape",
+      "source": "pwn.ai via Hacker News",
+      "domain": "pwn.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Critical VM escape vulnerability detailed in Firecracker, widely used for AI sandboxing.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers achieved a VM escape from Firecracker, obtaining root code execution on the host.",
+          "quote": "We escaped it and achieved code execution as root on the host."
+        },
+        {
+          "claim": "The exploit targets the return from the KVM_RUN system call to hijack the Firecracker thread's saved registers.",
+          "quote": "That made the return from KVM_RUN an attractive target."
+        },
+        {
+          "claim": "The attack methodology demonstrated a vulnerability identified as CVE-2026-99999.",
+          "quote": "This is a continuation to show CVE-2026-99999 on a Firecracker setup."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
