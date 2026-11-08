@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Saturday 07 November 2026](2026-11-07.md): Recent AI developments include Google's release of Gemini Omni 1.2 Flash with lower pricing and native video creation, a massive funding round and valuation for OpenAI, NVIDIA's new Cosmos 3 open models for interactive world simulation, advancements in agent memory architectures by Anthropic and researchers, and the demonstration of a Firecracker VM escape vulnerability.
+**Latest:** [Sunday 08 November 2026](2026-11-08.md): Recent developments include massive new funding and IPO delays for OpenAI, NVIDIA's release of open Cosmos 3 simulation models, secret leaks linked to coding agents, the shutdown of Microsoft Research's AI Frontiers group, and MIT's introduction of the CheMeleon molecular foundation model.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Sun 08 Nov 2026](2026-11-08.md) | Recent developments include massive new funding and IPO delays for OpenAI, NVIDIA's release of open Cosmos 3 simulation models, secret leaks linked to coding agents, the shutdown of Microsoft Research's AI Frontiers group, and MIT's introduction of the CheMeleon molecular foundation model. | 5 | 2 rewritten, 1 facts only |
 | [Sat 07 Nov 2026](2026-11-07.md) | Recent AI developments include Google's release of Gemini Omni 1.2 Flash with lower pricing and native video creation, a massive funding round and valuation for OpenAI, NVIDIA's new Cosmos 3 open models for interactive world simulation, advancements in agent memory architectures by Anthropic and researchers, and the demonstration of a Firecracker VM escape vulnerability. | 5 | all approved |
 | [Fri 06 Nov 2026](2026-11-06.md) | Recent developments cover privacy issues in developer tools, major security acquisitions, new open-weight world simulation models, and methods to improve LLM inference reproducibility and reinforcement learning efficiency. | 5 | 1 rewritten |
 | [Thu 05 Nov 2026](2026-11-05.md) | Meta acquires AI coding startup Conductor, while new releases include Qualcomm's AI accelerator, a document-to-JSON field extractor, StateBench for long-document tracking, and Palette for automated slide generation. | 5 | 3 rewritten |

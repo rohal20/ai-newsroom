@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "day": "2026-11-08",
+  "started": "2026-11-08T08:54:33Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments include massive new funding and IPO delays for OpenAI, NVIDIA's release of open Cosmos 3 simulation models, secret leaks linked to coding agents, the shutdown of Microsoft Research's AI Frontiers group, and MIT's introduction of the CheMeleon molecular foundation model.",
+  "fetch": {
+    "fetched": 15,
+    "unique": 15,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 4,
+      "MIT News AI": 1,
+      "Hacker News": 5
+    },
+    "seconds": 1.4
+  },
+  "candidates": 15,
+  "seconds": {
+    "editor": 10.7,
+    "researcher": 266.3,
+    "writer": 6.4,
+    "critic": 23.4
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "314bd089789a",
+      "title": "OpenAI Raises $11 Billion at $1.25 Trillion Valuation and Delays IPO",
+      "summary": "OpenAI has secured $11 billion in an ongoing funding round valuing the company at $1.25 trillion, though this falls short of its initial $30 billion target. The company has also delayed its anticipated public offering, with expectations now pointing to an IPO next year.",
+      "why_it_matters": "Changes in OpenAI's valuation and public offering timeline directly impact market dynamics and capital availability across the AI sector.",
+      "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Massive funding round valuing OpenAI at $1.25 trillion significantly shifts AI industry economics.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "OpenAI has raised $11 billion in a new funding round that values the company at $1.25 trillion.",
+          "quote": "OpenAI has reportedly raised $11 billion so far in a new funding round that values the AI lab at $1.25 trillion."
+        },
+        {
+          "claim": "The funding round is ongoing and could reach approximately $20 billion upon closing in the coming weeks.",
+          "quote": "The round is expected to close in the coming weeks and could total about $20 billion"
+        },
+        {
+          "claim": "The current fundraising figures fall short of OpenAI's earlier target to raise $30 billion.",
+          "quote": "The current figures fall well short of that target."
+        },
+        {
+          "claim": "OpenAI previously indicated plans to go public this year but delayed them, with expectations now pointing to an IPO next year.",
+          "quote": "OpenAI previously intimated that it would go public this year but subsequently delayed its plans."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "e8690f74b67f",
+      "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+      "summary": "NVIDIA released four new open-weight checkpoints for its Cosmos 3 model family to enable interactive world simulation and driving scene generation. All four new Cosmos 3 models are post-trained examples featuring 16 billion trainable parameters.",
+      "why_it_matters": "",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "NVIDIA releases open Cosmos 3 models for interactive physical world simulation.",
+      "status": "facts-only",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "NVIDIA released four new open-weight checkpoints for its Cosmos 3 model family to enable interactive world simulation and driving scene generation.",
+          "quote": "NVIDIA Cosmos world model development platform adds four new open-weight checkpoints to its Cosmos 3 model family for generating interactive world simulation"
+        },
+        {
+          "claim": "All four new Cosmos 3 models are post-trained examples featuring 16 billion trainable parameters.",
+          "quote": "All four models are post-trained examples of Cosmos 3 Nano and have 16B trainable parameters."
+        },
+        {
+          "claim": "The models are licensed under OpenMDW1.1, which permits both commercial and non-commercial use.",
+          "quote": "The models use OpenMDW1.1, permitting commercial and non-commercial use under its terms."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "16",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        }
+      ]
+    },
+    {
+      "id": "5186d80b7eef",
+      "title": "Hacker News Discussion Features Apiiro Blog on Coding Agents",
+      "summary": "A submission on Hacker News regarding coding agents leaking secrets received 369 points and 256 comments. The discussion links to an article from the Apiiro blog.",
+      "why_it_matters": "The community discussion points to insights regarding coding agents and leaked secrets from the Apiiro blog.",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source": "apiiro.com via Hacker News",
+      "domain": "apiiro.com",
+      "is_paper": false,
+      "text_source": "feed",
+      "editor_reason": "Critical security finding revealing automated agent workflows leaking credentials in public GitHub repos.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "The submission on Hacker News received 369 points and 256 comments.",
+          "quote": "Points: 369 # Comments: 256"
+        },
+        {
+          "claim": "The article is linked from the Apiiro blog regarding coding agents leaking secrets.",
+          "quote": "Article URL: https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again Comments URL: https://news.ycombinator.com/item?id=50407882"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Claude Code Feature Exposes Passwords in Public GitHub Files",
+          "problem": "Mentions Claude Code and passwords exposed in public GitHub files, which are not in the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "A Hacker News submission highlighted that Claude Code's \"Don't Ask Again\" feature resulted in passwords being exposed across 1,122 public GitHub files.",
+          "problem": "Includes specific details about Claude Code, 'Don't Ask Again' feature, and 1,122 public GitHub files that are not supported by the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "1eeaf5457cb1",
+      "title": "Microsoft Research Closes AI Frontiers Group Following Leadership Departures",
+      "summary": "The AI Frontiers sub-organization at Microsoft Research has been dissolved after its leadership team departed following a reorganization into Microsoft AI. The roughly 50-person group focused on organized research like agents left due to a disagreement with Microsoft AI's scaling-only philosophy.",
+      "why_it_matters": "The dissolution reflects ongoing cultural and strategic friction between foundational research teams and product-focused scaling mandates inside major tech labs.",
+      "url": "https://hunch.net/?p=13764006",
+      "source": "hunch.net via Hacker News",
+      "domain": "hunch.net",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Major strategic shift at Microsoft Research with the dissolution of its AI Frontiers group.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "The AI Frontiers sub-organization within Microsoft Research has been ended after its leaders left following a reorganization.",
+          "quote": "So AI Frontiers is over."
+        },
+        {
+          "claim": "AI Frontiers was a small sub-organization consisting of approximately 50 people focused on organized research efforts like agents.",
+          "quote": "particularly given the small size of AIF (~50 people)"
+        },
+        {
+          "claim": "In early September, the AI Frontiers group was reorganized into Microsoft AI.",
+          "quote": "In early September we were reorged into Microsoft AI."
+        },
+        {
+          "claim": "The author and other founding leadership team members chose to leave due to Microsoft AI's incompatible, scaling-only philosophy.",
+          "quote": "Every other founding AIF leadership team member seems to have come to a similar conclusion."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "ba5f1cdb14f5",
+      "title": "MIT Researchers Develop CheMeleon Machine-Learning Model",
+      "summary": "Researchers at MIT developed a new open-source machine-learning model called CheMeleon to predict the behavior and properties of molecules. Pharmaceutical companies have started adopting the foundation model to help make initial decisions on which molecules to pursue and reduce experimental testing.",
+      "why_it_matters": "Pharmaceutical companies can use this foundation model to help make initial decisions on molecule selection and drastically reduce the number of molecules that need to be experimentally tested.",
+      "url": "https://news.mit.edu/2026/how-to-predict-molecule-behavior-with-scant-data-1106",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "MIT introduces CheMeleon, a practical ML model predicting molecular behavior from sparse data.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers at MIT developed a new open-source machine-learning model called CheMeleon to predict the behavior and properties of molecules.",
+          "quote": "the open-source model the team developed, called CheMeleon, has already found regular use by several pharmaceutical companies."
+        },
+        {
+          "claim": "Pharmaceutical companies have started adopting CheMeleon as part of their company policy to help make initial decisions on which molecules to pursue.",
+          "quote": "Anytime you’re modeling a property, start with CheMeleon, that’s our new company policy"
+        },
+        {
+          "claim": "The new foundation model successfully outperforms other methods, helping to drastically reduce the number of molecules that need to be experimentally tested.",
+          "quote": "drastically reduces the number of molecules that need to be tested experimentally to accurately predict the properties of new molecules."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "to predict molecular behaviors and properties from scant data",
+          "problem": "Adds 'from scant data' which is not in the facts.",
+          "by": "critic"
+        }
+      ]
+    }
+  ]
+}
