@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "day": "2026-11-09",
+  "started": "2026-11-09T09:39:10Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments include Goldman Sachs restricting AI coding tools to non-engineers, Nvidia launching an independent board investigation regarding its CEO, and new AI models advancing physical, molecular, and interactive world simulations.",
+  "fetch": {
+    "fetched": 555,
+    "unique": 481,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 146,
+      "arXiv cs.AI": 397,
+      "Hugging Face Blog": 3,
+      "TechCrunch AI": 3,
+      "MIT News AI": 3,
+      "Hacker News": 3
+    },
+    "seconds": 10.2
+  },
+  "candidates": 28,
+  "seconds": {
+    "editor": 245.0,
+    "researcher": 25.3,
+    "writer": 5.2,
+    "critic": 31.1
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "a78801b83036",
+      "title": "Goldman Sachs restricts AI coding tools to engineers",
+      "summary": "Goldman Sachs has restricted Anthropic's Claude Code and Microsoft's GitHub to its engineers while cutting off traders and bankers. Internal guidance updated in October limits these AI coding tools following productivity and risk reviews.",
+      "why_it_matters": "Financial institutions are tightening access to AI coding assistants for non-technical staff based on internal risk and productivity assessments.",
+      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "source": "thestateofai.com via Hacker News",
+      "domain": "thestateofai.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Goldman Sachs restricts Claude Code for traders and bankers due to security/policy.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Goldman Sachs has restricted Anthropic's Claude Code and Microsoft's GitHub to its engineers, cutting off traders and bankers.",
+          "quote": "Goldman Sachs has restricted Anthropic's Claude Code and Microsoft's GitHub to its engineers, cutting off traders and bankers"
+        },
+        {
+          "claim": "Internal guidance updated in October limits the AI coding tools following productivity and risk reviews.",
+          "quote": "Internal guidance updated in October restricts Anthropic's Claude Code and Microsoft's GitHub to the bank's engineers"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "bc55171edc52",
+      "title": "Nvidia board investigates CEO Jensen Huang's relationship",
+      "summary": "Nvidia's board is launching an independent investigation after reports that CEO Jensen Huang was targeted by a Chinese spy, following his admission of an affair with a former chip company executive. The board stated there is currently no reason to believe that national security or company secrets were compromised, and Huang is fully cooperating.",
+      "why_it_matters": "Executive security concerns can trigger formal board-led reviews even when no compromise of company secrets is detected.",
+      "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Nvidia investigates CEO Jensen Huang over affair with suspected Chinese spy.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Nvidia's board is launching an independent investigation after reports that CEO Jensen Huang was targeted by a Chinese spy.",
+          "quote": "Nvidia’s board of directors announced Sunday that it’s launching an independent investigation following reports that CEO Jensen Huang was targeted by a Chinese spy operation."
+        },
+        {
+          "claim": "Jensen Huang admitted to an affair with Alice Huang, a former executive at a Singapore-based chip company.",
+          "quote": "Nvidia also published a message that Huang sent to the company admitting that he had an affair with Alice Huang, a former executive at Singapore-based chip company Megaspeed"
+        },
+        {
+          "claim": "The board stated there is currently no reason to believe that national security or company secrets were compromised.",
+          "quote": "Nvidia’s board said that it has “no reason to believe” that either national security or company secrets were compromised."
+        },
+        {
+          "claim": "Jensen Huang fully supports the review and has committed to cooperating with it.",
+          "quote": "Huang “fully supports the review and has committed to cooperating with it,”"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8422634c9a06",
+      "title": "Single deep-learning system simulates diverse physical processes",
+      "summary": "Researchers developed a single deep-learning system called WorldParticle to replace separate simulators by representing materials as tiny particles and predicting movement without hand-coded equations. The system successfully modeled six different physical phenomena, including deformable objects, granular materials, and proteins.",
+      "why_it_matters": "You can replace fragmented physical simulators with a unified particle-based model for diverse materials.",
+      "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "WorldParticle AI model accurately simulates matter from sand to folding proteins.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers developed a single deep-learning system called WorldParticle to replace the patchwork of separate simulators currently used for physical processes.",
+          "quote": "Researchers at MIT, the University of British Columbia (UBC), and elsewhere have now replaced that patchwork with a single deep-learning system, called WorldParticle"
+        },
+        {
+          "claim": "WorldParticle represents simulated materials as tiny particles and predicts their movement step by step without relying on hand-coded equations.",
+          "quote": "The system represents every material it simulates, from a dune of sand to a protein molecule, as tiny particles and predicts where those particles will move one step at a time."
+        },
+        {
+          "claim": "The researchers demonstrated the system by successfully modeling six different physical phenomena, including deformable objects, granular materials, and proteins.",
+          "quote": "They demonstrated WorldParticle by modeling six different physical phenomena, including deformable objects, granular materials, and proteins"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "sliding sand",
+          "problem": "The facts state the system modeled granular materials, but do not specifically mention 'sliding sand'.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "ba5f1cdb14f5",
+      "title": "Open-source machine-learning model predicts molecular behavior",
+      "summary": "MIT researchers developed an open-source machine-learning model called CheMeleon, trained on one million molecules and PubChem descriptors, to predict molecular behavior. The model outperformed foundation and classical methods across 58 test cases, reducing the time and expense of experimental testing.",
+      "why_it_matters": "You can use this open-source model to reduce the time and expense of experimentally testing and synthesizing new molecules.",
+      "url": "https://news.mit.edu/2026/how-to-predict-molecule-behavior-with-scant-data-1106",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "CheMeleon machine-learning approach predicts molecular behavior from scant experimental data.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers at MIT developed a new open-source machine-learning model called CheMeleon to predict the behavior and properties of molecules.",
+          "quote": "the open-source model the team developed, called CheMeleon, has already found regular use by several pharmaceutical companies."
+        },
+        {
+          "claim": "CheMeleon was trained using detailed data on one million different molecules and a catalog of about 1,600 descriptors from PubChem.",
+          "quote": "pre-training a machine-learning model with detailed data about a million different molecules, so that it gets to learn correlations between the structure of a given molecule and how it behaves with respect to a catalog of about 1,600 descriptors"
+        },
+        {
+          "claim": "The model outperformed other foundation models and classical expert-driven methods across 58 test cases.",
+          "quote": "Comparing its performance across 58 test cases, 'we see that our model comes out on top.'"
+        },
+        {
+          "claim": "As a result, CheMeleon significantly reduces the time and expense of experimentally testing and synthesizing large numbers of new molecules.",
+          "quote": "The CheMeleon foundation model drastically reduces the number of molecules that need to be tested experimentally to accurately predict the properties of new molecules."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "from limited data",
+          "problem": "The draft adds the claim 'from limited data', which is not supported by the facts (which state it was trained on one million molecules and 1,600 descriptors).",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "e8690f74b67f",
+      "title": "Nvidia Releases Open-Weight Cosmos 3 Models for World Simulation",
+      "summary": "Nvidia released four new open-weight checkpoints for its Cosmos 3 model family to enable interactive world simulation and driving scenes. These post-trained examples of Cosmos 3 Nano feature 16 billion trainable parameters and are licensed under OpenMDW1.1 for commercial and non-commercial use.",
+      "why_it_matters": "Engineers can leverage these new open-weight checkpoints for building interactive driving and world simulation applications.",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "NVIDIA releases new Cosmos 3 open models for interactive world simulation.",
+      "status": "rewritten",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "NVIDIA released four new open-weight checkpoints for its Cosmos 3 model family to enable interactive world simulation and driving scenes.",
+          "quote": "NVIDIA Cosmos world model development platform adds four new open-weight checkpoints to its Cosmos 3 model family"
+        },
+        {
+          "claim": "All four new models are post-trained examples of Cosmos 3 Nano and feature 16 billion trainable parameters.",
+          "quote": "All four models are post-trained examples of Cosmos 3 Nano and have 16B trainable parameters."
+        },
+        {
+          "claim": "The models are licensed under OpenMDW1.1, allowing for both commercial and non-commercial use.",
+          "quote": "The models use OpenMDW1.1, permitting commercial and non-commercial use under its terms."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "16",
+          "problem": "number not found in the verified facts",
+          "by": "numbers"
+        }
+      ]
+    }
+  ]
+}
