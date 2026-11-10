@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "day": "2026-11-10",
+  "started": "2026-11-10T09:40:03Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI updates include new models from Anthropic and Meta, privacy concerns regarding Google's data handling, a security breach at Fireworks AI affecting Notion, and a versatile new physics simulation model from MIT.",
+  "fetch": {
+    "fetched": 1275,
+    "unique": 1104,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 364,
+      "arXiv cs.AI": 887,
+      "Hugging Face Blog": 3,
+      "TechCrunch AI": 13,
+      "MIT News AI": 3,
+      "Hacker News": 5
+    },
+    "seconds": 65.0
+  },
+  "candidates": 35,
+  "seconds": {
+    "editor": 144.7,
+    "researcher": 24.4,
+    "writer": 6.4,
+    "critic": 14.5
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "796a7f7ee338",
+      "title": "Anthropic Releases Claude Fable 5.2 and Claude Mythos 5.2",
+      "summary": "Anthropic has released Claude Fable 5.2 and Claude Mythos 5.2, featuring enhanced coding, reasoning, and vision capabilities with up to 30% faster output generation. The models are priced at $8 per million input tokens and $40 per million output tokens, with an optional fast mode that increases generation speed by up to 2.5 times.",
+      "why_it_matters": "You can leverage these upgraded models for faster coding and reasoning tasks, though access to the Mythos version requires passing verification programs.",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source": "anthropic.com via Hacker News",
+      "domain": "anthropic.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic releases new Claude Fable 5.2 and Mythos 5.2 models.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic has upgraded its AI models to Claude Fable 5.2 and Claude Mythos 5.2, bringing improvements in coding, reasoning, and vision.",
+          "quote": "We’ve upgraded Claude Fable and Claude Mythos—models that are designed to tackle the most daunting technical challenges."
+        },
+        {
+          "claim": "The new models generate outputs up to 30% faster than the previous version.",
+          "quote": "They generate outputs up to 30% faster than Claude Fable 5.1 and Claude Mythos 5.1"
+        },
+        {
+          "claim": "The standard pricing is set at $8 per million input tokens and $40 per million output tokens.",
+          "quote": "they’re available at a lower price: $8 per million input tokens and $40 per million output tokens."
+        },
+        {
+          "claim": "An optional fast mode is available that speeds up token generation by up to 2.5 times.",
+          "quote": "come with an optional fast mode, which speeds up token generation by up to 2.5 times."
+        },
+        {
+          "claim": "Claude Fable 5.2 is available to all users due to built-in safeguards, while Claude Mythos 5.2 requires applying through verification programs.",
+          "quote": "Fable has strong cybersecurity and biology safeguards to guard against misuse, which allows us to make it available to all users."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "fea55cef6041",
+      "title": "Google Gemini Routes Personal Drive Files and Emails to Human Reviewers",
+      "summary": "Google has reversed its policy to route personal data from connected Gmail, Docs, and Drive into human review pipelines for Gemini. Automated scrubbers fail to sufficiently deidentify narrative data like account numbers, prompting warnings against connecting apps with confidential information.",
+      "why_it_matters": "You must disconnect sensitive personal apps from Gemini to prevent confidential emails and documents from being exposed to human annotators.",
+      "url": "https://github.com/thisisme6598/gemini_files/",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google Gemini criticized for routing personal Drive files to human annotators.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google reversed its previous policy and now routes personal data from connected Gmail, Docs, and Drive into human review pipelines for Gemini.",
+          "quote": "Google has quietly reversed this commitment. Under updated Google Help Answer 16836988 and in an October 16 edit to their aforementioned 2023 blogpost, Google explicitly confirms that connected Drive/email is routed into human review pipelines"
+        },
+        {
+          "claim": "Testing shows that personal files and emails can be ingested autonomously in background conversations even without explicit @ tags.",
+          "quote": "testing demonstrates that this ingestion occurs autonomously in background conversation without explicit @Drive or @Gmail tags, and the payload capture is probabilistic."
+        },
+        {
+          "claim": "Google's automated scrubbers are unable to sufficiently deidentify narrative data, such as account numbers and personal information.",
+          "quote": "Google's regex and NER automatic scrubbers cannot sufficiently deidentify narrative data, including account numbers, confirmation numbers, transaction dates, and collectively identifying personal information"
+        },
+        {
+          "claim": "As a result of the policy change, users are warned not to connect apps containing confidential information that reviewers should not see.",
+          "quote": "don't connect your apps to Gemini Apps if they contain confidential information that you wouldn't want a reviewer to see."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "a7266a93fa89",
+      "title": "Fireworks AI Security Breach Exposes Notion AI Chat Sessions",
+      "summary": "A security incident at vendor Fireworks AI impacted fewer than 1% of Notion workspaces by exposing unattributable Notion AI chat transcripts. Notion has shut down all connections to Fireworks, disabled the Insights feature, and halted open-weight model services through the vendor.",
+      "why_it_matters": "You should treat potentially exposed chat data as compromised and immediately rotate any sensitive credentials, such as API keys or passwords, that were pasted into Notion AI.",
+      "url": "https://www.notion.com/help/security-incident-involving-a-third-party-ai-vendor",
+      "source": "notion.com via Hacker News",
+      "domain": "notion.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Fireworks AI security breach impacts Notion and its customers.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "A security incident at vendor Fireworks AI may have impacted fewer than 1% of Notion workspaces, exposing some unattributable Notion AI chat sessions.",
+          "quote": "<1% of Notion workspaces may have been affected by the Fireworks security incident. Some unattributable chat sessions with Notion AI may have been exposed"
+        },
+        {
+          "claim": "The exposed chat transcripts were unattributable, meaning they lacked labels identifying the author or workspace and contained no tool call results.",
+          "quote": "“Unattributable” means the chats weren't labeled with who wrote them or which workspace they came from, and the transcripts did not contain tool call results."
+        },
+        {
+          "claim": "Notion learned of potential incidents from Fireworks earlier in the month and shut down all connections to their systems.",
+          "quote": "We learned from Fireworks about potential incidents earlier this month, and we shut down all connections to their systems out of an abundance of caution."
+        },
+        {
+          "claim": "As a result of the incident, Notion disabled the Insights feature and stopped serving open-weight models through Fireworks.",
+          "quote": "The Insights feature has been disabled as we investigate this incident, and we are no longer serving open-weight models through Fireworks."
+        },
+        {
+          "claim": "Notion recommends that users treat the exposed data as compromised and immediately rotate any sensitive information like passwords or API keys that may have been pasted into Notion AI.",
+          "quote": "If you or anyone on your team pasted sensitive information like passwords, API keys, or other credentials into Notion AI during this timeframe, we recommend rotating them right away."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "feb2ba211559",
+      "title": "Meta Introduces Muse Ember Multimodal Model",
+      "summary": "Meta launched Muse Ember, a small and efficient model supporting complex reasoning, tool calls, coding subtasks, and long document parsing with a 1M-token context window and 512K output tokens. Priced at $0.10 per million input tokens and $0.50 per million output tokens, the model natively processes text, images, audio, and video.",
+      "why_it_matters": "You can use this low-cost, highly efficient model via the Meta Model API and Muse Code for multimodal tasks requiring massive context windows.",
+      "url": "https://research.meta.ai/blog/muse-ember",
+      "source": "research.meta.ai via Hacker News",
+      "domain": "research.meta.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Meta releases Muse Ember, its smallest and most efficient model.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Meta introduced Muse Ember, its smallest and most efficient model designed for complex reasoning, tool calls, coding subtasks, and long document parsing.",
+          "quote": "Today, we're introducing Muse Ember, our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day"
+        },
+        {
+          "claim": "Muse Ember is available on the Meta Model API and Muse Code priced at $0.10 per million input tokens and $0.50 per million output tokens.",
+          "quote": "Muse Ember is available today on Muse Code and Meta Model API as muse-ember-1.0. It costs $0.10 per million input tokens"
+        },
+        {
+          "claim": "The model features a 1M-token context window and supports up to 512K output tokens.",
+          "quote": "with a 1M-token context window and up to 512K output tokens."
+        },
+        {
+          "claim": "Muse Ember natively understands text, images, audio, and video.",
+          "quote": "Muse Ember natively understands text, images, audio, and video"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8422634c9a06",
+      "title": "WorldParticle AI Model Simulates Diverse Physical Phenomena",
+      "summary": "Researchers developed WorldParticle, a single deep-learning system that replaces multiple separate physical simulators by predicting the step-by-step movement of particle-represented materials. The system has been demonstrated to accurately model six different physical phenomena, from sliding sand to folding proteins.",
+      "why_it_matters": "You can replace multiple separate physical simulators with this single deep-learning system to model complex physical materials with high accuracy.",
+      "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "WorldParticle AI model simulates diverse physical substances from sand to proteins.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers developed a single deep-learning system named WorldParticle to replace multiple separate physical simulators.",
+          "quote": "a single deep-learning system, called WorldParticle, that could help engineers model different physical phenomena"
+        },
+        {
+          "claim": "WorldParticle can simulate various physical phenomena, ranging from sliding sand to folding proteins.",
+          "quote": "from sliding sand to folding proteins, with one unified artificial intelligence architecture."
+        },
+        {
+          "claim": "The system represents materials as tiny particles and predicts their movement step by step rather than relying on hand-coded equations.",
+          "quote": "predicts where those particles will move one step at a time. Because it learns the underlying dynamics rather than being programmed with an equation"
+        },
+        {
+          "claim": "Researchers demonstrated the system by successfully modeling six different physical phenomena with high accuracy.",
+          "quote": "demonstrated WorldParticle by modeling six different physical phenomena, including deformable objects, granular materials, and proteins"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "MIT researchers",
+          "problem": "The facts state 'Researchers developed' but do not mention MIT.",
+          "by": "critic"
+        }
+      ]
+    }
+  ]
+}
