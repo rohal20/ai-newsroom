@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Tuesday 10 November 2026](2026-11-10.md): Recent AI updates include new models from Anthropic and Meta, privacy concerns regarding Google's data handling, a security breach at Fireworks AI affecting Notion, and a versatile new physics simulation model from MIT.
+**Latest:** [Wednesday 11 November 2026](2026-11-11.md): Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Wed 11 Nov 2026](2026-11-11.md) | Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator. | 5 | 1 rewritten |
 | [Tue 10 Nov 2026](2026-11-10.md) | Recent AI updates include new models from Anthropic and Meta, privacy concerns regarding Google's data handling, a security breach at Fireworks AI affecting Notion, and a versatile new physics simulation model from MIT. | 5 | 1 rewritten |
 | [Mon 09 Nov 2026](2026-11-09.md) | Recent developments include Goldman Sachs restricting AI coding tools to non-engineers, Nvidia launching an independent board investigation regarding its CEO, and new AI models advancing physical, molecular, and interactive world simulations. | 5 | 3 rewritten |
 | [Sun 08 Nov 2026](2026-11-08.md) | Recent developments include massive new funding and IPO delays for OpenAI, NVIDIA's release of open Cosmos 3 simulation models, secret leaks linked to coding agents, the shutdown of Microsoft Research's AI Frontiers group, and MIT's introduction of the CheMeleon molecular foundation model. | 5 | 2 rewritten, 1 facts only |

@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "day": "2026-11-11",
+  "started": "2026-11-11T09:15:44Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.8-flash",
+  "one_line": "Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator.",
+  "fetch": {
+    "fetched": 591,
+    "unique": 518,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 178,
+      "arXiv cs.AI": 381,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 20,
+      "MIT News AI": 3,
+      "Hacker News": 4
+    },
+    "seconds": 15.6
+  },
+  "candidates": 36,
+  "seconds": {
+    "editor": 43.4,
+    "researcher": 257.8,
+    "writer": 23.2,
+    "critic": 67.7
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "fd8e1c638d2d",
+      "title": "Anthropic Introduces Workplace Productivity Suite Including Claude Meetings and Sheets",
+      "summary": "Anthropic has introduced Claude Meetings in beta for Google Meet on Team and Enterprise tiers, enabling the AI to participate in video calls, execute real-time tasks, and share post-call materials. The company also introduced Claude Whiteboards and Claude Sheets in beta, launched Claude Data into general availability, and added interactive connectors for services like Adobe, Atlassian, and HubSpot.",
+      "why_it_matters": "Engineers and enterprise teams can now embed Claude directly into live video calls and connect it natively to production data warehouses, CRMs, and third-party tools to automate reporting and workflows.",
+      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic launches Claude Meetings for real-time collaborative workplace planning and action generation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic launched several workplace productivity features, including Claude Meetings, Claude Whiteboards, and Claude Sheets.",
+          "quote": "Anthropic announced new workplace features on Tuesday, including Claude Meetings, which brings Claude into video calls to begin working on tasks while participants are still talking. The company also unveiled Claude Whiteboards and Claude Sheets."
+        },
+        {
+          "claim": "Claude Meetings allows Claude to participate in video calls, perform tasks in real time, and share materials afterward on claude.ai.",
+          "quote": "With Claude Meetings, teams can add Claude to a video call as a visible participant. Claude then follows the conversation and gets to work on tasks in real time."
+        },
+        {
+          "claim": "Claude Meetings is in beta for Team and Enterprise tiers and initially functions with Google Meet.",
+          "quote": "Claude Meetings is launching in beta on Team and Enterprise plans. At launch, it works with Google Meet, with support for additional plans expected to follow."
+        },
+        {
+          "claim": "Claude Whiteboards and Claude Sheets are in beta on paid plans across web, desktop, and mobile platforms.",
+          "quote": "Claude Sheets is available in beta on paid plans, on web, desktop and mobile."
+        },
+        {
+          "claim": "Claude Data is now generally available, enabling Claude to connect to data warehouses or CRMs and generate dashboards or written reports.",
+          "quote": "Anthropic also announced that Claude Data, formerly known as Claude Dashboards, is now generally available. The feature connects Claude to systems that companies use to keep their numbers, like a data warehouse or CRM."
+        },
+        {
+          "claim": "New interactive connectors let users integrate full versions of third-party apps like Adobe, Atlassian, and HubSpot directly within Claude.",
+          "quote": "Additionally, the company announced interactive connectors that open the full version of apps like Adobe, Atlassian, and HubSpot inside Claude."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "91faed0650f0",
+      "title": "New York Enforces RAISE Act Requiring Safety Frameworks and Incident Reporting from Major AI Labs",
+      "summary": "New York opened a registration portal under the RAISE Act, requiring frontier AI developers earning over $500 million to register by January 1, 2027. Regulated developers must submit safety frameworks, report critical incidents within 72 hours, and publish model transparency reports under threat of fines up to $3 million enforced by the new Office of DIGIT.",
+      "why_it_matters": "Large frontier AI organizations operating in New York must establish strict 72-hour incident response protocols and public model documentation to comply with state oversight and avoid multi-million-dollar penalties.",
+      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New York's AI safety law takes effect, imposing mandatory safety disclosures and incident reporting.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "New York launched a registration portal requiring large frontier AI developers to register by January 1, 2027.",
+          "quote": "The state opened a registration portal Tuesday, with which large frontier AI developers like Anthropic and OpenAI will be required to register by January 1, 2027."
+        },
+        {
+          "claim": "The RAISE Act requires AI developers with over $500 million in revenue to share safety frameworks, report critical incidents within 72 hours, and publish model transparency reports.",
+          "quote": "It mandates that large frontier developers — companies with more than $500 million in annual revenue — have to publish safety frameworks on their websites, report critical safety incidents within 72 hours, and issue public model transparency reports."
+        },
+        {
+          "claim": "The new Office of DIGIT will enforce the law, with potential penalties reaching up to $3 million for repeat violations.",
+          "quote": "The newly formed Office of Digital Innovation, Governance, Integrity, and Trust (DIGIT) will implement the RAISE Act and oversee large frontier AI labs. Penalties can be as high as $1 million for one violation and $3 million for subsequent violations."
+        },
+        {
+          "claim": "Governor Kathy Hochul established an independent AI research center at Binghamton University to evaluate advanced AI systems and work with regulators.",
+          "quote": "On Tuesday, Hochul also launched the New York Center for AI Responsibility and Research based at State University of New York’s Binghamton University. The center will independently evaluate the safety, security, and operation of advanced AI systems"
+        },
+        {
+          "claim": "New York previously approved a chatbot safety law aimed at protecting minors that becomes effective on June 1, 2027.",
+          "quote": "In October, Hochul signed a separate chatbot safety law for minors, restricting behaviors like deceptive human-like interactions, emotionally manipulative or sycophantic responses, and encouragement of behaviors like suicide or disordered eating. That law takes effect June 1, 2027."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "168143ea4218",
+      "title": "Apple Previews Harbor App to Cluster Macs for Local AI Model Inference",
+      "summary": "Evidence reveals Apple is developing Harbor, a Mac application currently in private preview through its Claris subsidiary that turns Apple silicon machines into private AI inference servers. Harbor automatically links Thunderbolt 5-capable Macs to pool their unified memory without command-line configuration, allowing users to serve larger open-weight models locally.",
+      "why_it_matters": "Teams can pool multiple Apple silicon Macs over Thunderbolt 5 to host high-concurrency or larger open-weight models locally without managing complex manual server configurations.",
+      "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+      "source": "9to5mac.com via Hacker News",
+      "domain": "9to5mac.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Apple prepares a native Mac application to streamline running local AI models.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Evidence has been discovered that Apple is developing a new Mac app called Harbor designed to turn Macs into private AI inference servers.",
+          "quote": "leaker Aaron Perris has discovered a new Mac app called Harbor that’s been designed to turn your Mac into a private AI inference server."
+        },
+        {
+          "claim": "Harbor enables users to run open-weight AI models locally on Apple silicon while keeping data entirely on the device.",
+          "quote": "Run open-weight models locally on Apple silicon—your data never leaves your hardware, and nothing reaches the cloud."
+        },
+        {
+          "claim": "The app allows multiple Thunderbolt 5-capable Macs to pool their unified memory into a single cluster to run larger models and increase concurrency.",
+          "quote": "Connect two or more Thunderbolt 5-capable Mac computers and Harbor pools their unified memory into a single inference resource."
+        },
+        {
+          "claim": "Harbor automatically detects connected devices to establish clusters quickly without requiring manual setup or command-line tools.",
+          "quote": "Harbor automatically detects your devices over Thunderbolt 5 to form a cluster. Plug in, start, and you’re running—no manual configuration, no command line"
+        },
+        {
+          "claim": "Harbor is presently in a private preview release under Apple's Claris subsidiary.",
+          "quote": "Harbor is currently in a private preview under Apple’s Claris brand, but it seems likely that we’ll see it launch to the public"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8422634c9a06",
+      "title": "Researchers Build WorldParticle to Simulate Physical Phenomena via Deep Learning",
+      "summary": "Researchers from MIT, UBC, and other institutions developed WorldParticle, a unified deep-learning system that simulates diverse physical phenomena by representing materials as tiny particles and tracking their movements instead of using hand-coded equations. The system compresses particle data to manage millions of particles and predicts movements step-by-step with a neural network, outperforming numerical simulation methods across six distinct physical phenomena.",
+      "why_it_matters": "This neural system offers a more accurate alternative to hand-coded numerical methods for simulating diverse physical dynamics.",
+      "url": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "MIT introduces WorldParticle, a unified model simulating complex physical dynamics from sand to proteins.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Researchers from MIT, UBC, and other institutions have created a unified deep-learning system named WorldParticle to simulate diverse physical phenomena.",
+          "quote": "Researchers at MIT, the University of British Columbia (UBC), and elsewhere have now replaced that patchwork with a single deep-learning system, called WorldParticle"
+        },
+        {
+          "claim": "WorldParticle represents materials as tiny particles and tracks their movements to simulate dynamics rather than relying on hand-coded equations.",
+          "quote": "WorldParticle breaks an object into thousands or millions of tiny, three-dimensional dots, or particles, using what is known as a Lagrangian representation."
+        },
+        {
+          "claim": "The system processes particle data through a neural network to predict movements one step at a time, similarly to how language models predict words.",
+          "quote": "“It is a similar architecture to ChatGPT. But instead of predicting one word at a time to write a piece of text, we are predicting how these particles will move, one step at a time,”"
+        },
+        {
+          "claim": "To prevent the simulation of millions of particles from becoming computationally overwhelming, the researchers use a compression technique.",
+          "quote": "To streamline processing, the researchers employed a merging technique to combine and compress particles while still allowing WorldParticle to capture fine-grained details of their behavior."
+        },
+        {
+          "claim": "WorldParticle outperformed numerical simulation methods in accuracy when tested across six distinct physical phenomena.",
+          "quote": "They demonstrated WorldParticle by modeling six different physical phenomena, including deformable objects, granular materials, and proteins, with higher accuracy than numerical simulation methods."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "from material flows to protein folding",
+          "problem": "The verified facts do not mention material flows or protein folding.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "9a5bae24e02d",
+      "title": "Anthropic Prepares for IPO at $1.4 Trillion Valuation with Founders Retaining Voting Control",
+      "summary": "Anthropic is preparing for an initial public offering that could reach a $1.4 trillion valuation, with each of its seven co-founders set to sell shares worth approximately $250 million at a $74 midrange price. Following the sale, the founders will retain 51.1% of voting power through Class F supervoting stock while retaining roughly 22% of Class A shares collectively.",
+      "why_it_matters": "Anthropic's dual-class share structure guarantees that its original founders will maintain majority voting control over corporate strategy and AI safety governance following its public listing.",
+      "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic files for IPO with founders planning significant partial cash-outs while maintaining control.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic is preparing for an initial public offering that could value the company at $1.4 trillion.",
+          "quote": "Anthropic barrels toward an enormous IPO that could value it at $1.4 trillion"
+        },
+        {
+          "claim": "Each of Anthropic's seven co-founders plans to sell 3,378,378 shares, which would yield nearly $250 million each at the midrange price of $74 per share.",
+          "quote": "Each will sell 3,378,378 shares. Anthropic has floated an unusually broad initial price range of $70 to $78 a share. At the midrange of $74, each founder would take in just shy of $250 million."
+        },
+        {
+          "claim": "Board members Reed Hastings and Christopher Liddell have indicated plans to purchase $300 million and $3 million worth of shares, respectively.",
+          "quote": "Board member Reed Hastings has indicated he wants to buy $300 million worth of shares through his donor-advised fund. Board member Christopher Liddell also wants to buy $3 million worth of shares."
+        },
+        {
+          "claim": "Following the stock sale, the co-founders will collectively own roughly 22% of the outstanding Class A shares, with each holding around 3.2%.",
+          "quote": "After the sale, each of them will own about 3.2% of the total outstanding Class A shares, the S-1 says, or roughly 22% collectively."
+        },
+        {
+          "claim": "The founders will retain control of Anthropic by collectively holding 51.1% of the voting power through supervoting Class F stock.",
+          "quote": "Each will also receive one share of Class F stock, which carries supervoting rights. Collectively, the founders will control 51.1% of the votes"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
