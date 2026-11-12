@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "day": "2026-11-12",
+  "started": "2026-11-12T09:43:03Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments include Google's new Gemini Decisions API, United Airlines blocking personal AI booking agents, an open-source AWS local emulator, a local-first meeting recorder, and an efficient on-device agentic model.",
+  "fetch": {
+    "fetched": 27,
+    "unique": 27,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 6,
+      "TechCrunch AI": 15,
+      "MIT News AI": 2,
+      "Hacker News": 4
+    },
+    "seconds": 8.6
+  },
+  "candidates": 20,
+  "seconds": {
+    "editor": 255.3,
+    "researcher": 25.3,
+    "writer": 6.0,
+    "critic": 13.0
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "8e4104a923ec",
+      "title": "Google Introduces Gemini Decisions API for Fast Closed-Set Decisions",
+      "summary": "Google introduced the Gemini Decisions API, powered by the Gemini Decision 1 model, to handle multimodal inputs and evaluate multiple questions in a single request. The system provides probabilities and confidence scores with a 150-250 ms latency for $0.10 per 1M input tokens with zero output tokens billed.",
+      "why_it_matters": "You can now integrate low-latency, multimodal closed-set classification and scoring into your applications at a predictable cost.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google launches Gemini Decisions API for developers.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Google introduced the Gemini Decisions API powered by the new Gemini Decision 1 model for fast, closed-set decisions.",
+          "quote": "Today, we’re introducing the Gemini Decisions API, a new endpoint for fast, closed-set decisions powered by our new Gemini Decision 1 model"
+        },
+        {
+          "claim": "The API delivers probabilities and confidence scores with an end-to-end latency of 150-250 ms.",
+          "quote": "returning probabilities and confidence scores in 150-250 ms end-to-end latency"
+        },
+        {
+          "claim": "Pricing is set at $0.10 per 1M input tokens with zero output tokens billed.",
+          "quote": "at $0.10 per 1M input tokens with zero output tokens billed."
+        },
+        {
+          "claim": "The model supports multimodal inputs including text, images, audio, video, and PDFs up to 256K tokens.",
+          "quote": "You can pass one multimodal input across text, images, audio, video, and PDFs (up to 256K tokens)"
+        },
+        {
+          "claim": "Teams can evaluate multiple questions in a single request across three decision types: yes/no (noul), multiple choice (choice), and ordered rubric (score).",
+          "quote": "You can evaluate multiple questions against that shared input in a single request, mixing yes/no checks, multiple choice, and rubric scores."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "has launched",
+          "problem": "Facts state Google introduced the API, but 'launched' may imply general availability or a full release not supported by the facts.",
+          "by": "critic"
+        },
+        {
+          "text": "Closed-Set Predictions",
+          "problem": "Facts state 'closed-set decisions', not 'predictions'.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "1399104b4951",
+      "title": "United Airlines Blocks Third-Party AI Agents from Booking Flights",
+      "summary": "United Airlines is updating its booking and ticketing policies to ban artificial intelligence agents from booking flights for travelers. The airline cited risks of exposing sensitive personal and financial data through credential sharing and potential violations of federal in-person luggage verification regulations.",
+      "why_it_matters": "You must avoid deploying or using autonomous personal AI agents that rely on user credential sharing for airline bookings and check-ins.",
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "source": "cbsnews.com via Hacker News",
+      "domain": "cbsnews.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "United Airlines blocks AI travel agents from booking flights.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "United Airlines is banning artificial intelligence agents from booking flights for travelers.",
+          "quote": "United Airlines said on Wednesday that it is banning artificial intelligence agents from making flight reservations on behalf of travelers"
+        },
+        {
+          "claim": "The airline warns that sharing account credentials with third-party AI tools can expose sensitive personal and financial data.",
+          "quote": "sharing account credentials with personal, third-party, AI assistants can expose sensitive information, and actions taken by these tools may result in unintended purchases"
+        },
+        {
+          "claim": "United noted that using AI agents for tasks like check-in might breach federal regulations, such as in-person luggage verification rules.",
+          "quote": "using an AI agent to, for example, check in for a flight could violate federal regulations, including rules requiring travelers to verify in person that their luggage does not contain banned substances"
+        },
+        {
+          "claim": "The carrier is updating its booking and ticketing policies to block unauthorized third-party personal AI agents.",
+          "quote": "United is taking steps to restrict access — directly within our digital platforms and indirectly via travel agencies and aggregators — to prohibit use by unauthorized, third-party personal AI agents or assistants"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "70a69d3bb582",
+      "title": "AWS Emulator Enables Local Cloud Testing Without Account Requirements",
+      "summary": "The AWS Emulator is a local program that mimics AWS APIs, enabling developers to test software without needing an active AWS account or incurring service fees. It can run locally, inside containers on Windows and macOS, or directly embedded into test binaries, though building from source requires at least 100 GB of free disk space.",
+      "why_it_matters": "You can test AWS-dependent software locally in containers or test binaries without incurring cloud costs, provided you have sufficient disk space to build it.",
+      "url": "https://github.com/aws/aws-emulator",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "AWS emulator released, streamlining cloud development workflows.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "AWS Emulator is a local program that mimics AWS APIs, allowing developers to test software without needing an AWS account or incurring service fees.",
+          "quote": "AWS Emulator is a local emulator of the AWS APIs. You use it to test your software without calling AWS"
+        },
+        {
+          "claim": "The emulator can be run locally, via containers on Windows and macOS, or embedded directly into test binaries.",
+          "quote": "Embedded mode compiles the emulator into your test binary, so your project's first cargo test builds the emulator's service crates"
+        },
+        {
+          "claim": "Building the emulator from source requires significant resources, including at least 100 GB of free disk space for the target directory.",
+          "quote": "At least 100 GB of free disk for target/. The workspace has one crate per AWS service"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "f6b29b4e2ab3",
+      "title": "Yogurt Offers Local-First Open-Source Call Recording",
+      "summary": "Yogurt is an open-source, MIT-licensed alternative to meeting recorders that operates without an account or an automated meeting bot. All audio recording, transcriptions, and AI processing happen locally on the user's computer by default.",
+      "why_it_matters": "You can record and process meeting audio entirely on your local machine without exposing data to third-party services or injecting meeting bots.",
+      "url": "https://github.com/FrigadeHQ/yogurt",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Yogurt launched as an open-source, on-device AI meeting assistant.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Yogurt records calls locally without adding an automated bot to the meeting.",
+          "quote": "Yogurt records your calls without adding a bot to the meeting."
+        },
+        {
+          "claim": "All audio, transcripts, and AI processing remain on the user's computer by default.",
+          "quote": "Your audio, transcripts and AI processing stay on your computer."
+        },
+        {
+          "claim": "Yogurt operates under the MIT license and does not require an account to use.",
+          "quote": "Yogurt is free and open source under the MIT license. No account is needed."
+        }
+      ],
+      "dropped_facts": 2,
+      "first_issues": [
+        {
+          "text": "Free",
+          "problem": "The facts do not explicitly mention that Yogurt is free (though they state it requires no account and has an MIT license, 'free' is an added word not in the text).",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "b22522d14a17",
+      "title": "Tether AI Research Releases BotPsy Sub-Billion-Parameter Agentic Model",
+      "summary": "Tether AI Research introduced BotPsy, a sub-billion-parameter agentic language model optimized for on-device deployment that roughly doubles the agentic performance of its base Qwen3.5-0.8B-Think model. The model will be released as open-source under the Apache 2.0 license in various formats and precisions.",
+      "why_it_matters": "You can deploy a high-performance, open-source agentic language model directly onto edge devices with under one billion parameters.",
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "BotPsy introduces sub-billion-parameter on-device agentic language models.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Tether AI Research has introduced BotPsy, a sub-billion-parameter agentic language model built for on-device deployment.",
+          "quote": "Tether AI Research introduces BotPsy, a 0.8B-parameter model introduce BotPsy, a 0.8B-parameter model designed for function calling and agentic workflows, built on top of Qwen3.5-0.8B and suitable for on-device deployment."
+        },
+        {
+          "claim": "BotPsy achieves state-of-the-art tool-use and agentic performance, outperforming models up to 1.2B parameters in its weight class.",
+          "quote": "BotPsy achieves state-of-the-art (SOTA) tool-use and agentic performance for its size, outperforming every model of up to 1.2B parameters that we tested"
+        },
+        {
+          "claim": "BotPsy roughly doubles the agentic performance of its base model, Qwen3.5-0.8B-Think, across key benchmarks.",
+          "quote": "BotPsy roughly doubles the agentic capability of Qwen3.5-0.8B-Think on key benchmarks: BFCL v4 rises from 23.4 to 44.0, ACEBench from 30.1 to 58.7, and τ-bench from 23.2 to 51.5"
+        },
+        {
+          "claim": "BotPsy will be released as open-source under the Apache 2.0 license in multiple precisions and formats.",
+          "quote": "BotPsy will be released with open weights under the Apache 2.0 license for research and educational use. It will be available in three precisions (bf16, Q8, Q4), as Hugging Face safetensors and as GGUF files"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

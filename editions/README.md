@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Wednesday 11 November 2026](2026-11-11.md): Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator.
+**Latest:** [Thursday 12 November 2026](2026-11-12.md): Recent developments include Google's new Gemini Decisions API, United Airlines blocking personal AI booking agents, an open-source AWS local emulator, a local-first meeting recorder, and an efficient on-device agentic model.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Thu 12 Nov 2026](2026-11-12.md) | Recent developments include Google's new Gemini Decisions API, United Airlines blocking personal AI booking agents, an open-source AWS local emulator, a local-first meeting recorder, and an efficient on-device agentic model. | 5 | 2 rewritten |
 | [Wed 11 Nov 2026](2026-11-11.md) | Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator. | 5 | 1 rewritten |
 | [Tue 10 Nov 2026](2026-11-10.md) | Recent AI updates include new models from Anthropic and Meta, privacy concerns regarding Google's data handling, a security breach at Fireworks AI affecting Notion, and a versatile new physics simulation model from MIT. | 5 | 1 rewritten |
 | [Mon 09 Nov 2026](2026-11-09.md) | Recent developments include Goldman Sachs restricting AI coding tools to non-engineers, Nvidia launching an independent board investigation regarding its CEO, and new AI models advancing physical, molecular, and interactive world simulations. | 5 | 3 rewritten |
