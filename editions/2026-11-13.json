@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "day": "2026-11-13",
+  "started": "2026-11-13T09:26:33Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments include Google's new Gemini 4 Hydrogen model, forensic evidence of Blackwell GPU use in Chinese labs, open-source tooling for self-improving agents, vulnerabilities in preference-based leaderboards, and a 145B parameter on-device AI model.",
+  "fetch": {
+    "fetched": 811,
+    "unique": 698,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 237,
+      "arXiv cs.AI": 537,
+      "Hugging Face Blog": 8,
+      "TechCrunch AI": 20,
+      "MIT News AI": 4,
+      "Hacker News": 5
+    },
+    "seconds": 28.6
+  },
+  "candidates": 40,
+  "seconds": {
+    "editor": 25.8,
+    "researcher": 26.0,
+    "writer": 6.6,
+    "critic": 12.8
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "ec9fd4077cce",
+      "title": "Google Introduces Gemini 4 Hydrogen and Orchestrator",
+      "summary": "Google introduced Gemini 4 Hydrogen, an AI model built for coding and agentic workflows featuring a flat pricing structure and a 1 million-token context window. Additionally, Google introduced Orchestrator in Google Antigravity to automatically switch between models like Carbon and Hydrogen during a session.",
+      "why_it_matters": "You can leverage predictable pricing and automated model-switching to optimize token costs and performance for your agentic workflows.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google announces Gemini 4 Hydrogen, a major new model release.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Google introduced Gemini 4 Hydrogen, a new AI model designed for speed and efficiency in everyday coding and agentic workflows.",
+          "quote": "Today, we’re introducing Gemini 4 Hydrogen, bringing cutting-edge intelligence to everyone — with speed and efficiency for everyday coding and agentic workflows."
+        },
+        {
+          "claim": "Gemini 4 Hydrogen is priced flat at $1.50 per million input tokens and $7.50 per million output tokens across a 1 million-token context window.",
+          "quote": "Gemini 4 Hydrogen is priced flat across its entire 1 million-token context window at $1.50 per million input tokens and $7.50 per million output tokens."
+        },
+        {
+          "claim": "Google is introducing Orchestrator in Google Antigravity to automatically switch between models like Carbon and Hydrogen within the same session.",
+          "quote": "To help make this multi-model collaboration automatic, we’re introducing Orchestrator in Google Antigravity."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "has launched",
+          "problem": "Facts state Google is introducing/introduced, not that it has launched.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "d096a8a420fb",
+      "title": "Forensic Analysis Links Chinese AI Models to Export-Controlled Blackwell GPUs",
+      "summary": "Forensic weight analysis reveals that recent AI models from Chinese labs such as DeepSeek, Moonshot AI, MiniMax, and Ant Group contain numerical patterns matching NVIDIA Blackwell architecture. Researchers estimate training the largest of these models required thousands of these export-controlled GPUs over a few months.",
+      "why_it_matters": "Hardware restriction evasion at scale impacts the competitive landscape and resource assumptions for frontier model training.",
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "source": "unemploymentlabs.com via Hacker News",
+      "domain": "unemploymentlabs.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Investigation reveals Chinese frontier models carry export-controlled GPU fingerprints.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Forensic analysis of AI model weights indicates that Chinese labs including DeepSeek, Moonshot AI, MiniMax, and Ant Group are using export-controlled NVIDIA Blackwell GPUs.",
+          "quote": "Our forensic analysis of publicly released AI models finds evidence that DeepSeek, Moonshot AI, MiniMax and Ant Group have gained access to NVIDIA’s Blackwell GPUs"
+        },
+        {
+          "claim": "Six AI models released by these Chinese companies since April 2026 contain numerical patterns and hardware fingerprints matching Blackwell architecture.",
+          "quote": "Six models released by these companies since April 2026 contain numerical patterns matching Blackwell hardware, whereas earlier models from the same companies match NVIDIA’s older Hopper generation."
+        },
+        {
+          "claim": "Researchers estimated that training the largest of these models required thousands of Blackwell GPUs over a period of two to three months.",
+          "quote": "estimate that the two largest runs, Kimi K3 and DeepSeek-V4-Pro, each needed thousands of Blackwell GPUs for two to three months"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "ca1478ab4f6d",
+      "title": "AgentRun: Open-Source Platform for Self-Improving AI Agents",
+      "summary": "AgentRun is an open-source platform that brings self-improvement, durable execution, and a control plane to AI agent harnesses. It reduces token usage by retaining past notes and skills while ensuring runs survive server restarts.",
+      "why_it_matters": "You can use this tool to cut token costs and maintain state persistence for local AI agent deployments.",
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/README.md",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "AgentRun launches as an open-source platform for self-improving managed agents.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "AgentRun is an open-source platform designed to add self-improvement, durable execution, and a control plane to AI agent harnesses.",
+          "quote": "AgentRun is an open-source platform that supercharges your agents. It adds self-improvement, durable execution and a control plane on top of your favorite agent harness."
+        },
+        {
+          "claim": "The platform helps reduce token usage by allowing agents to retain notes, skills, and workflows from previous runs.",
+          "quote": "After each run, the agent keeps what will help next time: a note, a skill, or a workflow that does the job without the loop."
+        },
+        {
+          "claim": "AgentRun ensures durable execution so that runs can survive server restarts and continue.",
+          "quote": "Every run lives in one store. Kill the server mid-run, start it again, and the run carries on."
+        },
+        {
+          "claim": "Users can start AgentRun locally using Node.js with a single command, which opens a browser console.",
+          "quote": "npx @parcha/agentrun It starts the server and one runner on port 7340 (or the next free one), keeps everything in ~/.agentrun, and opens the console in your browser."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Managed Agents",
+          "problem": "The word 'Managed' is not supported by the facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "9d9a277b7af9",
+      "title": "Preference-Based AI Leaderboards Vulnerable to Manipulation Attacks",
+      "summary": "Online language model leaderboards relying on open inputs and the Bradley-Terry model are vulnerable to manipulation tactics by providers. Nearly all tested models achieved significant rank boosts when subjected to these individual manipulation strategies.",
+      "why_it_matters": "You should not rely solely on public preference leaderboards when evaluating model performance for production use.",
+      "url": "https://arxiv.org/abs/2611.14769",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Research exposes vulnerabilities in preference-based model evaluations and leaderboard hacking.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Online language model leaderboards are vulnerable to various manipulation tactics by providers.",
+          "quote": "these leaderboards are highly vulnerable to several manipulation strategies that unscrupulous providers could use to boost a model's rank"
+        },
+        {
+          "claim": "Individual manipulation attacks can significantly improve a model's standing.",
+          "quote": "each attack can boost a model by up to 15-20 places in a ranking and, combined, they can boost a model by up to 45 places"
+        },
+        {
+          "claim": "These vulnerabilities affect any preference-based evaluation relying on the Bradley-Terry model with open inputs.",
+          "quote": "these issues hold for any preference-based evaluation using the Bradley-Terry model that allows open prompting, voting, or model submission"
+        },
+        {
+          "claim": "Nearly all models tested experienced a rank boost from these manipulation strategies.",
+          "quote": "These manipulations boost the rank of nearly every tested model"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "f980cc1f1e21",
+      "title": "Edge0 Releases Edge0-145B On-Device AI Model",
+      "summary": "Edge0 has released Edge0-145B, an open-source on-device AI model featuring 145 billion total parameters. To make local execution feasible, only about 10 billion parameters actively participate in computation during each inference step.",
+      "why_it_matters": "You can now experiment with frontier-scale parameter counts locally by leveraging sparse activation architectures on your own hardware.",
+      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "source": "edge0.ai via Hacker News",
+      "domain": "edge0.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Edge0-145B brings frontier AI capabilities to local consumer hardware.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Edge0 has open-sourced Edge0-145B, the world's first open-source on-device AI model with 145 billion parameters.",
+          "quote": "Edge0-145B is the world's first open-source on-device AI model with 145 billion parameters."
+        },
+        {
+          "claim": "To make running the model feasible, only approximately 10B of its 145B total parameters participate in computation on each inference step.",
+          "quote": "Of the model's 145B total parameters, only approximately 10B participate in computation on each inference step."
+        }
+      ],
+      "dropped_facts": 2,
+      "first_issues": []
+    }
+  ]
+}
