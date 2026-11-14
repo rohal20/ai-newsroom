@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "day": "2026-11-14",
+  "started": "2026-11-14T08:54:08Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "OpenAI launched an agent wallet feature, Nvidia faced executive upheaval and regulatory scrutiny over GPU distribution, and LangChain reached a $3 billion valuation.",
+  "fetch": {
+    "fetched": 26,
+    "unique": 26,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 7,
+      "TechCrunch AI": 11,
+      "MIT News AI": 4,
+      "Hacker News": 4
+    },
+    "seconds": 1.5
+  },
+  "candidates": 23,
+  "seconds": {
+    "editor": 320.4,
+    "researcher": 24.7,
+    "writer": 5.7,
+    "critic": 13.5
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "c231d25e54b9",
+      "title": "OpenAI Introduces Wallet Feature for AI Agent Purchases",
+      "summary": "OpenAI launched a new wallet feature allowing AI agents called 'dots' to complete purchases on behalf of users. Transactions use a payment token instead of actual card details to ensure card information is not shared with the dot or merchant.",
+      "why_it_matters": "You can now use AI agents to securely execute purchases using biometric approvals and payment tokens instead of sharing your actual card details.",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "ChatGPT Wallet launches, enabling AI agents to autonomously shop and check out.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "OpenAI launched a new wallet feature allowing AI agents named 'dots' to complete purchases on behalf of users.",
+          "quote": "On Friday, OpenAI launched a new wallet feature that lets its agents, called dots, help you decide what to buy and then complete the purchase on your behalf."
+        },
+        {
+          "claim": "The feature is initially available only to U.S. ChatGPT Pro subscribers aged 18 and older with specific U.S.-issued credit cards.",
+          "quote": "The option will initially be available to a limited number of U.S. ChatGPT Pro subscribers, ages 18 and up, with a U.S.-issued Visa, Mastercard, or American Express."
+        },
+        {
+          "claim": "Users maintain control by reviewing the transaction details and approving purchases using biometric security checks like Face ID or a fingerprint.",
+          "quote": "users will approve the purchases directly with a security check like Face ID or a fingerprint, which creates a record of their transaction."
+        },
+        {
+          "claim": "Transactions use a payment token instead of actual card details to ensure card information is not shared with the dot or merchant.",
+          "quote": "ChatGPT’s Wallet charges the selected card using a payment token, which is a substitute for the user’s actual card details, so that information isn’t shared with either the dot or the merchant."
+        },
+        {
+          "claim": "OpenAI plans to introduce features allowing users to set spending limits and pre-approve purchases for more autonomous agent handling.",
+          "quote": "In the future, the company plans to offer users more control over the feature by allowing them to set spending limits or configure other parameters around purchase categories or time periods"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "while maintaining user spending limits.",
+          "problem": "The facts state that OpenAI only *plans* to introduce features allowing users to set spending limits, so the draft assumes they are currently maintained.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "59c58e3f39cc",
+      "title": "Nvidia CEO Jensen Huang Resigns Amid Scandal",
+      "summary": "Nvidia co-founder and CEO Jensen Huang resigned after admitting to extramarital affairs, including one with a woman suspected of being a Chinese spy. Following his resignation, CFO Colette Kress was appointed interim CEO as lawmakers launched congressional investigations.",
+      "why_it_matters": "Leadership changes at Nvidia introduce strategic uncertainty for engineering teams relying on their hardware roadmaps and executive stability.",
+      "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Jensen Huang resigns from Nvidia, triggering massive industry and geopolitical ramifications.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Nvidia co-founder and CEO Jensen Huang admitted to extramarital affairs, including one with a woman suspected by U.S. officials of being a Chinese spy.",
+          "quote": "U.S. officials believe that one of Huang’s likely romantic interests, Megaspeed executive Alice Huang, is a Chinese spy who has been feeding information back to Beijing."
+        },
+        {
+          "claim": "Jensen Huang resigned from his position as CEO of Nvidia amid the escalating scandal.",
+          "quote": "By early Thursday morning, Huang was no longer CEO of the company he co-founded 33 years ago."
+        },
+        {
+          "claim": "Following Huang's resignation, Nvidia's CFO Colette Kress was appointed as interim CEO.",
+          "quote": "The company’s current CFO, Colette Kress, will take over as interim CEO while still fulfilling her CFO duties."
+        },
+        {
+          "claim": "Lawmakers launched investigations and summoned Jensen Huang and Commerce Secretary Howard Lutnick to testify before Congress.",
+          "quote": "Representative Richard Neal (D-MA) and Senator Ron Wyden (D-OR) said they will investigate how the Trump administration handled Nvidia’s chip sales to China"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "c6caa4d4f0b0",
+      "title": "Allegations Surface That Nvidia Engineered GPU Scarcity",
+      "summary": "Nvidia allegedly engineered shortages by funding AI startups that subsequently purchased its GPUs to maintain high demand perception. Former CEO Jensen Huang pushed these investments to offload semiconductor oversupply, while CFO Colette Kress urged scaling back such deals.",
+      "why_it_matters": "Market distortions in GPU availability affect procurement strategies and infrastructure planning for large-scale AI training.",
+      "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+      "source": "techpowerup.com via Hacker News",
+      "domain": "techpowerup.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Allegations emerge that Nvidia engineered GPU market scarcity by funding startups.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Nvidia allegedly engineered GPU and memory shortages by funding AI startups that subsequently purchased Nvidia GPUs.",
+          "quote": "NVIDIA artificially inflated the ongoing GPU and memory shortage by investing in AI startups that would go on to buy NVIDIA GPUs"
+        },
+        {
+          "claim": "Former CEO Jensen Huang pushed for these investments to maintain high demand perception and offload an oversupply of TSMC semiconductors.",
+          "quote": "to maintain the perception of ongoing high demand and to move an oversupply of semiconductors from TSMC."
+        },
+        {
+          "claim": "CFO Colette Kress urged a reduction in circular financing and wanted to scale back a $250 billion deal with OpenAI.",
+          "quote": "after she had pushed to scale back NVIDIA's $250 billion deal with OpenAI."
+        },
+        {
+          "claim": "Nvidia faced an oversupply issue because AI hyperscalers began shifting toward custom solutions instead of off-the-shelf components.",
+          "quote": "saw AI hyperscalers move away from off-the-shelf components in favor of custom solutions."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "3dc626ea28ff",
+      "title": "Export-Banned Nvidia Blackwell Chips Found in Chinese AI Models",
+      "summary": "Leading open-weight AI models from Chinese companies like Moonshot AI and DeepSeek were trained using Nvidia Blackwell GPUs restricted from export. Approximately two million advanced chips entered China through smuggling schemes designed to hide their final destination.",
+      "why_it_matters": "Cross-border hardware restrictions continue to face enforcement challenges, impacting global compute distribution and competitive dynamics.",
+      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Research reveals China's top AI models were trained on export-banned Nvidia chips.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Leading open-weight AI models developed by Chinese companies were trained using Nvidia Blackwell GPUs that are restricted from export to China.",
+          "quote": "The leading open-weight models developed by Chinese companies were trained on Nvidia chips that the U.S. government restricted from shipping to its largest geopolitical rival"
+        },
+        {
+          "claim": "Nvidia CEO Jensen Huang left the company after admitting to an affair with Alice Huang, an executive of Megaspeed, which is implicated in smuggling Nvidia chips into China.",
+          "quote": "Nvidia CEO Jensen Huang left the company this week after admitting to his affair with Alice Huang, executive of Megaspeed, a company implicated in smuggling Nvidia chips into China."
+        },
+        {
+          "claim": "Researcher Will DePue analyzed model weights and found evidence that models from Moonshot AI and DeepSeek bear fingerprints from training on Blackwell chips.",
+          "quote": "DePue was able to find compelling evidence that the most closely watched models, including Moonshot’s Kimi’s K3 releases and DeepSeek’s V4 models, bear fingerprints from training on Blackwell chips."
+        },
+        {
+          "claim": "Epoch AI estimates that approximately two million advanced chips entered China in 2024 and 2025 through schemes designed to hide their final destination.",
+          "quote": "Epoch AI, a nonprofit research organization, estimates that about two million advanced chips entered China in 2024 and 2025 through schemes designed to hide their final destination."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "645e798427f9",
+      "title": "AI Agent Startup LangChain Reaches $3B Valuation",
+      "summary": "LangChain raised a $300 million Series C funding round led by CapitalG, more than doubling its valuation to $3 billion. The company focuses on its LangSmith agent creation and management software, which currently serves 7,000 customers.",
+      "why_it_matters": "Rapid valuation growth in agent tooling indicates continued enterprise demand for standardized agent development and management platforms.",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "AI agent startup LangChain reaches a $3B valuation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "LangChain raised a $300 million Series C funding round, bringing its valuation to $3 billion.",
+          "quote": "Agent management startup LangChain has raised a $300 million Series C at a $3 billion valuation"
+        },
+        {
+          "claim": "The funding round was led by CapitalG, with investments from GIC, DFJ Growth, IVP, and Sapphire Ventures.",
+          "quote": "led by CapitalG, with participation from investors, including Singapore’s GIC, DFJ Growth, IVP, and Sapphire Ventures"
+        },
+        {
+          "claim": "LangChain's current $3 billion valuation is more than double its previous valuation of $1.25 billion from a year ago.",
+          "quote": "That’s more than double its $1.25 billion valuation when it raised $125 million about a year ago"
+        },
+        {
+          "claim": "LangChain focuses on its agent creation and management software called LangSmith.",
+          "quote": "its agent creation and management software, LangSmith, is not trying to lock users"
+        },
+        {
+          "claim": "LangChain currently claims 7,000 customers for LangSmith, including major companies like Nvidia, Toyota, and Salesforce.",
+          "quote": "now claims 7,000 LangSmith customers, including big-name startups like Harvey, Rippling, and Clay, and enterprises like Nvidia, Toyota, and Salesforce"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

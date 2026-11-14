@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Friday 13 November 2026](2026-11-13.md): Recent developments include Google's new Gemini 4 Hydrogen model, forensic evidence of Blackwell GPU use in Chinese labs, open-source tooling for self-improving agents, vulnerabilities in preference-based leaderboards, and a 145B parameter on-device AI model.
+**Latest:** [Saturday 14 November 2026](2026-11-14.md): OpenAI launched an agent wallet feature, Nvidia faced executive upheaval and regulatory scrutiny over GPU distribution, and LangChain reached a $3 billion valuation.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Sat 14 Nov 2026](2026-11-14.md) | OpenAI launched an agent wallet feature, Nvidia faced executive upheaval and regulatory scrutiny over GPU distribution, and LangChain reached a $3 billion valuation. | 5 | 1 rewritten |
 | [Fri 13 Nov 2026](2026-11-13.md) | Recent developments include Google's new Gemini 4 Hydrogen model, forensic evidence of Blackwell GPU use in Chinese labs, open-source tooling for self-improving agents, vulnerabilities in preference-based leaderboards, and a 145B parameter on-device AI model. | 5 | 2 rewritten |
 | [Thu 12 Nov 2026](2026-11-12.md) | Recent developments include Google's new Gemini Decisions API, United Airlines blocking personal AI booking agents, an open-source AWS local emulator, a local-first meeting recorder, and an efficient on-device agentic model. | 5 | 2 rewritten |
 | [Wed 11 Nov 2026](2026-11-11.md) | Anthropic introduced new enterprise tools and detailed founder IPO payouts, New York enacted strict frontier AI regulations, Apple is developing a local cluster inference app, and researchers revealed the WorldParticle physics simulator. | 5 | 1 rewritten |
