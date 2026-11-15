@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "day": "2026-11-15",
+  "started": "2026-11-15T09:13:29Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "The AI ecosystem saw major updates including the llama.cpp v1.0.0 release, leadership changes at Nvidia affecting startup funding, a DRAM price-fixing lawsuit proceeding, a new LLM-native markup language, and a benchmark for testing AI responses to misconceptions.",
+  "fetch": {
+    "fetched": 14,
+    "unique": 14,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 5,
+      "MIT News AI": 3,
+      "Hacker News": 1
+    },
+    "seconds": 1.1
+  },
+  "candidates": 14,
+  "seconds": {
+    "editor": 223.2,
+    "researcher": 294.2,
+    "writer": 6.9,
+    "critic": 2.7
+  },
+  "critic_rounds": 1,
+  "stories": [
+    {
+      "id": "40e78db6601d",
+      "title": "llama.cpp and ggml Release Version 1.0.0",
+      "summary": "The llama.cpp and ggml projects have released version 1.0.0, establishing major-version bumps to signal API and ABI incompatibilities. The library supports over 150 model architecture variants and all mainstream speculative decoding methods, backed by hardware companies providing cross-platform self-hosted runners.",
+      "why_it_matters": "You can rely on clearer API and ABI compatibility signals when integrating local inference across diverse hardware platforms.",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Major v1.0.0 milestone release for the foundational local AI inference engine.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "llama.cpp and ggml have released version 1.0.0 of their libraries.",
+          "quote": "Today we release libraries v1.0.0, highlighting our responsibility to those developers."
+        },
+        {
+          "claim": "Going forward, llama.cpp and ggml will use major-version bumps to signal API and ABI incompatibilities.",
+          "quote": "Moving forward, both llama.cpp and ggml will reflect API and ABI incompatibilities with major-version bumps."
+        },
+        {
+          "claim": "The llama.cpp project has been developing over the course of 3.5 years.",
+          "quote": "During the 3.5 years since its inception, the project has grown a lot and many downstream applications already depend on our work."
+        },
+        {
+          "claim": "llama.cpp supports over 150 model architecture variants along with all mainstream speculative decoding methods.",
+          "quote": "Currently, llama.cpp supports more than 150 architecture variants as well as all mainstream speculative decoding methods."
+        },
+        {
+          "claim": "Hardware companies including NVIDIA, AMD, Qualcomm, Arm, IBM, and Intel are providing support to add more self-hosted runners across platforms.",
+          "quote": "With hardware support from NVIDIA, AMD, Qualcomm, Arm, IBM and Intel, we continue to enroll more self-hosted runners across all major hardware platforms."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "ec577d4c46a6",
+      "title": "Nvidia CEO Jensen Huang Resigns, Signaling Shift in Startup Funding",
+      "summary": "Nvidia co-founder and CEO Jensen Huang has officially resigned after 33 years, with interim CEO Colette Kress expected to take a more conservative approach to funding AI startups. This potential pullback from Nvidia's prolific investment strategy is projected to cause valuation drops and increased caution among venture capitalists.",
+      "why_it_matters": "AI startups heavily dependent on Nvidia's venture capital funding rounds will need to adjust to tighter financial conditions and lower valuations.",
+      "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Jensen Huang's departure creates massive funding and strategic disruption across AI startups.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Jensen Huang, Nvidia's co-founder and CEO of 33 years, has officially resigned.",
+          "quote": "Jensen Huang, Nvidia’s embattled CEO who co-founded and led the company for 33 years, had officially stepped down."
+        },
+        {
+          "claim": "Nvidia has been a prolific investor in AI startups, pouring tens of billions into them annually and participating in 105 rounds in a single year.",
+          "quote": "Nvidia has been a prolific investor, pouring tens of billions into startups annually and participating in 105 rounds this year alone"
+        },
+        {
+          "claim": "Interim CEO Colette Kress is expected to take a more conservative approach to funding AI startups compared to Huang.",
+          "quote": "Nvidia’s interim CEO, Colette Kress, is expected to institute some changes, especially when it comes to Nvidia’s investments into AI startups"
+        },
+        {
+          "claim": "Nvidia's potential pullback in startup investments is expected to cause a drop in valuations and make traditional venture capitalists more cautious.",
+          "quote": "Now Nvidia is expected to be more selective in the new companies it backs, while writing smaller-sized checks into its existing portfolio, contributing to a drop in valuations."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "14ba8d169059",
+      "title": "Federal Court Denies Motion to Dismiss DRAM Price-Fixing Lawsuit",
+      "summary": "A federal judge denied a motion to dismiss a class action lawsuit accusing Samsung, SK Hynix, and Micron of conspiring to restrict conventional DRAM supply. The case, which follows a significant surge in DRAM prices over an 18-month period, has set new procedural dates with answers required by December 2026.",
+      "why_it_matters": "Ongoing litigation against major memory chip makers could impact hardware component costs and supply chain stability for infrastructure development.",
+      "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+      "source": "litnews.ai via Hacker News",
+      "domain": "litnews.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Antitrust case against major DRAM suppliers advances, impacting foundational AI hardware supply costs.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "A federal judge denied a motion to dismiss a class action lawsuit accusing major memory chip makers of conspiring to restrict conventional DRAM supply.",
+          "quote": "Judge Noël Wise denied in full Samsung, SK Hynix and Micron's joint motion to dismiss a proposed class action alleging they conspired to cut supply of conventional DRAM"
+        },
+        {
+          "claim": "The lawsuit alleges that Samsung, SK Hynix, and Micron controlled a vast majority of global DRAM revenue.",
+          "quote": "the three companies controlled more than 91% of global DRAM revenue as of the third quarter of 2025."
+        },
+        {
+          "claim": "Conventional DRAM prices surged significantly over a period of 18 months prior to the lawsuit.",
+          "quote": "conventional DRAM prices had risen 171.8% in one year, according to the complaint, which alleges a 697% increase over 18 months."
+        },
+        {
+          "claim": "New procedural dates were set, requiring answers by December 2026 and an initial case management conference in January 2027.",
+          "quote": "Answers are due Dec. 7, 2026, and the initial case management conference was reset for Jan. 12, 2027."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "a88bddb17214",
+      "title": "LLMON Markup Language Released with Granite 4.1 Preview Models",
+      "summary": "Developers have introduced LLMON, an LLM-native markup language designed to communicate structure and semantics to causal language models while mitigating indirect prompt injections. Two experimental preview models, granite-4.1-3b-LLMON-preview and granite-4.1-8b-LLMON-preview, have been released alongside JSON conversion tools.",
+      "why_it_matters": "You can use LLMON to drastically reduce indirect prompt injection attack success rates while maintaining existing data structures.",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Introduces LLMON markup language support in new Granite 4.1 open models.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Developers created LLMON (LLM Object Notation), an LLM-native markup language designed to explicitly communicate structure and semantics to causal language models.",
+          "quote": "we developed LLMON (LLM Object Notation, pronounced “lemon”), an LLM-native markup language for explicitly communicating structure and semantics to the models."
+        },
+        {
+          "claim": "Two experimental preview models derived from Granite 4.1 base models are being released: granite-4.1-3b-LLMON-preview and granite-4.1-8b-LLMON-preview.",
+          "quote": "Today we are releasing two experimental preview models, derived from Granite 4.1 base models, trained to consume and generate LLMON-marked text: granite-4.1-3b-LLMON-preview and granite-4.1-8b-LLMON-preview."
+        },
+        {
+          "claim": "LLMON helps mitigate indirect prompt injections, reducing attack success rates to nearly zero on some benchmarks compared to regular instruction-tuned models.",
+          "quote": "Indirect prompt injections, hidden in user data, are mostly ignored by LLMON models due to explicit instruction/data separation. For some benchmarks, attack success rates drop to nearly zero"
+        },
+        {
+          "claim": "Conversion tools are provided to translate existing JSON formats into LLMON and back without data loss.",
+          "quote": "we created conversion tools and example notebooks that translate JSON to LLMON and back in a lossless manner."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8400bdfe1e2a",
+      "title": "XYBench Released to Test AI Responses to Misconceptions",
+      "summary": "Researchers have released XYBench, an EMNLP 2026 Best Resource Paper Award winner containing over 8,000 questions designed to test how AI assistants handle user requests based on misconceptions. Developed in collaboration with Carnegie Mellon, NVIDIA, and Johns Hopkins, the benchmark aggregates data from Stack Overflow, Stack Exchange, manual curation, and WikiHow guides.",
+      "why_it_matters": "You can use this benchmark to evaluate how effectively your models detect and correct user misconceptions instead of blindly following flawed premises.",
+      "url": "https://huggingface.co/blog/allenai/xybench",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New benchmark release targeting latent user intent behind conversational prompts.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers released XYBench, a benchmark consisting of over 8,000 questions designed to test how AI assistants respond to requests based on misconceptions.",
+          "quote": "We’re releasing XYBench, a benchmark of 8K+ questions that tests how AI assistants respond to requests based on misconceptions"
+        },
+        {
+          "claim": "XYBench won the Best Resource Paper Award at EMNLP 2026.",
+          "quote": "XYBench won the Best Resource Paper Award at EMNLP 2026."
+        },
+        {
+          "claim": "The benchmark was developed in collaboration with researchers from Carnegie Mellon, NVIDIA, and Johns Hopkins.",
+          "quote": "Developed with researchers at Carnegie Mellon, NVIDIA, and Johns Hopkins, XYBench exposes a critical gap in LLMs' ability to troubleshoot problems"
+        },
+        {
+          "claim": "XYBench was built from four sources, including 1,557 questions from Stack Overflow, 184 from Stack Exchange, 102 manually curated examples, and 6,272 questions generated from WikiHow guides.",
+          "quote": "We built XYBench from four sources: 1,557 questions from Stack Overflow, 184 from Stack Exchange, 102 manually curated examples, and 6,272 questions generated from WikiHow guides."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
