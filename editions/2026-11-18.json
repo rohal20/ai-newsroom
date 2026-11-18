@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "day": "2026-11-18",
+  "started": "2026-11-18T10:01:52Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments span hardware disaggregation for efficiency, bottlenecks in AI-assisted code review, new model routing integrations, gradient-free weight self-editing, and the impact of search summaries on web traffic.",
+  "fetch": {
+    "fetched": 596,
+    "unique": 519,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 162,
+      "arXiv cs.AI": 401,
+      "Hugging Face Blog": 1,
+      "TechCrunch AI": 20,
+      "MIT News AI": 4,
+      "Hacker News": 8
+    },
+    "seconds": 11.7
+  },
+  "candidates": 37,
+  "seconds": {
+    "editor": 122.3,
+    "researcher": 26.1,
+    "writer": 4.7,
+    "critic": 23.5
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "2d0ef2ca9868",
+      "title": "Cerebras Deploys Disaggregated Inference Pairing GPUs and CS-3 Systems",
+      "summary": "Cerebras has deployed a production inference solution where AMD Instinct GPUs handle prompt processing and Cerebras CS-3 systems handle output generation. This setup delivers five times more tokens per megawatt compared to previous configurations, with plans to deploy across hundreds of megawatts by the end of 2027.",
+      "why_it_matters": "You can achieve significantly higher token generation efficiency by separating prompt processing onto GPUs from output generation on Cerebras systems.",
+      "url": "https://www.cerebras.ai/blog/cerebras-launches-disaggregated-inference",
+      "source": "cerebras.ai via Hacker News",
+      "domain": "cerebras.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Cerebras launches disaggregated inference for high-performance AI deployment.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Cerebras has deployed a disaggregated inference solution where GPUs handle prompt processing and Cerebras systems handle output generation.",
+          "quote": "GPUs handle prompt processing (prefill) and Cerebras systems handle output generation (decode)."
+        },
+        {
+          "claim": "The new production solution delivers five times more tokens per megawatt compared to previous configurations.",
+          "quote": "This solution is now in production and delivers five times more tokens per megawatt at the same ultrafast Cerebras speeds."
+        },
+        {
+          "claim": "The production deployment pairs AMD Instinct GPUs for prompt processing with Cerebras CS-3 systems for generating responses.",
+          "quote": "In a production deployment on the Cerebras Inference Cloud, AMD Instinct GPUs process prompts, and Cerebras CS-3 systems generate responses."
+        },
+        {
+          "claim": "Cerebras plans to deploy disaggregated inference across hundreds of megawatts by the end of 2027.",
+          "quote": "We plan to deploy disaggregated inference broadly across hundreds of megawatts in the Cerebras Inference Cloud and in partner deployments by the end of 2027."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "launched",
+          "problem": "Facts state Cerebras 'has deployed' and 'plans to deploy', but 'launched' is acceptable rewording for deployed. Let's check scope: facts say 'deployed a disaggregated inference solution', draft says 'launched a production inference architecture'. Actually, let's look closer at 'through 2027': facts say 'by the end of 2027'.",
+          "by": "critic"
+        },
+        {
+          "text": "through 2027",
+          "problem": "Facts state 'by the end of 2027', which is a specific deadline, whereas 'through 2027' changes the scope/timeline.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "5c441d68610c",
+      "title": "Harvard Research Shows AI Coding Agents Shift Development Bottleneck to Review",
+      "summary": "A study of 718 firms by Harvard researchers found that engineers using AI coding agents produced 30 percent more code without completing more overall work. However, the time required to clear the code review process increased by 49 percent.",
+      "why_it_matters": "Adopting AI coding assistants may increase your team's code volume while simultaneously slowing down code review pipelines.",
+      "url": "https://complexdiscovery.com/harvard-researchers-find-ai-coding-agents-shifted-the-bottleneck-to-code-review/",
+      "source": "complexdiscovery.com via Hacker News",
+      "domain": "complexdiscovery.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Harvard study reveals AI coding agents shift software bottlenecks to code review.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Engineers using AI coding agents wrote about 30 percent more code, but overall finished work did not increase.",
+          "quote": "Engineers at firms that adopted AI coding agents added about 30 percent more code, yet finished work did not measurably rise"
+        },
+        {
+          "claim": "The time required to get code through the review process increased by 49 percent.",
+          "quote": "getting code through review took 49 percent longer"
+        },
+        {
+          "claim": "The research was conducted by Harvard Ph.D. candidates Fiona Chen and James Stratton across 718 firms.",
+          "quote": "according to a working paper by Harvard Ph.D. candidates Fiona Chen and James Stratton covering 718 firms."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "853b24ff0d6e",
+      "title": "Hugging Face and OpenRouter Partner for Open-Weight Model Routing",
+      "summary": "Hugging Face has partnered with OpenRouter to route Inference Providers requests using existing Hugging Face tokens and code. OpenRouter automatically selects the optimal provider based on live metrics, handles retries, and passes through transparent pricing without markup.",
+      "why_it_matters": "You can now run any open-weight model from the Hugging Face Hub with automated provider failover and without changing your billing structure.",
+      "url": "https://huggingface.co/blog/openrouter",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face and OpenRouter partner to simplify open-weight model execution.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Hugging Face and OpenRouter are partnering to route Hugging Face Inference Providers requests through OpenRouter.",
+          "quote": "Today, we are switching Inference Providers from our own custom router to OpenRouter's."
+        },
+        {
+          "claim": "The integration allows users to call any open-weight model on the Hugging Face Hub using their Hugging Face token and existing code.",
+          "quote": "Together, every open-weight model on the Hub that a provider serves can be called with your Hugging Face token, through the same API"
+        },
+        {
+          "claim": "OpenRouter selects the best provider for each request based on live metrics like price, speed, and reliability, and automatically retries if a failure occurs.",
+          "quote": "Requests made to language models now go through OpenRouter, which picks the best provider for each call based on live price, speed and reliability, and retries on another provider if the first one fails."
+        },
+        {
+          "claim": "Pricing remains transparent with no markup added by Hugging Face to the provider's price on the user's bill.",
+          "quote": "Pricing doesn't change: you pay the provider's price on your Hugging Face bill, and Hugging Face doesn't add a markup on top of it."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "9fe3e937f57a",
+      "title": "Language Models Improve via Direct Weight Rewriting Without Gradients",
+      "summary": "A language model can improve itself by editing its own weights through reasoning without gradients or training. A 27B model's self-edit increased its accuracy by 6.6 points on 490 unseen problems using only an open model and hours on a single GPU.",
+      "why_it_matters": "You can execute model self-improvement cycles locally on a single GPU without needing training infrastructure.",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Research demonstrates language models capable of rewriting their own weights.",
+      "status": "rewritten",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "A language model can improve itself by editing its own weights through reasoning without gradients or training.",
+          "quote": "we ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training"
+        },
+        {
+          "claim": "A 27B model's self-edit increased its accuracy by 6.6 points on 490 unseen problems.",
+          "quote": "its own edit makes it 6.6 points more accurate on 490 problems it never saw"
+        },
+        {
+          "claim": "The self-rewriting process requires only an open model and hours on a single GPU, needing no training infrastructure.",
+          "quote": "it needs no pre- or post-training infrastructure, only an open model and hours on one GPU."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "Researchers demonstrated",
+          "problem": "The facts do not mention researchers; they only state what the method achieves.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "f2df59b272b9",
+      "title": "Google AI Overviews Linked to Significant Drop in External Search Traffic",
+      "summary": "Google's AI Overviews now appear on over half of tracked US keywords, up from under six percent two years prior. Experiments and tracking data show this feature reduces clicks to external websites by approximately 40 percent.",
+      "why_it_matters": "If your application relies on organic search traffic, the expansion of AI-generated answers directly reduces inbound user clicks.",
+      "url": "https://revscope.co/blog/search-seo-geo-2026/",
+      "source": "revscope.co via Hacker News",
+      "domain": "revscope.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google's AI answers are reported to reduce organic search traffic significantly.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google's AI Overviews reduce clicks to outside websites by approximately 40%.",
+          "quote": "an Overview cuts clicks to outside websites by about 40%."
+        },
+        {
+          "claim": "AI Overviews appear on more than half of US keywords tracked by DataForSEO, up significantly from 6% two years prior.",
+          "quote": "Those Overviews now appear on more than half the US keywords DataForSEO tracks, up from 6% two years ago."
+        },
+        {
+          "claim": "The share of results showing an AI Overview climbed from 5.93% in September 2024 to 61.43% in August 2026.",
+          "quote": "the share of results showing one climbed from 5.93% in September 2024 to 61.43% in August 2026."
+        },
+        {
+          "claim": "In a randomized experiment, researchers found that searches resulting in no outbound click increased from 54% to 73% when AI Overviews were present.",
+          "quote": "Searches ending with no outbound click went from 54% to 73%."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Tuesday 17 November 2026](2026-11-17.md): Windows 11 tracks developer tool usage, Hugging Face partners with OpenRouter, California sues OpenAI over agent security, OpenAI embeds external safety researchers, and cybersecurity startup Corma reaches a $1 billion valuation.
+**Latest:** [Wednesday 18 November 2026](2026-11-18.md): Recent AI developments span hardware disaggregation for efficiency, bottlenecks in AI-assisted code review, new model routing integrations, gradient-free weight self-editing, and the impact of search summaries on web traffic.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Wed 18 Nov 2026](2026-11-18.md) | Recent AI developments span hardware disaggregation for efficiency, bottlenecks in AI-assisted code review, new model routing integrations, gradient-free weight self-editing, and the impact of search summaries on web traffic. | 5 | 2 rewritten |
 | [Tue 17 Nov 2026](2026-11-17.md) | Windows 11 tracks developer tool usage, Hugging Face partners with OpenRouter, California sues OpenAI over agent security, OpenAI embeds external safety researchers, and cybersecurity startup Corma reaches a $1 billion valuation. | 5 | all approved |
 | [Sun 15 Nov 2026](2026-11-15.md) | The AI ecosystem saw major updates including the llama.cpp v1.0.0 release, leadership changes at Nvidia affecting startup funding, a DRAM price-fixing lawsuit proceeding, a new LLM-native markup language, and a benchmark for testing AI responses to misconceptions. | 5 | all approved |
 | [Sat 14 Nov 2026](2026-11-14.md) | OpenAI launched an agent wallet feature, Nvidia faced executive upheaval and regulatory scrutiny over GPU distribution, and LangChain reached a $3 billion valuation. | 5 | 1 rewritten |
