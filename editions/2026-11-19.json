@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "day": "2026-11-19",
+  "started": "2026-11-19T10:11:36Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Anthropic launched a historic $81.3 billion IPO while major tech providers released advanced coding models, interactive generation tools, and unified routing infrastructure.",
+  "fetch": {
+    "fetched": 533,
+    "unique": 477,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 134,
+      "arXiv cs.AI": 362,
+      "Hugging Face Blog": 6,
+      "TechCrunch AI": 20,
+      "MIT News AI": 5,
+      "Hacker News": 6
+    },
+    "seconds": 10.4
+  },
+  "candidates": 40,
+  "seconds": {
+    "editor": 254.6,
+    "researcher": 66.2,
+    "writer": 6.0,
+    "critic": 27.2
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "6b4b11d8558c",
+      "title": "Anthropic Prices IPO at $83 a Share to Raise $81.3 Billion",
+      "summary": "Anthropic priced its IPO at $83 per share, surpassing its initial projected range of $70 to $78 and raising $81.3 billion. The company will begin trading on Nasdaq under the ticker symbol 'ANT' with a fully diluted valuation of approximately $1.5 trillion.",
+      "why_it_matters": "This record-breaking public offering establishes a massive new financial benchmark for standalone AI infrastructure companies.",
+      "url": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic prices its IPO at $83/share, valuing the company at $1.5 trillion.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic priced its IPO at $83 per share, surpassing its initial projected range of $70 to $78.",
+          "quote": "Anthropic has priced its long-awaited IPO at $83 per share, above its initial range of $70 to $78"
+        },
+        {
+          "claim": "The company sold 980 million shares and raised $81.3 billion, making it the largest IPO in history.",
+          "quote": "generating $81.3 billion in proceeds and surpassing SpaceX’s $75 billion record to become the largest IPO in history"
+        },
+        {
+          "claim": "The IPO values Anthropic at approximately $1.5 trillion on a fully diluted basis.",
+          "quote": "At the IPO price, Anthropic is valued at roughly $1.5 trillion on a fully diluted basis"
+        },
+        {
+          "claim": "Anthropic is set to begin trading on Nasdaq on Thursday under the ticker symbol 'ANT'.",
+          "quote": "Anthropic will begin its life as a public company on Thursday, trading on Nasdaq under the ticker symbol “ANT.”"
+        },
+        {
+          "claim": "Strategic partners Amazon and Google hold nearly 15% and almost 14% of the company, respectively.",
+          "quote": "strategic partners Amazon, which owns nearly 15% of the company, and Google, which holds almost 14%"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "e2b6407cfa68",
+      "title": "Google Introduces Gemini 4 Neon for Complex Engineering and Science Workflows",
+      "summary": "Google introduced Gemini 4 Neon, an AI model featuring a 1 million-token context window and specialized pricing tiers for input and output tokens. The model is rolling out across the Gemini API in Google AI Studio, Gemini for business, Google Antigravity, and the Gemini app for paid subscribers.",
+      "why_it_matters": "Engineers and knowledge workers gain access to a high-context AI model tailored for complex software and science workflows.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google introduces the Gemini 4 Neon model.",
+      "status": "rewritten",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "Google introduced Gemini 4 Neon, a new AI model designed for complex software engineering, knowledge work, and science workflows.",
+          "quote": "Today, we’re introducing Gemini 4 Neon — bringing frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows."
+        },
+        {
+          "claim": "Gemini 4 Neon is priced at $3 per million input tokens, $0.15 per million cached input tokens, and $15 per million output tokens, featuring a 1 million-token context window.",
+          "quote": "The model is priced at $3 per million input tokens ($0.15 per million cached input tokens, a 95% discount) and $15 per million output tokens, with a 1 million-token context window."
+        },
+        {
+          "claim": "The model is rolling out across the Gemini API in Google AI Studio, Gemini for business, Google Antigravity, and the Gemini app for paid subscribers.",
+          "quote": "Gemini 4 Neon is rolling out today in the Gemini API in Google AI Studio, Gemini for business (via API and model dropdown), for paid Google AI Pro and Ultra subscribers in Google Antigravity, and for Pro and Ultra subscribers in the Gemini app."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "paid mobile apps",
+          "problem": "Facts state it is rolling out to 'the Gemini app for paid subscribers', not specifically mobile apps.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "bb5459d8891c",
+      "title": "Google Releases Genie 4 with Real-Time Text Editing and Native Audio",
+      "summary": "Google is rolling out Genie 4 to eligible Google AI Ultra subscribers, featuring real-time editing via text prompts and native audio support. The update also includes extended 3-minute exploration sessions for Genie 3 and a new agent for creating interactive universes.",
+      "why_it_matters": "Developers and creators can leverage real-time multimodal inputs to build and modify interactive virtual environments dynamically.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "source": "blog.google via Hacker News",
+      "domain": "blog.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google DeepMind releases Genie 4 for public use.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google is rolling out a new Project Genie experience that includes Genie 4 to eligible Google AI Ultra subscribers.",
+          "quote": "today, we are rolling out a new Project Genie experience to eligible Google AI Ultra subscribers, making these worlds far more responsive, creative, and social."
+        },
+        {
+          "claim": "Genie 4 introduces real-time editing capabilities via mid-session text prompts and real-time native audio.",
+          "quote": "With Genie 4, our most realistic and interactive world model yet, you can now prompt mid-session to change the world you created."
+        },
+        {
+          "claim": "Genie 3 updates include extended exploration sessions of up to 3 minutes per generation.",
+          "quote": "Explore for up to 3 minutes per generation (up from 60 seconds), or link multiple worlds together for longer journeys."
+        },
+        {
+          "claim": "A new Project Genie agent allows users to create interactive universes using natural language conversations.",
+          "quote": "Simply describe your vision in natural language, and the agent orchestrates Google’s suite of multimodal models"
+        },
+        {
+          "claim": "Google AI Pro members can join the waitlist to access the new Project Genie experience.",
+          "quote": "Google AI Pro members can join the waitlist on the same page."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "208b7ebb3cea",
+      "title": "Microsoft Launches Seven New AI Models Focused on Price-Performance",
+      "summary": "Microsoft released seven new AI models, including MAI Cyber 2 Flash for security, MAI Code 2 for enterprise coding, and the live speech-to-speech model MAI Realtime 1. Additionally, the company introduced MAI Licensed Weights to let enterprises securely customize frontier models in Azure.",
+      "why_it_matters": "Enterprises gain access to specialized, cost-optimized models and licensed weights for secure in-environment customization.",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+      "source": "microsoft.ai via Hacker News",
+      "domain": "microsoft.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Microsoft announces seven new models at Ignite 2026.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Microsoft released a family of seven new AI models focused on price-performance and customizable licensed weights.",
+          "quote": "today we’re releasing a family of seven new world class models at a truly exceptional price-performance."
+        },
+        {
+          "claim": "MAI Cyber 2 Flash was launched for security monitoring and is priced 86% lower on output tokens than MAI Cyber 1.1 Flash.",
+          "quote": "our latest model is now priced 86% lower on output tokens than MAI Cyber 1.1 Flash"
+        },
+        {
+          "claim": "MAI Code 2 is designed for enterprise coding tasks, offering 98% of the performance of GPT-6.1 Sol at 40% of the price.",
+          "quote": "MAI Code 2 gives you 98% of the performance of GPT-6.1 Sol at 40% of the price"
+        },
+        {
+          "claim": "MAI Realtime 1 is introduced as a live speech-to-speech model priced at $0.01 per audio minute.",
+          "quote": "It’s priced for enterprise-scale use, starting at a budget-saving price of $0.01 per audio minute."
+        },
+        {
+          "claim": "Microsoft introduced MAI Licensed Weights, allowing enterprises to run and customize frontier models securely in their own Azure environment.",
+          "quote": "Take a frontier MAI model, customize it using your proprietary data if you want to. Then run it securely in your own Azure environment."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "853b24ff0d6e",
+      "title": "Hugging Face and OpenRouter Partner to Optimize Open-Weight Model Routing",
+      "summary": "Hugging Face's Inference Providers now utilize OpenRouter's routing system to automatically select the best provider based on live price, speed, and reliability metrics. Users pay standard provider pricing without markups while benefiting from automated failover retries.",
+      "why_it_matters": "Engineers deploying open-weight models get automated reliability and cost optimization without changing their billing setup.",
+      "url": "https://huggingface.co/blog/openrouter",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face and OpenRouter partner to simplify running open-weight models.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Hugging Face and OpenRouter are partnering so that Hugging Face's Inference Providers now use OpenRouter's routing system.",
+          "quote": "Today, we are switching Inference Providers from our own custom router to OpenRouter's."
+        },
+        {
+          "claim": "OpenRouter selects the best provider for each request based on live measurements of price, speed, and reliability, and automatically retries if a failure occurs.",
+          "quote": "Requests made to language models now go through OpenRouter, which picks the best provider for each call based on live price, speed and reliability, and retries on another provider if the first one fails."
+        },
+        {
+          "claim": "Pricing remains unchanged with no added markup from Hugging Face, and users continue to pay the provider's price on their Hugging Face bill.",
+          "quote": "Pricing doesn't change: you pay the provider's price on your Hugging Face bill, and Hugging Face doesn't add a markup on top of it."
+        },
+        {
+          "claim": "Open-weight models grew significantly on OpenRouter, rising from 26.8% of served tokens in October 2025 to 71.7% by the end of September 2026.",
+          "quote": "On OpenRouter, open-weight models went from 26.8% of the tokens served in October 2025 to 71.7% at the end of September 2026"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
