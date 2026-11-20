@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "day": "2026-11-20",
+  "started": "2026-11-20T09:56:14Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments introduce new macOS AI agents from Google and Apple, alongside algorithmic improvements for LLM memory efficiency, architectural scaling insights, and high-parameter MoE inference techniques.",
+  "fetch": {
+    "fetched": 591,
+    "unique": 513,
+    "feeds_ok": 5,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 161,
+      "arXiv cs.AI": 400,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 20,
+      "MIT News AI": 5,
+      "Hacker News": 0
+    },
+    "seconds": 23.6
+  },
+  "candidates": 34,
+  "seconds": {
+    "editor": 26.0,
+    "researcher": 30.1,
+    "writer": 7.1,
+    "critic": 0.9
+  },
+  "critic_rounds": 1,
+  "stories": [
+    {
+      "id": "1054662f25c3",
+      "title": "Google Introduces Computer Use Feature for Gemini on macOS",
+      "summary": "Google announced a new computer use feature for the Gemini desktop application on macOS that allows the AI agent to navigate native apps and web browsers. Users maintain control over the process by retaining the ability to pause, stop, and approve actions.",
+      "why_it_matters": "You can now automate multi-step workflows across your Mac apps using Gemini, provided you have a paid subscription and the desktop app.",
+      "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google updates Gemini with a native Mac-controlling AI agent capability.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google announced a new computer use feature for its Gemini desktop application on macOS.",
+          "quote": "Google on Thursday announced that it is bringing computer use to its Gemini desktop application on macOS"
+        },
+        {
+          "claim": "The AI agent can perform tasks by navigating native Mac apps and browsing the web in the background.",
+          "quote": "allowing its AI to complete tasks on users’ behalf, navigating native Mac apps, and browsing websites in the background."
+        },
+        {
+          "claim": "Users retain control by being able to pause, stop, and approve the AI's actions.",
+          "quote": "users can pause, stop, and approve Gemini’s actions before they happen."
+        },
+        {
+          "claim": "The feature requires the Gemini app for Mac and a Google AI Plus, Pro, or Ultra subscription.",
+          "quote": "requires the Gemini app for Mac and a Google AI Plus, Pro, or Ultra subscription."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8f4728ffc5b9",
+      "title": "Apple Develops Native Mac AI Agent and Plans Third-Party Warnings",
+      "summary": "Apple is developing an early-stage AI agent to perform tasks like browsing the web, using apps, and writing code, as revealed by a recent job posting. Additionally, macOS 27.3 will introduce warnings that discourage users from granting full computer access to third-party agents.",
+      "why_it_matters": "Upcoming macOS updates will explicitly warn users against third-party agent access while Apple builds its own native solution.",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Apple reportedly developing an AI agent designed to run macOS.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Apple is developing an AI agent designed to perform computer tasks such as browsing the web, using apps, and writing code.",
+          "quote": "Apple appears to be working on its own AI agent to conduct computer work on behalf of users — including using apps, accessing websites, and coding, among other things."
+        },
+        {
+          "claim": "The development of the AI agent was revealed through a job posting for a senior engineering manager to oversee the project.",
+          "quote": "The news was originally reported by Bloomberg, which spotted a job listing the iPhone maker recently posted for a senior engineering manager to oversee the creation of an “AI agent that can use a computer.”"
+        },
+        {
+          "claim": "Apple plans to introduce warnings in macOS 27.3 that discourage users from giving third-party agents full computer access.",
+          "quote": "The version of its upcoming macOS 27.3 will deploy warnings discouraging users from granting full access to third-party agents."
+        },
+        {
+          "claim": "Although Apple has considered introducing the service by the end of next year, the project is still in its early stages.",
+          "quote": "has eyed introducing the service as soon as the end of next year,” progress on its in-house agent “remains in the early stages."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "bc5ae8bd093a",
+      "title": "PRKV Method Reduces KV Cache Memory Bottlenecks in Long-Context LLMs",
+      "summary": "Researchers introduced PRKV, a training-free key-value cache eviction method using Personalized PageRank to estimate token importance. The approach achieves competitive performance under aggressive compression up to 90% while lowering peak memory usage and maintaining low overhead.",
+      "why_it_matters": "You can implement PRKV to significantly reduce memory consumption during long-context LLM inference without retraining.",
+      "url": "https://arxiv.org/abs/2611.24969",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Introduces PRKV, a training-free KV cache eviction method to optimize long-context LLM inference memory.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Memory consumption of the key-value cache is a major bottleneck for long-context LLM inference.",
+          "quote": "Memory consumption of the key-value (KV) cache remains a central bottleneck for long-context LLM inference."
+        },
+        {
+          "claim": "Researchers introduced PRKV, a training-free KV eviction method that uses Personalized PageRank to estimate token importance.",
+          "quote": "We introduce PRKV, a training-free KV eviction method that estimates multi-hop global token importance by applying Personalized PageRank over attention-induced transition graphs."
+        },
+        {
+          "claim": "PRKV achieves competitive task performance even under aggressive compression ratios of up to 90%.",
+          "quote": "Under moderate to aggressive compression ratios, including up to 90%, PRKV achieves competitive task performance against established eviction baselines"
+        },
+        {
+          "claim": "The new method reduces peak memory usage while maintaining low end-to-end overhead.",
+          "quote": "while reducing peak memory usage with low end-to-end overhead."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "16ff4aab8e4c",
+      "title": "Scaling Insights and Canon Layers Evaluated in Large-Scale Transformer Runs",
+      "summary": "Researchers completed 64 pretraining runs of Transformers and linear models at 1.3-8B parameters, showing that Canon layers save about 30% of pretraining tokens for equal MMLU accuracy. However, linear models matching Transformers on benchmarks failed to reliably retrieve information from a 500-token context.",
+      "why_it_matters": "Integrating Canon layers into your architecture can reduce pretraining token requirements, though linear alternatives still struggle with short-context retrieval.",
+      "url": "https://arxiv.org/abs/2611.24963",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Extensive scaling study analyzing Transformer architectural layers and synthetic pretraining dynamics.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers conducted 64 from-scratch pretraining runs of Transformers and three linear-model families at 1.3-8B parameters.",
+          "quote": "We study it with 64 from-scratch pretraining runs of Transformers and three linear-model families at 1.3-8B parameters"
+        },
+        {
+          "claim": "Canon layers add local token mixing and save about 30% of pretraining tokens for the same MMLU accuracy at 8B.",
+          "quote": "Canon layers, which add local token mixing, consistently improve Transformers, saving about 30% of pretraining tokens for the same MMLU accuracy at 8B."
+        },
+        {
+          "claim": "Gated linear attention matches Gated DeltaNet and outperforms Mamba2 at 8B/1T when using Canon.",
+          "quote": "with Canon, the simplest linear model, gated linear attention, matches Gated DeltaNet and outperforms Mamba2 even at 8B/1T."
+        },
+        {
+          "claim": "Linear models that match or beat Transformers on standard benchmarks fail to reliably retrieve information from a short 500-token context.",
+          "quote": "linear models that match or beat Transformers on these benchmarks cannot, in fact, reliably retrieve information from a short 500-token context."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "af1852b4c46d",
+      "title": "Strata Inference Engine Runs 180B Parameter MoE Models on Limited VRAM",
+      "summary": "Strata is a new inference engine for Mixture of Experts models that offloads cold experts to system RAM or disk while keeping hot experts in VRAM. A slot pool fix in Transformers further enables efficient expert caching by allowing grouped matrix multiplication on cached slots.",
+      "why_it_matters": "You can run massive 180B parameter MoE models on hardware with significantly less VRAM by utilizing these offloading and caching strategies.",
+      "url": "https://huggingface.co/blog/moe-expert-streaming",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face demonstrates pushing MoE inference limits for large models on consumer hardware.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Strata is an inference engine for Mixture of Experts (MoE) models that keeps only hot experts in VRAM while moving the rest to RAM or disk.",
+          "quote": "Strata is an inference engine for MoE models like Qwen. Only the hot experts stay in VRAM, the rest goes to RAM, or even to disk."
+        },
+        {
+          "claim": "A 180B parameter MoE model can run on a GPU with much less memory using specialized inference techniques.",
+          "quote": "Experts are 90%+ of a MoE model's weights, so a 180B model like this one can run on a GPU with much less memory."
+        },
+        {
+          "claim": "The author implemented a slot pool fix in Transformers to make expert caching efficient by allowing grouped matrix multiplication to run on cached slots.",
+          "quote": "The fix, and the key idea of this project, was to turn the cache into a slot pool: one preallocated device tensor shared by all layers"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

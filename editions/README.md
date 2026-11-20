@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Thursday 19 November 2026](2026-11-19.md): Anthropic launched a historic $81.3 billion IPO while major tech providers released advanced coding models, interactive generation tools, and unified routing infrastructure.
+**Latest:** [Friday 20 November 2026](2026-11-20.md): Recent developments introduce new macOS AI agents from Google and Apple, alongside algorithmic improvements for LLM memory efficiency, architectural scaling insights, and high-parameter MoE inference techniques.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Fri 20 Nov 2026](2026-11-20.md) | Recent developments introduce new macOS AI agents from Google and Apple, alongside algorithmic improvements for LLM memory efficiency, architectural scaling insights, and high-parameter MoE inference techniques. | 5 | all approved |
 | [Thu 19 Nov 2026](2026-11-19.md) | Anthropic launched a historic $81.3 billion IPO while major tech providers released advanced coding models, interactive generation tools, and unified routing infrastructure. | 5 | 1 rewritten |
 | [Wed 18 Nov 2026](2026-11-18.md) | Recent AI developments span hardware disaggregation for efficiency, bottlenecks in AI-assisted code review, new model routing integrations, gradient-free weight self-editing, and the impact of search summaries on web traffic. | 5 | 2 rewritten |
 | [Tue 17 Nov 2026](2026-11-17.md) | Windows 11 tracks developer tool usage, Hugging Face partners with OpenRouter, California sues OpenAI over agent security, OpenAI embeds external safety researchers, and cybersecurity startup Corma reaches a $1 billion valuation. | 5 | all approved |
