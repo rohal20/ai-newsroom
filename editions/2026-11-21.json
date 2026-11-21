@@ -1,0 +1,216 @@
+{
+  "version": 1,
+  "day": "2026-11-21",
+  "started": "2026-11-21T09:38:41Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments include a compact reasoning model that runs locally, an AI-assisted proof of the Riemann hypothesis, physics-constrained chaotic system modeling, Apple's early work on a desktop automation agent, and a high-performance open-source speech recognition model.",
+  "fetch": {
+    "fetched": 25,
+    "unique": 25,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 7,
+      "TechCrunch AI": 9,
+      "MIT News AI": 6,
+      "Hacker News": 3
+    },
+    "seconds": 1.3
+  },
+  "candidates": 24,
+  "seconds": {
+    "editor": 221.5,
+    "researcher": 24.4,
+    "writer": 6.8,
+    "critic": 3.0
+  },
+  "critic_rounds": 1,
+  "stories": [
+    {
+      "id": "b9db119f86f5",
+      "title": "Thinking Machines Releases Inkling 2 Mini",
+      "summary": "Thinking Machines has released Inkling 2 Mini, a 26.4B parameter Mixture-of-Experts model that uses a looped transformer architecture to enhance reasoning. With a 20GB memory footprint, it runs locally on consumer hardware and leads open-weights models under 100B parameters on multiple benchmarks.",
+      "why_it_matters": "You can deploy a high-performance reasoning model locally on standard consumer hardware for inference and customization.",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "source": "thinkingmachines.ai via Hacker News",
+      "domain": "thinkingmachines.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Release of Inkling 2 Mini bringing high performance to local setups.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Thinking Machines released Inkling 2 Mini, a fast, small-footprint Mixture-of-Experts AI model with 26.4B total parameters.",
+          "quote": "Today we are releasing Inkling 2 Mini, a fast, powerful model that’s small enough to run on your laptop."
+        },
+        {
+          "claim": "Inkling 2 Mini uses a looped transformer architecture that runs middle layers multiple times per token to enhance reasoning quality.",
+          "quote": "Inkling 2 Mini is a looped transformer, running the middle layers of the model three times for every token."
+        },
+        {
+          "claim": "The model has a total memory footprint of approximately 20GB, allowing it to run locally on consumer hardware like laptops.",
+          "quote": "The total memory footprint of Inkling 2 Mini is ~20GB, allowing it to run on local devices such as consumer laptops"
+        },
+        {
+          "claim": "Inkling 2 Mini leads open-weights models under 100B parameters on benchmarks such as DeepSWE v1.1 and Vals Index v2.2.",
+          "quote": "Inkling 2 Mini leads every open-weights model with less than 100B total parameters on benchmarks such as DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%)."
+        },
+        {
+          "claim": "The model is released with open weights and is immediately available on Tinker for inference and customization.",
+          "quote": "Inkling 2 Mini is released with open weights and is available on Tinker today for inference and customization."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "d6bff5841b5a",
+      "title": "AI-Assisted and Human Proofs of the Riemann Hypothesis Announced",
+      "summary": "Anthropic employee and mathematician Levent Alpöge announced a solution to the 167-year-old Riemann hypothesis developed using the Claude AI model. Independent sources have confirmed that the solution compiles in the Lean proof-verification language.",
+      "why_it_matters": "AI models are now capable of assisting mathematicians in developing verifiable, complex proofs for historic mathematical problems.",
+      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "AI claims a solution to the historic Riemann hypothesis.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Anthropic employee and mathematician Levent Alpöge announced a solution to the 167-year-old Riemann hypothesis.",
+          "quote": "Levent Alpöge: The mathematician saw his employer, Anthropic, become the first publicly traded frontier AI lab. He also appears to have solved one of the most important problems in mathematics."
+        },
+        {
+          "claim": "Alpöge developed the solution using the AI model Claude, describing the experience as a stream-of-consciousness jaunt.",
+          "quote": "Alpöge described a “stream-of-consciousness jaunt through the experience of finding all the pieces of the argument through incredible confusion with Claude”"
+        },
+        {
+          "claim": "Independent sources and mathematicians have successfully confirmed that Alpöge’s solution compiles in Lean, an open-source coding language for verifying proofs.",
+          "quote": "Several participants in the Zulip chat, including MIT mathematician Andrew Sutherland, say they have successfully confirmed that Alpöge’s solution can be compiled successfully."
+        },
+        {
+          "claim": "Stanford postdoc Alessandro Masullo also released a human-written proof of the General Riemann hypothesis without the use of AI.",
+          "quote": "Stanford professor and the president of the American Mathematics Association, posted a proof of the General Riemann hypothesis written by Stanford postdoc Alessandro Masullo, noting that “it is all human, with no AI."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "480a8b723958",
+      "title": "New Approach Enables Physically Consistent AI Models of Chaotic Systems",
+      "summary": "MIT researchers have developed a new approach to introduce physics-based restrictions on machine learning models for chaotic systems. The method uses energy-based constraints and a projection layer to enforce energy dissipation as a hard constraint.",
+      "why_it_matters": "You can now train machine learning models on chaotic systems with guarantees that their predictions remain physically bounded and realistic.",
+      "url": "https://news.mit.edu/new-approach-enables-physically-consistent-ai-models-chaotic-systems-1120",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New physics-informed constraints make AI models reliable for chaotic systems.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "MIT researchers developed a new approach to introduce physics-based restrictions on machine learning models for chaotic systems, ensuring they stay within realistic bounds.",
+          "quote": "researchers with MIT’s Laboratory for Information and Decision Systems (LIDS) have found a way to introduce physics-based restrictions on machine learning models that can ensure that such models never exceed realistic bounds"
+        },
+        {
+          "claim": "The research team includes MIT graduate student Sunbochen Tang and professors Navid Azizan and Themistoklis Sapsis.",
+          "quote": "a paper by MIT graduate student Sunbochen Tang and MIT professors Navid Azizan and Themistoklis Sapsis."
+        },
+        {
+          "claim": "The new method uses energy-based constraints and a projection layer to enforce energy dissipation as a hard constraint, guaranteeing predictions remain bounded.",
+          "quote": "We then add a projection layer, a component that adjusts how the model predicts the system will evolve, to enforce energy dissipation as a hard constraint."
+        },
+        {
+          "claim": "The findings were published in the Proceedings of the National Academy of Sciences (PNAS).",
+          "quote": "The new findings are published in the Proceedings of the National Academy of Sciences (PNAS)"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "8f4728ffc5b9",
+      "title": "Apple Developing In-House AI Agent to Control macOS",
+      "summary": "Apple is developing an in-house AI agent designed to perform tasks such as browsing the web, using apps, and writing code on macOS. Revealed through a job posting, the early-stage project could see a release as early as the end of next year.",
+      "why_it_matters": "Native OS-level AI automation will soon provide standardized ways to execute complex, multi-app workflows directly on user devices.",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Apple is reportedly developing a native AI agent to control macOS.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Apple is developing its own AI agent designed to perform computer tasks on behalf of users.",
+          "quote": "Apple appears to be working on its own AI agent to conduct computer work on behalf of users"
+        },
+        {
+          "claim": "The development of the AI agent was revealed through a job posting for a senior engineering manager.",
+          "quote": "spotted a job listing the iPhone maker recently posted for a senior engineering manager to oversee the creation of an “AI agent that can use a computer.”"
+        },
+        {
+          "claim": "The proposed AI agent will be capable of browsing the web, using various apps, and writing code.",
+          "quote": "It browses the web, works across apps, runs commands, writes and debugs code"
+        },
+        {
+          "claim": "Apple is implementing new warnings in macOS to discourage users from giving third-party agents full computer access.",
+          "quote": "the version of its upcoming macOS 27.3 will deploy warnings discouraging users from granting full access to third-party agents."
+        },
+        {
+          "claim": "Although Apple is eying a release as early as the end of next year, the in-house agent project is still in its early stages.",
+          "quote": "progress on its in-house agent “remains in the early stages.”"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "679cee5ea146",
+      "title": "Reson8 Open-Sources Rumble-2-Flash Speech Model",
+      "summary": "Reson8 has open-sourced Rumble-2-Flash, a 0.5B-parameter speech recognition model supporting over 40 languages under the Apache 2.0 license. The model transcribes an hour of audio in about half a second while matching the performance of much larger models.",
+      "why_it_matters": "You can integrate ultra-fast, multilingual speech recognition into applications with minimal computational overhead.",
+      "url": "https://huggingface.co/blog/rumble-2-flash",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Release of Rumble-2-Flash, an open 0.5B speech model supporting 40+ languages.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Reson8 open-sourced Rumble-2-Flash, a new 0.5B-parameter speech recognition model supporting over 40 languages under the Apache 2.0 license.",
+          "quote": "Today we're open sourcing Rumble-2-Flash under the Apache 2.0 license. It's a 0.5B-parameter speech recognition model for 40+ languages"
+        },
+        {
+          "claim": "The model achieves an extremely fast processing speed, capable of transcribing an hour of audio in about half a second.",
+          "quote": "an hour of audio in about half a second, with over 7,000 RTFx on full batches"
+        },
+        {
+          "claim": "On a 302-hour call-centre benchmark, Rumble-2-Flash performs comparably to NVIDIA's much larger 30B Nemotron 3.5 Transcribe model.",
+          "quote": "on par with NVIDIA's Nemotron 3.5 Transcribe (30B) on a 302-hour call-centre benchmark"
+        },
+        {
+          "claim": "On the Open ASR Leaderboard multilingual track, the model achieved a 6.96% average error rate, outperforming larger models like Meta's omniASR-LLM 7B.",
+          "quote": "averages a 6.96% error rate across Chinese, German, French, Italian, Spanish, Portuguese, Hindi, Dutch and English. That's better than Meta's omniASR-LLM 7B"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
