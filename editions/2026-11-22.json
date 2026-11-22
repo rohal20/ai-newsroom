@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "day": "2026-11-22",
+  "started": "2026-11-22T09:40:48Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent developments cover security actions by inference providers, physics-informed AI for chaotic systems, European legal APIs for agents, LLM analysis of medical code sharing, and the wider air quality impacts of data centers.",
+  "fetch": {
+    "fetched": 19,
+    "unique": 19,
+    "feeds_ok": 4,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 4,
+      "MIT News AI": 5,
+      "Hacker News": 5
+    },
+    "seconds": 1.9
+  },
+  "candidates": 19,
+  "seconds": {
+    "editor": 34.4,
+    "researcher": 38.0,
+    "writer": 7.6,
+    "critic": 10.7
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "7893687ce631",
+      "title": "OpenRouter Removes Providers and Endpoints Following Data Policy Incidents",
+      "summary": "Security researchers reported that certain AI inference providers had data compromised or violated their data policies, prompting OpenRouter to investigate. Consequently, OpenRouter off-boarded three providers and removed Zero Data Retention eligibility from 125 endpoints, while confirming its own systems were not breached.",
+      "why_it_matters": "You should audit your choice of inference providers and endpoint configurations to ensure compliance with data retention and security policies.",
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "source": "openrouter.ai via Hacker News",
+      "domain": "openrouter.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OpenRouter discloses security and data processing incidents impacting inference providers.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Security researchers reported that certain AI inference providers had data compromised or violated their data policies.",
+          "quote": "security researchers reported that certain inference providers had data compromised or otherwise shown evidence that their data policies were not being upheld."
+        },
+        {
+          "claim": "OpenRouter confirmed that its own systems were not breached or subjected to unauthorized access.",
+          "quote": "These findings did not show any breach or unauthorized access of OpenRouter."
+        },
+        {
+          "claim": "OpenRouter off-boarded three providers as a result of the investigations.",
+          "quote": "Off-boarded three providers from OpenRouter, based on the results of our investigations."
+        },
+        {
+          "claim": "Zero Data Retention eligibility was removed from 125 endpoints.",
+          "quote": "Removed 125 endpoints from Zero Data Retention (ZDR) eligibility."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "480a8b723958",
+      "title": "MIT Approach Adds Physics Constraints to AI Models of Chaotic Systems",
+      "summary": "MIT researchers developed a new approach to introduce physics-based restrictions on machine learning models of chaotic systems. This enforcement prevents models from generating unreliable predictions for complex nonlinear systems in weather, climate, and turbulent flows.",
+      "why_it_matters": "Applying these physics-based constraints allows you to build more reliable machine learning models for complex nonlinear systems.",
+      "url": "https://news.mit.edu/new-approach-enables-physically-consistent-ai-models-chaotic-systems-1120",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New physics-informed constraints make AI predictions for chaotic systems more reliable.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "MIT researchers developed a new approach to introduce physics-based restrictions on machine learning models of chaotic systems.",
+          "quote": "researchers with MIT’s Laboratory for Information and Decision Systems (LIDS) have found a way to introduce physics-based restrictions on machine learning models"
+        },
+        {
+          "claim": "Enforcing physics-based constraints prevents AI models from generating unreliable predictions for complex nonlinear systems in weather, climate, and turbulent flows.",
+          "quote": "Enforcing physics-based constraints prevents AI models from generating unreliable predictions for complex nonlinear systems in weather, climate, and turbulent flows."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "29504616ac00",
+      "title": "Pandex API and MCP Server for European Legislation",
+      "summary": "Pandex provides an API and MCP server for EU and European country legislation and court decisions. It integrates with AI tools such as Claude, Cursor, GitHub Copilot, Windsurf, Zed, and Gemini.",
+      "why_it_matters": "You can integrate European legal data into your AI coding workflows and development environments.",
+      "url": "https://www.pandex.io/",
+      "source": "pandex.io via Hacker News",
+      "domain": "pandex.io",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Pandex offers an official European law interface for AI agents over MCP.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Pandex provides an API and MCP server for EU and European country legislation and court decisions.",
+          "quote": "Legislation and highest-court decisions of the EU and seven European countries, straight from the institutions that publish them, ready for search and AI agents."
+        },
+        {
+          "claim": "It integrates with AI tools such as Claude, Cursor, GitHub Copilot, Windsurf, Zed, and Gemini.",
+          "quote": "Works with the AI tools you already use. - Claude - Cursor - GitHub Copilot - Windsurf - Zed - Gemini"
+        }
+      ],
+      "dropped_facts": 2,
+      "first_issues": [
+        {
+          "text": "Launches",
+          "problem": "The facts state Pandex provides an API and MCP server, but do not mention a launch.",
+          "by": "critic"
+        },
+        {
+          "text": "directly",
+          "problem": "The facts do not state that it integrates directly.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "4665289b81f8",
+      "title": "LLM Study Reveals Low Code-Sharing Rates in Medical Prediction Research",
+      "summary": "Researchers from MIT and Dana-Farber Cancer Institute used large language models to examine code sharing in clinical prediction studies and found that only about 1 in 8 studies reported sharing their code. These findings are informing the TRIPOD-Code reporting guideline, which aims to establish consensus on essential elements for shared analytical code.",
+      "why_it_matters": "This highlights the current lack of reproducibility standards in clinical AI literature and points toward upcoming reporting guidelines.",
+      "url": "https://news.mit.edu/2026/ai-helps-researchers-investigate-how-medical-studies-share-code-1119",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "LLMs used to audit thousands of medical studies and code repositories for reproducibility gaps.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers from MIT and Dana-Farber Cancer Institute used large language models to examine how code is shared in clinical prediction studies.",
+          "quote": "Using large language models (LLMs), the researchers examined nearly 4,000 papers to identify statements about shared code."
+        },
+        {
+          "claim": "The review found that only about 1 in 8 studies actually reported sharing their code.",
+          "quote": "Only about 1 in 8 studies reported sharing code."
+        },
+        {
+          "claim": "The findings are being used to inform the development of TRIPOD-Code, a new reporting guideline for code sharing.",
+          "quote": "The open-access findings, recently published in Nature Medicine, are informing TRIPOD-Code, a reporting guideline being developed to clarify what researchers should share."
+        },
+        {
+          "claim": "TRIPOD-Code aims to establish clear standards and consensus on what essential elements should be included in shared analytical code.",
+          "quote": "TRIPOD-Code aims to establish a consensus. Through an expert review process, the team is developing guidance on which elements of shared analytical code should be considered essential."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "d943a23e58cc",
+      "title": "Study Links AI Data Center Electricity Demand to Long-Distance Air Quality Impacts",
+      "summary": "AI data center expansion causes negative air quality and health impacts in regions far from the physical facilities, resulting in an estimated 650 premature deaths across the U.S. in 2023 due to electricity demands. Researchers utilized a new modeling framework to trace how power grid emissions propagate across the country, showing high per capita premature death rates in Midwestern states despite demand being concentrated in Virginia and Texas.",
+      "why_it_matters": "The geographical decoupling of data center power demand and grid emissions means your infrastructure footprint has far-reaching environmental health consequences.",
+      "url": "https://news.mit.edu/2026/study-reveals-data-centers-long-distance-damage-air-quality-1119",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New study quantifies long-distance air quality impacts caused by data center energy demands.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 5,
+      "facts": [
+        {
+          "claim": "AI data center expansion causes negative air quality and health impacts in regions far from the physical facilities.",
+          "quote": "The rapid expansion of data centers for artificial intelligence causes negative health and air quality impacts in regions far from where the brick-and-mortar facilities are located"
+        },
+        {
+          "claim": "Electricity demands from data centers in 2023 resulted in an estimated 650 premature deaths across the U.S.",
+          "quote": "additional air pollution from the electricity demands of data centers in 2023 resulted in about 650 premature deaths across the United States."
+        },
+        {
+          "claim": "Midwestern states experienced some of the highest per capita premature death rates even though electricity demand was concentrated in Virginia and Texas.",
+          "quote": "Some Midwestern states had among the highest estimated rates of premature deaths per capita attributable to data centers, even though much of the data center electricity demand was concentrated in Virginia and Texas."
+        },
+        {
+          "claim": "Researchers used a new modeling framework to trace how power grid electricity demands and emissions propagate across the country.",
+          "quote": "The researchers built a modeling framework that captures how the electricity demanded by data centers propagates through the nation’s interconnected power grid."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
