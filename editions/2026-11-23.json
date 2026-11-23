@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "day": "2026-11-23",
+  "started": "2026-11-23T10:39:27Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments introduce local analog circuit design tools, physics-constrained chaotic system models, search-native pretraining, RL-based unlearning for corrupted SFT data, and a new looped multimodal mini model.",
+  "fetch": {
+    "fetched": 506,
+    "unique": 436,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 142,
+      "arXiv cs.AI": 351,
+      "Hugging Face Blog": 2,
+      "TechCrunch AI": 3,
+      "MIT News AI": 4,
+      "Hacker News": 4
+    },
+    "seconds": 11.2
+  },
+  "candidates": 29,
+  "seconds": {
+    "editor": 21.5,
+    "researcher": 36.6,
+    "writer": 9.4,
+    "critic": 10.6
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "315fb775dc30",
+      "title": "SLIC Technique Enables Local Analog Circuit Design on Laptops",
+      "summary": "MIT researchers developed SLIC, a small language model technique that performs analog circuit design locally using only a few billion parameters. Running locally protects proprietary company data and eliminates the privacy risks associated with cloud-hosted models.",
+      "why_it_matters": "Engineers can design analog circuits locally on a laptop without risking data privacy by using cloud-hosted models.",
+      "url": "https://news.mit.edu/2026/ai-driven-technique-could-help-engineers-design-analog-chips-faster-and-less-expensive-1123",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "SLIC training method enables a small LLM to efficiently design analog circuits.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "MIT researchers developed a new technique called SLIC that allows a small language model to perform analog circuit design locally on a laptop.",
+          "quote": "The MIT method, called Small LM Iterating on Circuits, or SLIC (pronounced “slick”), enables engineers to train a small language model to perform analog circuit design as well as or better than a frontier large language model (LLM)."
+        },
+        {
+          "claim": "The SLIC technique protects proprietary company data and eliminates privacy risks by running locally instead of on resource-intensive cloud-hosted models.",
+          "quote": "Because it’s trained and deployed locally, it can use a company’s circuit design data without raising privacy risks."
+        },
+        {
+          "claim": "The SLIC model is several thousand times smaller than frontier models, utilizing only a few billion parameters compared to trillions.",
+          "quote": "The SLIC model uses a few billion parameters, making it several thousand times smaller than frontier models that use trillions of parameters and require enormous amounts of computational resources."
+        },
+        {
+          "claim": "The research will be presented at the upcoming 2026 Conference on Neural Information Processing Systems.",
+          "quote": "The research will be presented at the 2026 Conference on Neural Information Processing Systems."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "faster and less expensively",
+          "problem": "The facts do not state that analog chips can be designed faster or less expensively.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "480a8b723958",
+      "title": "New Method Enforces Physics-Based Restrictions on AI Models",
+      "summary": "MIT researchers developed a new method using energy-based constraints and a projection layer to restrict machine learning models. This approach prevents models of chaotic systems from producing physically impossible, unbounded predictions over time.",
+      "why_it_matters": "You can deploy machine learning models for chaotic systems with a mathematical guarantee that their predictions remain physically bounded.",
+      "url": "https://news.mit.edu/new-approach-enables-physically-consistent-ai-models-chaotic-systems-1120",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New physics-informed constraints make AI models of chaotic systems reliably consistent.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers at MIT developed a new method to enforce physics-based restrictions on machine learning models.",
+          "quote": "researchers with MIT’s Laboratory for Information and Decision Systems (LIDS) have found a way to introduce physics-based restrictions on machine learning models"
+        },
+        {
+          "claim": "The new approach prevents chaotic system models from producing physically impossible, unbounded predictions over time.",
+          "quote": "ensure that such models never exceed realistic bounds, based on what is actually possible in the real world."
+        },
+        {
+          "claim": "The research team includes MIT graduate student Sunbochen Tang and professors Navid Azizan and Themistoklis Sapsis.",
+          "quote": "published in the Proceedings of the National Academy of Sciences (PNAS) in a paper by MIT graduate student Sunbochen Tang and MIT professors Navid Azizan and Themistoklis Sapsis."
+        },
+        {
+          "claim": "The method uses energy-based constraints and a projection layer to guarantee that model predictions remain bounded.",
+          "quote": "We then add a projection layer, a component that adjusts how the model predicts the system will evolve, to enforce energy dissipation as a hard constraint."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "3a32e13f20f6",
+      "title": "Search-Native Pretraining Integrates Search Capabilities Into Language Models",
+      "summary": "Researchers propose Search-Native Pretraining, which integrates search capabilities during the pretraining phase by augmenting text corpora with web-search queries and responses. The resulting QueryLM models demonstrate better performance on knowledge-intensive tasks and increased evidence steerability.",
+      "why_it_matters": "Smaller language models can match or outperform larger baseline models on knowledge-intensive tasks by baking search directly into pretraining.",
+      "url": "https://arxiv.org/abs/2611.26809",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Search-native pretraining integrates retrieval directly into language model pretraining.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers propose Search-Native Pretraining to integrate search capabilities during the pretraining phase using ordinary text corpora.",
+          "quote": "We propose Search-Native Pretraining as a practical route to teach search capability during pretraining from ordinary text corpora."
+        },
+        {
+          "claim": "The pretraining corpus is augmented with web-search queries and responses retrieved via a local index.",
+          "quote": "Specifically, we augment pretraining corpus at scale with web-search queries and retrieve web response using a local index."
+        },
+        {
+          "claim": "Search-pretrained models, known as QueryLM, demonstrate better performance on knowledge-intensive tasks and increased evidence steerability across Wikipedia and DCLM-Edu corpora at scales from 360M to 3.3B parameters.",
+          "quote": "Across Wikipedia and DCLM-Edu corpora and 360M to 3.3B parameter scales, search-pretrained models (\"QueryLM\") show improved performance on knowledge-intensive tasks and higher steerability toward the retrieved evidence."
+        },
+        {
+          "claim": "A 1.4B parameter QueryLM model matches or outperforms a FLOP-matched 3.3B baseline model on all knowledge-intensive tasks.",
+          "quote": "we find that a 1.4B QueryLM consistently beats or matches the performance of a FLOP-matched 3.3B baseline model across all knowledge intensive tasks."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "a25e9fdf4e56",
+      "title": "Reinforcement Learning Restores Reasoning Performance Despite Corrupted SFT Data",
+      "summary": "Group Relative Policy Optimization post-training successfully restores model reasoning accuracy to gold-baseline levels even when supervised fine-tuning data is severely corrupted. Initializing reinforcement learning with minimal incorrect traces can further boost post-RL performance.",
+      "why_it_matters": "You can rely on reinforcement learning to discover functional reasoning when your fine-tuning data is compromised.",
+      "url": "https://arxiv.org/abs/2611.26756",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Reinforcement learning successfully unlearns corrupted supervised fine-tuning in reasoning tasks.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Reinforcement learning succeeds in reasoning tasks even when supervised fine-tuning data is severely corrupted.",
+          "quote": "reinforcement learning (RL) in reasoning tasks can succeed even when the supervised fine-tuning (SFT) data is severely corrupted"
+        },
+        {
+          "claim": "Group Relative Policy Optimization post-training restores model accuracy back to gold-baseline levels of approximately 60% despite data corruption.",
+          "quote": "Group Relative Policy Optimization (GRPO) post-training consistently restores model accuracy back to gold-baseline levels (approximately 60%)"
+        },
+        {
+          "claim": "Initializing RL with eight minimal, incorrect, three-line form-only traces boosts post-RL performance to 69.30%.",
+          "quote": "initializing RL with as few as N = 8 minimal, incorrect, three-line \"form-only\" traces boosts post-RL performance to 69.30%"
+        },
+        {
+          "claim": "SFT accuracy is largely uncorrelated with post-RL accuracy, showing that SFT establishes structural layout while RL discovers functional reasoning.",
+          "quote": "SFT accuracy is largely uncorrelated with post-RL accuracy (r approximately 0), demonstrating a fundamental asymmetry in post-training: SFT primarily establishes structural layout (form), while RL independently discovers functional reasoning (function)."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "80d31a6dee29",
+      "title": "Inkling 2 Mini Released for Local Multimodal AI Setups",
+      "summary": "Thinking Machines Lab released Inkling 2 Mini, a multimodal Mixture-of-Experts looped transformer featuring 26 billion physical parameters and 3 billion active parameters per token. The model achieves increased capacity by looping middle layers three times and supports a 1-million-token context size.",
+      "why_it_matters": "You can run a high-capacity, million-context multimodal model locally that processes both image and text inputs efficiently.",
+      "url": "https://huggingface.co/blog/inkling2mini",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Inkling 2 Mini launched for high performance in local AI setups.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Thinking Machines Lab has released Inkling 2 Mini, a new looped transformer model designed for local AI setups.",
+          "quote": "Inkling 2 Mini is much, much smaller than Inkling 2 Small, and is designed for local AI setups."
+        },
+        {
+          "claim": "Inkling 2 Mini is a multimodal Mixture-of-Experts model featuring roughly 26 billion physical total parameters and 3 billion active parameters per token.",
+          "quote": "It’s a multimodal Mixture-of-Experts with ~26B physical total and 3B active parameters per token."
+        },
+        {
+          "claim": "The model supports a 1-million-token context size and accepts both image and text inputs.",
+          "quote": "It supports a 1M-token context size, accepts images and text inputs."
+        },
+        {
+          "claim": "The model achieves its increased capacity by looping 12 middle layers three times, acting as 48 logical layers.",
+          "quote": "Inkling 2 Mini is a mixture-of-experts model with 24 decoder layers, but the 12 middle layers run three times in a loop."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
