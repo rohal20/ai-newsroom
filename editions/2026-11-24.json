@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "day": "2026-11-24",
+  "started": "2026-11-24T12:22:05Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments span automated code review tools, major chip and optimization stack acquisitions, personalized search integrations, local analog chip design models, and new robotic point tracking benchmarks.",
+  "fetch": {
+    "fetched": 1126,
+    "unique": 978,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 334,
+      "arXiv cs.AI": 773,
+      "Hugging Face Blog": 2,
+      "TechCrunch AI": 14,
+      "MIT News AI": 2,
+      "Hacker News": 1
+    },
+    "seconds": 50.0
+  },
+  "candidates": 29,
+  "seconds": {
+    "editor": 18.9,
+    "researcher": 27.4,
+    "writer": 6.5,
+    "critic": 72.0
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "27065c561fbc",
+      "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+      "summary": "Claude Ship includes an agent named Claude Approvals that can automatically approve code changes according to policies defined by the development team. The new toolset consists of Code Review, which is generally available, alongside PR Steward and Claude Approvals, which are currently in beta.",
+      "why_it_matters": "",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Anthropic launches Claude Ship to let AI agents review and approve code changes.",
+      "status": "facts-only",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "Claude Ship includes an agent named Claude Approvals that can automatically approve code changes according to policies defined by the development team.",
+          "quote": "it also includes an agent that can approve code changes automatically based on policies set by a development team."
+        },
+        {
+          "claim": "The new toolset consists of Code Review, which is generally available, alongside PR Steward and Claude Approvals, which are currently in beta.",
+          "quote": "The new offering consists of Code Review, which is already generally available, and two new agents now in beta: PR Steward and Claude Approvals."
+        },
+        {
+          "claim": "Claude Ship is rolling out specifically to Claude Team and Enterprise plans for repositories hosted on GitHub.",
+          "quote": "Claude Ship is rolling out to Claude Team and Enterprise plans for repositories on GitHub."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "automatically reviews, fixes, and approves",
+          "problem": "The facts state that Claude Approvals can automatically approve code changes, but do not mention that it reviews and fixes them.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "6a7990e1ad10",
+      "title": "Amazon Acquires Decart's AI Optimization Technology for $7.5B",
+      "summary": "Amazon has agreed to acquire Decart for $7.5 billion, including its founding team, AI researchers, and the technology behind the Decart Optimization Stack (DOS). The technology could help customers run workloads more easily on Amazon's Trainium chips instead of Nvidia's as Amazon prepares to sell those chips.",
+      "why_it_matters": "This acquisition provides tooling designed to simplify running workloads on Amazon's custom chips as an alternative to Nvidia.",
+      "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Amazon acquires Decart's AI optimization tech for $7.5B to bolster Trainium chips.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Amazon has agreed to acquire a significant portion of Israeli startup Decart for $7.5 billion.",
+          "quote": "Amazon has agreed to acquire a good chunk of Israeli startup Decart. The e-commerce and cloud giant is paying $7.5 billion for the startup"
+        },
+        {
+          "claim": "Amazon is acquiring the technology behind the Decart Optimization Stack (DOS), along with its founding team and AI researchers.",
+          "quote": "As part of the deal, Amazon will acquire the technology behind DOS, as well as Decart’s founding team and team of AI researchers and engineers"
+        },
+        {
+          "claim": "Amazon is preparing to sell its Trainium chips to customers to compete with Nvidia.",
+          "quote": "Amazon, which has so far been using its Trainium chips at its own data centers, is preparing to start selling them to customers as a competitor to Nvidia."
+        },
+        {
+          "claim": "Decart's technology could help customers run workloads more easily on Amazon's chips instead of Nvidia's.",
+          "quote": "Decart’s technology could make it easier for customers to run their workloads on Amazon chips, rather than Nvidia’s"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "significant portion of",
+          "problem": "The facts do not state that Amazon is acquiring a \"significant portion\" of Decart, just that it agreed to acquire it (and the technology/team).",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "7601f68fa236",
+      "title": "Google Search's AI Mode Integrates Google Drive and Wallet",
+      "summary": "Google is expanding Personal Intelligence in Search's AI Mode to pull context from Google Drive, Google Wallet, and the Gemini app. Users can control privacy settings optionally, while a new Personalization icon will soon display the context used below responses.",
+      "why_it_matters": "Users can query personal documents and financial data directly within search while maintaining explicit privacy controls.",
+      "url": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google Search's AI Mode integrates personal data from Drive and Wallet for responses.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Google is expanding Personal Intelligence in Search's AI Mode to include Google Drive, Google Wallet, and the Gemini app.",
+          "quote": "Google announced on Monday that it’s expanding Personal Intelligence in Search’s AI Mode with integrations for Google Drive, Google Wallet, and the Gemini app."
+        },
+        {
+          "claim": "Connecting Google Wallet allows the AI to help track financial goals and credit card rewards, but it cannot move or manage money.",
+          "quote": "AI Mode can only read information from accounts and isn’t able to move or manage their money."
+        },
+        {
+          "claim": "Integrating Google Drive allows the AI to pull information from scattered documents and spreadsheets to provide more relevant answers.",
+          "quote": "By connecting Google Drive to Personal Intelligence, AI can draw on those files to provide more relevant, personalized answers"
+        },
+        {
+          "claim": "Users can control their privacy by turning Personal Intelligence on or off, and connecting the apps is completely optional.",
+          "quote": "not everyone wants AI looking at their Wallet and Drive, so connecting the apps is optional, and you can turn Personal Intelligence on or off at any time."
+        },
+        {
+          "claim": "A new 'Personalization' icon will soon let users view the context being used by AI Mode below responses.",
+          "quote": "users will soon be able to view the context that AI Mode uses via a new “Personalization” icon that will appear below responses."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Engineers and researchers",
+          "problem": "The facts mention users controlling privacy and connecting apps, but do not specify \"Engineers and researchers\" as the users.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "315fb775dc30",
+      "title": "MIT Introduces SLIC for Local Analog Circuit Design Using Small Language Models",
+      "summary": "MIT researchers developed SLIC, an AI technique using multi-turn reinforcement learning to train small language models with a few billion parameters. Running locally on a laptop, the model refines analog circuit designs while protecting proprietary data from cloud risks.",
+      "why_it_matters": "Hardware engineers can design analog circuits locally without exposing sensitive proprietary data to cloud-hosted frontier models.",
+      "url": "https://news.mit.edu/2026/ai-driven-technique-could-help-engineers-design-analog-chips-faster-and-less-expensive-1123",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New SLIC training method enables small LLMs to efficiently design analog chips.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "MIT researchers developed a new AI technique called SLIC that allows engineers to use small language models for analog circuit design.",
+          "quote": "The MIT method, called Small LM Iterating on Circuits, or SLIC (pronounced “slick”), enables engineers to train a small language model to perform analog circuit design"
+        },
+        {
+          "claim": "The SLIC model can run locally on a laptop, protecting proprietary company data from privacy risks associated with cloud-hosted models.",
+          "quote": "This small model is inexpensive and efficient enough to run on a laptop. Because it’s trained and deployed locally, it can use a company’s circuit design data without raising privacy risks."
+        },
+        {
+          "claim": "SLIC models use a few billion parameters, making them thousands of times smaller than frontier models with trillions of parameters.",
+          "quote": "The SLIC model uses a few billion parameters, making it several thousand times smaller than frontier models that use trillions of parameters"
+        },
+        {
+          "claim": "The technique uses multi-turn reinforcement learning where a small model learns from demonstrations and iteratively refines its circuit designs.",
+          "quote": "They used a technique called multi-turn reinforcement learning with verifiable rewards, where a model works through a multi-step task while adapting to environmental feedback."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "faster and cheaper",
+          "problem": "The facts state that it runs locally and protects data, but do not mention that hardware engineers can design chips \"faster and cheaper\".",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "ca38829e7312",
+      "title": "RoboTrack Benchmark and Models Released for Robotic Manipulation Point Tracking",
+      "summary": "Researchers have released RoboTrack, featuring the RoboTrack-Bench human-annotated video suite and the RoboTrack-15M synthetic training dataset generated via MolmoSpaces. The release also includes the RoboTracker and RoboTracker-Warp models, which improve point tracking performance over previous baselines.",
+      "why_it_matters": "Robotics researchers gain new standardized evaluation benchmarks and models to improve point tracking in complex manipulation tasks.",
+      "url": "https://huggingface.co/blog/allenai/robotrack",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face introduces RoboTrack for point tracking in robotic manipulation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "The researchers introduced RoboTrack, a new benchmark and training data suite designed for point tracking in robotic manipulation.",
+          "quote": "We introduce RoboTrack, a benchmark and training data suite for point tracking in robotic manipulation."
+        },
+        {
+          "claim": "RoboTrack-Bench includes 307 human-annotated videos featuring various viewpoints, cluttered scenes, and different robots and human hands.",
+          "quote": "RoboTrack-Bench contains 307 human-annotated videos from DROID, Ego-Exo4D, MolmoAct 2, and EgoVerse, covering different robots and human hands, cluttered scenes, and first- and third-person viewpoints."
+        },
+        {
+          "claim": "The synthetic training dataset, RoboTrack-15M, was generated using a simulation ecosystem called MolmoSpaces.",
+          "quote": "This pipeline produces RoboTrack-15M, a new synthetic training dataset targeted toward robotic manipulation."
+        },
+        {
+          "claim": "The release includes two new point tracking models, RoboTracker and RoboTracker-Warp, which improve performance over previous baselines.",
+          "quote": "Today, we’re releasing both RoboTrack components and two new point tracking models: RoboTracker and RoboTracker-Warp."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}

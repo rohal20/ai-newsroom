@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Monday 23 November 2026](2026-11-23.md): Recent AI developments introduce local analog circuit design tools, physics-constrained chaotic system models, search-native pretraining, RL-based unlearning for corrupted SFT data, and a new looped multimodal mini model.
+**Latest:** [Tuesday 24 November 2026](2026-11-24.md): Recent AI developments span automated code review tools, major chip and optimization stack acquisitions, personalized search integrations, local analog chip design models, and new robotic point tracking benchmarks.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Tue 24 Nov 2026](2026-11-24.md) | Recent AI developments span automated code review tools, major chip and optimization stack acquisitions, personalized search integrations, local analog chip design models, and new robotic point tracking benchmarks. | 5 | 3 rewritten, 1 facts only |
 | [Mon 23 Nov 2026](2026-11-23.md) | Recent AI developments introduce local analog circuit design tools, physics-constrained chaotic system models, search-native pretraining, RL-based unlearning for corrupted SFT data, and a new looped multimodal mini model. | 5 | 1 rewritten |
 | [Sun 22 Nov 2026](2026-11-22.md) | Recent developments cover security actions by inference providers, physics-informed AI for chaotic systems, European legal APIs for agents, LLM analysis of medical code sharing, and the wider air quality impacts of data centers. | 5 | 1 rewritten |
 | [Sat 21 Nov 2026](2026-11-21.md) | Recent AI developments include a compact reasoning model that runs locally, an AI-assisted proof of the Riemann hypothesis, physics-constrained chaotic system modeling, Apple's early work on a desktop automation agent, and a high-performance open-source speech recognition model. | 5 | all approved |
