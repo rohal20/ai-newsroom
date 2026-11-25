@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "day": "2026-11-25",
+  "started": "2026-11-25T11:10:15Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent AI developments span protein design capabilities in GPT-6, local analog chip design with small language models, personalized physical controls via agentic systems, new robotic point tracking benchmarks, and agentic financial transaction tools.",
+  "fetch": {
+    "fetched": 666,
+    "unique": 578,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 193,
+      "arXiv cs.AI": 447,
+      "Hugging Face Blog": 4,
+      "TechCrunch AI": 13,
+      "MIT News AI": 3,
+      "Hacker News": 6
+    },
+    "seconds": 10.7
+  },
+  "candidates": 37,
+  "seconds": {
+    "editor": 139.5,
+    "researcher": 23.4,
+    "writer": 6.5,
+    "critic": 24.6
+  },
+  "critic_rounds": 3,
+  "stories": [
+    {
+      "id": "4530af1ba6c2",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "summary": "The GPT-6 model family can design new protein shapes and sequences using only reasoning and code, without specialized biology models. In lab tests with Onava, proteins based on GPT-6.2's designs showed evidence of binding across five targets.",
+      "why_it_matters": "",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+      "source": "openai.com via Hacker News",
+      "domain": "openai.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OpenAI demonstrates intrinsic protein-design capabilities with new models.",
+      "status": "facts-only",
+      "rewrites": 2,
+      "sentences_checked": 12,
+      "facts": [
+        {
+          "claim": "The GPT-6 model family can design new protein shapes and sequences using only reasoning and code, without specialized biology models.",
+          "quote": "Our GPT‑6 family of models can design new protein shapes and the sequence of their chemical building blocks using only reasoning and code"
+        },
+        {
+          "claim": "In lab tests with Onava, proteins based on GPT-6.2's designs showed evidence of binding across five targets.",
+          "quote": "proteins based on GPT‑6.2’s designs showed evidence of binding, or attachment, across five targets."
+        },
+        {
+          "claim": "Internal research models matched or outperformed specialized models on many protein design tasks.",
+          "quote": "An internal research model matched or outperformed specialized models on many protein design tasks."
+        },
+        {
+          "claim": "Researchers were able to guide the models' designs by prompting them on attachment locations and desired shapes.",
+          "quote": "Researchers could also guide designs by prompting the model on where a protein should attach and what shape it should take."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Onava",
+          "problem": "The name 'Onava' is not present in the verified facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "315fb775dc30",
+      "title": "AI-Driven Technique Enables Local Analog Chip Design Using Small Language Models",
+      "summary": "MIT researchers developed an AI technique called SLIC that enables engineers to design analog integrated circuits locally using small language models with a few billion parameters. This method protects proprietary data by running locally on a laptop rather than on cloud-hosted infrastructure.",
+      "why_it_matters": "You can securely design analog chips locally on your laptop while protecting proprietary data from being sent to cloud-hosted models.",
+      "url": "https://news.mit.edu/2026/ai-driven-technique-could-help-engineers-design-analog-chips-faster-and-less-expensive-1123",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New AI-driven technique enables faster and cheaper analog chip design.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "MIT researchers developed a new AI technique called SLIC that allows engineers to use small language models for designing analog integrated circuits locally on a laptop.",
+          "quote": "The MIT method, called Small LM Iterating on Circuits, or SLIC (pronounced “slick”), enables engineers to train a small language model to perform analog circuit design as well as or better than a frontier large language model (LLM)."
+        },
+        {
+          "claim": "The SLIC method protects proprietary data because the model is trained and deployed locally rather than on resource-intensive, cloud-hosted models.",
+          "quote": "Because it’s trained and deployed locally, it can use a company’s circuit design data without raising privacy risks."
+        },
+        {
+          "claim": "SLIC models use a few billion parameters, making them thousands of times smaller than frontier models that rely on trillions of parameters.",
+          "quote": "The SLIC model uses a few billion parameters, making it several thousand times smaller than frontier models that use trillions of parameters and require enormous amounts of computational resources."
+        },
+        {
+          "claim": "The research will be presented at the upcoming 2026 Conference on Neural Information Processing Systems.",
+          "quote": "The research will be presented at the 2026 Conference on Neural Information Processing Systems."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "58c64dd3bfb5",
+      "title": "Agentic System Personalizes Physical Controls for Software",
+      "summary": "Researchers developed an AI agent system named TangiMap that dynamically maps digital software functions onto tangible physical inputs based on context. The system successfully repurposed standard hardware like audio mixers for photo editing and 3D modeling.",
+      "why_it_matters": "You can use language model agents to seamlessly remap standard physical hardware interfaces for diverse creative software tools.",
+      "url": "https://news.mit.edu/2026/tangimap-agentic-system-personalizes-physical-controls-help-users-dj-their-art-1124",
+      "source": "MIT News AI",
+      "domain": "news.mit.edu",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "TangiMap AI agent personalizes physical controls for dynamic workflows.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers at MIT CSAIL and Boston University developed a new system named TangiMap that personalizes physical controls for software.",
+          "quote": "A new system called “TangiMap,” co-developed by an MIT graduate student and researcher at MIT’s Computer Science and Artificial Intelligence Laboratory (CSAIL), helps bring tangible control back to your software."
+        },
+        {
+          "claim": "TangiMap utilizes an AI agent powered by a large language model to map digital functions onto tangible inputs based on software context.",
+          "quote": "Then, the agent uses a large language model to put all the info it's gathered into a file before mapping specific digital functions to physical controls."
+        },
+        {
+          "claim": "The research team successfully used TangiMap to repurpose standard hardware like mixers for photo editing in Adobe Lightroom and 3D modeling in Blender.",
+          "quote": "The system helped the researchers turn a standard mixer into a photo-editing controller."
+        },
+        {
+          "claim": "The creators of TangiMap, Yunyi Zhu and Chang Xiao, presented their tool at the ACM Symposium on User Interface Software and Technology.",
+          "quote": "Zhu and co-author Chang Xiao, an assistant professor at Boston University, presented their tool at the ACM Symposium on User Interface Software and Technology earlier this month."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "ca38829e7312",
+      "title": "RoboTrack Benchmark and Models Improve Point Tracking for Robotic Manipulation",
+      "summary": "Researchers introduced RoboTrack, a benchmark and training data suite featuring human-annotated videos and a synthetic dataset called RoboTrack-15M for point tracking. They also released two new models, RoboTracker and RoboTracker-Warp, which improve performance on robotic manipulation tasks.",
+      "why_it_matters": "You can evaluate and improve robotic manipulation point tracking using standardized benchmarks that expose limitations in existing trackers.",
+      "url": "https://huggingface.co/blog/allenai/robotrack",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "RoboTrack introduces point tracking for real-world robotic manipulation.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "The researchers introduced RoboTrack, a new benchmark and training data suite designed for point tracking in robotic manipulation.",
+          "quote": "We introduce RoboTrack, a benchmark and training data suite for point tracking in robotic manipulation."
+        },
+        {
+          "claim": "RoboTrack-Bench includes 307 human-annotated videos featuring various viewpoints, cluttered scenes, and different robots or human hands.",
+          "quote": "RoboTrack-Bench contains 307 human-annotated videos from DROID, Ego-Exo4D, MolmoAct 2, and EgoVerse, covering different robots and human hands, cluttered scenes, and first- and third-person viewpoints."
+        },
+        {
+          "claim": "A new synthetic training dataset called RoboTrack-15M was created using a simulation ecosystem to generate dense point tracks.",
+          "quote": "This pipeline produces RoboTrack-15M, a new synthetic training dataset targeted toward robotic manipulation."
+        },
+        {
+          "claim": "The team released two new point tracking models, RoboTracker and RoboTracker-Warp, which improve performance over their baseline models.",
+          "quote": "Today, we’re releasing both RoboTrack components and two new point tracking models: RoboTracker and RoboTracker-Warp."
+        },
+        {
+          "claim": "Evaluations showed that leading trackers perform significantly worse on RoboTrack-Bench than on existing robotics benchmarks like RoboTAP.",
+          "quote": "Every final tracker we evaluated scores lower on RoboTrack-Bench than on RoboTAP, the only other real-video robotics benchmark."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "6014a04f08fa",
+      "title": "Versine Launches MCP Tool to Enable AI Agents to Transact Money",
+      "summary": "Versine is a new Model Context Protocol tool that allows AI agents to send and receive money using self-custodial stablecoin wallets on Base. Users can securely approve these transactions via mobile app passkeys or biometrics.",
+      "why_it_matters": "You can now integrate secure, user-approved financial transactions directly into AI agents across platforms like ChatGPT and Claude.",
+      "url": "https://news.ycombinator.com/item?id=50634426",
+      "source": "news.ycombinator.com via Hacker News",
+      "domain": "news.ycombinator.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Launch of Versine, an MCP enabling AI agents to send and receive money.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Versine is a new Model Context Protocol (MCP) tool designed to allow AI agents to send and receive money.",
+          "quote": "Versine is an MCP that sits in front of a wallet with a balance."
+        },
+        {
+          "claim": "The platform utilizes self-custodial stablecoin wallets storing USDC on Base.",
+          "quote": "each user has a self-custodial stablecoin wallet storing USDC on Base."
+        },
+        {
+          "claim": "Users can approve transactions securely using a passkey or biometric method within the mobile app.",
+          "quote": "Once you swipe up in the app and approve with a passkey (or your device’s biometric method), we create a one-time permission"
+        },
+        {
+          "claim": "The service is currently available on iOS, Android, and as an MCP on ChatGPT and Claude.",
+          "quote": "It's available on iOS and Android and as an MCP on ChatGPT and Claude."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
