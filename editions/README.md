@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Wednesday 25 November 2026](2026-11-25.md): Recent AI developments span protein design capabilities in GPT-6, local analog chip design with small language models, personalized physical controls via agentic systems, new robotic point tracking benchmarks, and agentic financial transaction tools.
+**Latest:** [Thursday 26 November 2026](2026-11-26.md): AI developments span billing corrections for GPT-6.2, Photoshop warnings over AI metadata, state AG interventions on Character.AI data auctions, bare-metal execution for Qwen, and the formalization of context scaling.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Thu 26 Nov 2026](2026-11-26.md) | AI developments span billing corrections for GPT-6.2, Photoshop warnings over AI metadata, state AG interventions on Character.AI data auctions, bare-metal execution for Qwen, and the formalization of context scaling. | 5 | 1 rewritten |
 | [Wed 25 Nov 2026](2026-11-25.md) | Recent AI developments span protein design capabilities in GPT-6, local analog chip design with small language models, personalized physical controls via agentic systems, new robotic point tracking benchmarks, and agentic financial transaction tools. | 5 | 1 facts only |
 | [Tue 24 Nov 2026](2026-11-24.md) | Recent AI developments span automated code review tools, major chip and optimization stack acquisitions, personalized search integrations, local analog chip design models, and new robotic point tracking benchmarks. | 5 | 3 rewritten, 1 facts only |
 | [Mon 23 Nov 2026](2026-11-23.md) | Recent AI developments introduce local analog circuit design tools, physics-constrained chaotic system models, search-native pretraining, RL-based unlearning for corrupted SFT data, and a new looped multimodal mini model. | 5 | 1 rewritten |

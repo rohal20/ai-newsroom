@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "day": "2026-11-26",
+  "started": "2026-11-26T10:45:29Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "AI developments span billing corrections for GPT-6.2, Photoshop warnings over AI metadata, state AG interventions on Character.AI data auctions, bare-metal execution for Qwen, and the formalization of context scaling.",
+  "fetch": {
+    "fetched": 596,
+    "unique": 522,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 177,
+      "arXiv cs.AI": 398,
+      "Hugging Face Blog": 5,
+      "TechCrunch AI": 10,
+      "MIT News AI": 2,
+      "Hacker News": 4
+    },
+    "seconds": 15.6
+  },
+  "candidates": 35,
+  "seconds": {
+    "editor": 24.7,
+    "researcher": 28.0,
+    "writer": 7.1,
+    "critic": 12.2
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "244a3e8cb4f1",
+      "title": "OpenAI Corrects GPT-6.2 Billing Error",
+      "summary": "OpenAI fixed a launch billing mistake that incorrectly discounted GPT-6.2 usage, causing users to hit limits 40% faster on Astra and 25% faster on Sol. The company will not charge for past usage differences and is adding one banked reset for Go, Plus, Pro, and Business plans as an apology.",
+      "why_it_matters": "Your automated workflows utilizing GPT-6.2 will hit rate and usage caps noticeably faster now that the billing discount has been removed.",
+      "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+      "source": "twitter.com via Hacker News",
+      "domain": "twitter.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "OpenAI merges Chat and Work experiences, tightening usage limits for heavy users.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "OpenAI made a billing mistake at the launch of GPT-6.2 that incorrectly discounted usage for most users.",
+          "quote": "We made a billing mistake at launch of GPT-6.2 that incorrectly discounted GPT-6.2 Astra and Sol usage for most users."
+        },
+        {
+          "claim": "Users will now reach their limits 40% faster on GPT-6.2 Astra after the billing fix.",
+          "quote": "you will reach your limits 40% faster on GPT-6.2 Astra"
+        },
+        {
+          "claim": "Users will reach their limits 25% faster on GPT-6.2 Sol following the correction.",
+          "quote": "and 25% faster on Sol."
+        },
+        {
+          "claim": "OpenAI will not charge users for the difference in past usage caused by the mistake.",
+          "quote": "we won’t charge you for the difference on past usage."
+        },
+        {
+          "claim": "As an apology, OpenAI is adding one banked reset for users on Go, Plus, Pro, and Business plans.",
+          "quote": "we’ll be adding one banked reset for everyone on Go, Plus, Pro, and Business."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "dc69597abec1",
+      "title": "The New York Times Blocks Photoshop Updates Over AI Metadata",
+      "summary": "The New York Times instructed freelance photographers to avoid updating to Adobe Photoshop 2027 and subsequent versions for assignments. The publication fears that new AI features will add metadata labeling photos as AI-generated, which could damage reader trust under its strict minimal-editing policy.",
+      "why_it_matters": "If your clients enforce strict authenticity policies, automated AI metadata generation in creative tools could trigger compliance violations.",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "source": "theverge.com via Hacker News",
+      "domain": "theverge.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New York Times warns photographers against updating Photoshop due to AI feature risks.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "The New York Times has asked its freelance photographers to avoid updating to the newest version of Adobe Photoshop.",
+          "quote": "The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop"
+        },
+        {
+          "claim": "The publication is concerned that Photoshop's AI features will add metadata labeling the photographs as AI-generated.",
+          "quote": "can result in metadata identifying photographs as AI-generated."
+        },
+        {
+          "claim": "The newspaper maintains a strict policy of minimal photo editing and fears that AI metadata could damage readers' trust.",
+          "quote": "For a newsroom like the Times, where photo editing is kept to a minimum, the metadata risks losing readers’ trust."
+        },
+        {
+          "claim": "Photographers are specifically instructed not to use Adobe Photoshop 2027 and subsequent updates on Times assignments.",
+          "quote": "avoid using Adobe Photoshop 2027 (release 28.0.0 and subsequent updates) when working on assignment for The Times"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "16ddaf7683c8",
+      "title": "State Attorneys General Challenge Character.AI Data Auction",
+      "summary": "A coalition of 42 state attorneys general is intervening to prevent Character.ai from auctioning sensitive data and private chats from over 21 million U.S. accounts during bankruptcy. The affected dataset includes chat histories from more than 2.1 million minors and personal data like IP addresses.",
+      "why_it_matters": "This intervention establishes strict regulatory oversight regarding the liquidation of user-generated conversational data during AI company bankruptcies.",
+      "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "State AGs challenge Character.AI's plan to auction off private user chats in bankruptcy.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 5,
+      "facts": [
+        {
+          "claim": "A coalition of 42 state attorneys general is intervening to stop Character.ai from auctioning off sensitive user data and private conversations during its bankruptcy proceedings.",
+          "quote": "a coalition of 42 state attorneys general is intervening in Character.ai’s bankruptcy proceedings in an effort to stop the chatbot maker from selling off sensitive user data"
+        },
+        {
+          "claim": "The dataset affected includes chat histories from over 21 million U.S. accounts, including more than 2.1 million belonging to minors, along with other personal data like IP addresses.",
+          "quote": "Character.ai’s dataset includes chat histories from more than 21 million U.S. accounts, more than 2.1 million of which belong to minors. In addition, the sale would involve other personal data, like IP addresses"
+        },
+        {
+          "claim": "Character.ai filed for Chapter 11 bankruptcy in October after previously assuring consumers that their personal information would not be sold.",
+          "quote": "Character.ai, which filed for Chapter 11 bankruptcy in October, previously told consumers that their personal information would not be sold"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "a1356d98cece",
+      "title": "Bare Metal Qwen Runs LLMs Without an OS",
+      "summary": "A new standalone bootable x86-64 operating system executes Qwen/Qwen3-0.6B directly on hardware or KVM without standard libraries or traditional operating systems. Featuring a 24,252-byte kernel, the system achieves a 74 to 94 ms cold boot to an interactive chat and 134.9 tokens per second decode performance on QEMU KVM.",
+      "why_it_matters": "You can now execute small language models with near-instantaneous boot times by bypassing traditional OS and runtime overhead.",
+      "url": "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Bare-metal Qwen implementation running directly on hardware via assembly.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "A standalone bootable x86-64 operating system runs Qwen/Qwen3-0.6B directly on hardware or KVM without traditional operating systems or standard libraries.",
+          "quote": "A standalone bootable x86-64 operating system that runs Qwen/Qwen3-0.6B directly on hardware or KVM with no Linux, no Windows, no C, no Rust, and no libc."
+        },
+        {
+          "claim": "The stripped static Multiboot 1 kernel size is 24,252 bytes with FAST_Q8=1 enabled by default.",
+          "quote": "24,252 bytes stripped static Multiboot 1 kernel (FAST_Q8=1, default: .text = 17,143 B, .rodata = 2,772 B, .bss = 2.1 MiB NOBITS, zero dynamic dependencies)"
+        },
+        {
+          "claim": "The system achieves a 74 to 94 ms cold boot to an interactive multi-turn chat with a persistent KV-cache.",
+          "quote": "74–94 ms cold boot to interactive asm-llm> multi-turn chat with persistent KV-cache across turns"
+        },
+        {
+          "claim": "Decode performance reaches 134.9 tokens per second on QEMU KVM using an AMD EPYC processor with 16 vCPUs.",
+          "quote": "134.9 tok/s decode on QEMU KVM (AMD EPYC 7642, 16 vCPUs; 23.7 tok/s at 1 vCPU, 118.1 tok/s at 8 vCPUs, 136.6 tok/s peak)"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "5aa9e3310d13",
+      "title": "Context Scaling Introduced to Address AI Bottlenecks",
+      "summary": "Context scaling is introduced to resolve AI failures caused by mismatches between task states and available context. The framework governs deployment capacity using training, decision-time, and context-infrastructure budgets evaluated via controlled interventions and utility-cost curves.",
+      "why_it_matters": "You can utilize this framework's budget interventions to optimize deployment capacity and mitigate context bottlenecks in production models.",
+      "url": "https://arxiv.org/abs/2611.33160",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Context Scaling paper introduces a new frontier framework for LLM performance.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "AI failures often happen because of a mismatch between the task state and available context.",
+          "quote": "Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available"
+        },
+        {
+          "claim": "The effort to reduce the context bottleneck is named context scaling.",
+          "quote": "We call the effort to reduce this bottleneck context scaling."
+        },
+        {
+          "claim": "The system is governed by three specific budgets: training, decision-time, and context-infrastructure.",
+          "quote": "governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$."
+        },
+        {
+          "claim": "Context scaling focuses on improving the system's capacity regarding deployment state for model use.",
+          "quote": "context scaling improves the system's capacity to acquire, represent, deliver, evaluate, and persist deployment state for model use."
+        },
+        {
+          "claim": "The proposed evaluation approach uses controlled budget interventions and utility-cost curves.",
+          "quote": "propose controlled budget interventions and utility-cost curves for evaluation."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": [
+        {
+          "text": "Researchers formalize",
+          "problem": "The facts do not mention researchers.",
+          "by": "critic"
+        }
+      ]
+    }
+  ]
+}
