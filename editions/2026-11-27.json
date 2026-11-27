@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "day": "2026-11-27",
+  "started": "2026-11-27T10:45:59Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent updates cover Nvidia's export compliance pauses and new releases in document parsing, alongside academic frameworks for context scaling, agent memory, and mathematical formalization.",
+  "fetch": {
+    "fetched": 588,
+    "unique": 514,
+    "feeds_ok": 6,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 177,
+      "arXiv cs.AI": 398,
+      "Hugging Face Blog": 6,
+      "TechCrunch AI": 2,
+      "MIT News AI": 1,
+      "Hacker News": 4
+    },
+    "seconds": 11.4
+  },
+  "candidates": 29,
+  "seconds": {
+    "editor": 133.1,
+    "researcher": 37.6,
+    "writer": 3.9,
+    "critic": 6.9
+  },
+  "critic_rounds": 1,
+  "stories": [
+    {
+      "id": "94305b427e5a",
+      "title": "Nvidia Pauses Server Shipments to Southeast Asia",
+      "summary": "Nvidia has paused server shipments to countries including Malaysia, Singapore, Thailand, and Indonesia to verify compliance with U.S. export rules. The action follows the discovery that Chinese companies used these regional data centers, which provide about 24% of the AI computing power used in China, to remotely access Nvidia chips through a loophole.",
+      "why_it_matters": "Engineers relying on cloud resources or regional infrastructure in Southeast Asia may face unexpected access restrictions or availability shifts as compliance checks tighten.",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+      "source": "TechCrunch AI",
+      "domain": "techcrunch.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Nvidia pauses Southeast Asia chip shipments over US export rules.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 5,
+      "facts": [
+        {
+          "claim": "Nvidia has paused server shipments to several Southeast Asian countries, including Malaysia, Singapore, Thailand, and Indonesia.",
+          "quote": "Nvidia has told manufacturing partners, including Dell and Super Micro, to hit pause on server shipments to Malaysia, Singapore, Thailand, and Indonesia"
+        },
+        {
+          "claim": "The pause allows Nvidia to check if regional partners are complying with U.S. export rules.",
+          "quote": "as it assesses whether its regional partners are meeting U.S. export requirements."
+        },
+        {
+          "claim": "The action comes after Chinese companies used these regional data centers to remotely access Nvidia chips, exploiting a loophole.",
+          "quote": "Chinese companies have been tapping Nvidia chips remotely from data centers there, a loophole the US Commerce Department closed"
+        },
+        {
+          "claim": "Remote data centers in these regions are estimated to provide about 24% of the AI computing power used in China.",
+          "quote": "remote data centers like these supply about 24% of China’s AI computing power."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "5aa9e3310d13",
+      "title": "Context Scaling Framework for AI Systems",
+      "summary": "Researchers introduce context scaling as a distinct effort to improve how AI systems acquire, represent, deliver, evaluate, and persist deployment state. The framework treats the model-infrastructure pair as the unit of analysis, governed by training, decision-time, and context-infrastructure budgets.",
+      "why_it_matters": "This taxonomy provides a structured way to diagnose and improve deployment failures caused by missing or distorted operational state rather than weak model inference.",
+      "url": "https://arxiv.org/abs/2611.33160",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Context scaling explores new frontiers in handling AI state and dependencies.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revisions, tool traces, sensor readings, or environment changes may be unavailable, distorted, or poorly selected. We call the effort to reduce this bottleneck context scaling. We frame a model as $P_\\theta(d\\mid c)$ within a system governed by three budgets: training $B_\\theta$, decision-time $B_d$, and context-infrastructure $B_c$. Pretraining scaling invests in $\\theta$; decision-time scaling searches, refines, or verifies decisions under supplied context; context scaling improves the system's capacity to acquire, represent, deliver, evaluate, and persist deployment state for model use. The three programs interact, but only $B_c$ targets what the system can make available before a decision. This view makes the model-infrastructure pair the unit of analysis. We define effective-context value as a task- and intervention-dependent attribution, separate deployment state from model-visible context, and identify availability, fidelity, selection, and utilization failures. We then organize current mechanisms through a five-operation context lifecycle and propose controlled budget interventions and utility-cost curves for evaluation. The resulting agenda centers on grounded reporting, interaction-data and full-cost infrastructure, and safety and governance for persistent, adaptive systems.",
+          "quote": "Many failures of deployed AI arise not from weak inference but from a mismatch between the state a task depends on and the context available when the system acts. Relevant user state, repository revis"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "0b3165cb6908",
+      "title": "MGMem Framework for Long-Horizon Agent Memory",
+      "summary": "Researchers proposed MGMem, an efficient, deterministic, and provenance-preserving memory framework for long-horizon Large Language Model agents. The system utilizes a deterministic discriminative-parser pipeline and a three-stage resolver without relying on generative indexing calls.",
+      "why_it_matters": "Developers building multi-session dialogue agents can leverage this framework to improve memory retrieval accuracy and efficiency without incurring the overhead of generative indexing.",
+      "url": "https://arxiv.org/abs/2611.33174",
+      "source": "arXiv cs.CL",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "Efficient, deterministic, and provenance-preserving framework for long-horizon agent memory.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers propose MGMem, a new framework designed to provide efficient, deterministic, and provenance-preserving memory for long-horizon Large Language Model agents.",
+          "quote": "We propose MGMem, a framework with no generative indexing calls that replaces this step with a deterministic discriminative-parser pipeline"
+        },
+        {
+          "claim": "MGMem uses a deterministic discriminative-parser pipeline that organizes recurring mentions into an incidence graph and resolves question mentions using a three-stage resolver.",
+          "quote": "replaces this step with a deterministic discriminative-parser pipeline: recurring mentions across sessions are organized into an incidence graph, question mentions are resolved by a subject-conditioned three-stage resolver"
+        },
+        {
+          "claim": "MGMem outperforms matched-protocol baselines on LoCoMo for English multi-session dialogue QA without using any generative indexing calls.",
+          "quote": "On English multi-session dialogue QA, MGMem outperforms matched-protocol baselines on LoCoMo without generative indexing calls"
+        },
+        {
+          "claim": "On the full LongMemEval-S benchmark, MGMem remains competitive overall and either leads or ties on single-session types among local retrieval comparisons.",
+          "quote": "on the full LongMemEval-S, it remains competitive overall and leads or ties on single-session types among local retrieval comparisons"
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "d3aa48daa62d",
+      "title": "NVIDIA Releases Nemotron 3.5 Parse and Associated Tools",
+      "summary": "NVIDIA released Nemotron 3.5 Parse, a compact document model that converts page images into structured data, alongside three open-source datasets including Synthetic Charts V1. Additionally, a DFlash2 speculator was introduced to speed up inference by proposing up to 32 tokens ahead.",
+      "why_it_matters": "Engineering teams can utilize these new open models, datasets, and speculation tools to accelerate document processing pipelines and improve inference throughput.",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face guide on building with Nemotron 3.5 Parse.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "NVIDIA released Nemotron 3.5 Parse, a compact document model that converts page images into structured data.",
+          "quote": "We recently released NVIDIA Nemotron 3.5 Parse, a compact document model that turns page images into structured data"
+        },
+        {
+          "claim": "Three open-source datasets were released, including Synthetic Charts V1 with 9.98 million examples.",
+          "quote": "Synthetic Charts V1 — 9.98M examples: rendered charts and structured annotations for learning categories, series, and numerical values."
+        },
+        {
+          "claim": "A DFlash2 speculator was introduced to enable faster inference by proposing up to 32 tokens ahead.",
+          "quote": "our DFlash2 speculator goes further: a small draft model proposes up to 32 tokens ahead, and Parse verifies the proposals together."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    },
+    {
+      "id": "be1cc5587b8c",
+      "title": "AutoformBench Evaluates Advanced Mathematical Formalization",
+      "summary": "Researchers introduced AutoformBench, a benchmark featuring 341 Lean 4 formalization tasks from advanced mathematical sources, audited by experienced mathematicians. Agents are required to translate informal proofs into Lean while building missing definitions, intermediate lemmas, and infrastructure.",
+      "why_it_matters": "AI researchers working on automated theorem proving can use this benchmark to test an agent's ability to construct formal mathematical infrastructure rather than just solving isolated domains.",
+      "url": "https://arxiv.org/abs/2611.33165",
+      "source": "arXiv cs.AI",
+      "domain": "arxiv.org",
+      "is_paper": true,
+      "text_source": "feed (abstract)",
+      "editor_reason": "New benchmark for formalizing advanced mathematics using machine-checked proofs.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Researchers introduced AutoformBench, a new benchmark consisting of 341 Lean 4 formalization tasks from 24 advanced mathematical sources.",
+          "quote": "We introduce AutoformBench, a benchmark of 341 Lean 4 formalization tasks drawn from 24 advanced mathematical sources."
+        },
+        {
+          "claim": "Mathematicians with experience in Lean formalized and audited each target statement, while leaving the Lean proof for the evaluated agent.",
+          "quote": "Lean-experienced mathematicians formalized and audited each target statement, leaving the corresponding Lean proof to the evaluated agent."
+        },
+        {
+          "claim": "Agents are provided with the informal proof and must translate it to Lean while building missing definitions, intermediate lemmas, and infrastructure.",
+          "quote": "agents receive the informal proof but must translate it into Lean while constructing the missing definitions, intermediate lemmas, and supporting infrastructure."
+        },
+        {
+          "claim": "Model success on the benchmark depends heavily on the model's ability to build missing formal infrastructure rather than the specific mathematical domain.",
+          "quote": "success depends less on mathematical domain than on models' ability to construct missing formal infrastructure."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    }
+  ]
+}
