@@ -2,10 +2,11 @@
 
 Every morning's briefing, newest first. Each one is written by the newsroom's agents and checked by the critic before it is published.
 
-**Latest:** [Friday 27 November 2026](2026-11-27.md): Recent updates cover Nvidia's export compliance pauses and new releases in document parsing, alongside academic frameworks for context scaling, agent memory, and mathematical formalization.
+**Latest:** [Saturday 28 November 2026](2026-11-28.md): Recent updates include Google's faster DeepCrossAttention architecture, new native AI coding and visualization tools, an AMD benchmark dashboard from Hugging Face, and NVIDIA's Nemotron 3.5 Parse model.
 
 | Date | The day in one line | Stories | Critic |
 |---|---|---|---|
+| [Sat 28 Nov 2026](2026-11-28.md) | Recent updates include Google's faster DeepCrossAttention architecture, new native AI coding and visualization tools, an AMD benchmark dashboard from Hugging Face, and NVIDIA's Nemotron 3.5 Parse model. | 5 | 1 rewritten |
 | [Fri 27 Nov 2026](2026-11-27.md) | Recent updates cover Nvidia's export compliance pauses and new releases in document parsing, alongside academic frameworks for context scaling, agent memory, and mathematical formalization. | 5 | all approved |
 | [Thu 26 Nov 2026](2026-11-26.md) | AI developments span billing corrections for GPT-6.2, Photoshop warnings over AI metadata, state AG interventions on Character.AI data auctions, bare-metal execution for Qwen, and the formalization of context scaling. | 5 | 1 rewritten |
 | [Wed 25 Nov 2026](2026-11-25.md) | Recent AI developments span protein design capabilities in GPT-6, local analog chip design with small language models, personalized physical controls via agentic systems, new robotic point tracking benchmarks, and agentic financial transaction tools. | 5 | 1 facts only |

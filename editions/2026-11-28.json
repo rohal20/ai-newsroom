@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "day": "2026-11-28",
+  "started": "2026-11-28T10:14:51Z",
+  "topic": "AI",
+  "model": "gemini/gemini-3.5-flash-lite",
+  "one_line": "Recent updates include Google's faster DeepCrossAttention architecture, new native AI coding and visualization tools, an AMD benchmark dashboard from Hugging Face, and NVIDIA's Nemotron 3.5 Parse model.",
+  "fetch": {
+    "fetched": 12,
+    "unique": 12,
+    "feeds_ok": 2,
+    "feeds_total": 6,
+    "per_feed": {
+      "arXiv cs.CL": 0,
+      "arXiv cs.AI": 0,
+      "Hugging Face Blog": 7,
+      "TechCrunch AI": 0,
+      "MIT News AI": 0,
+      "Hacker News": 5
+    },
+    "seconds": 3.3
+  },
+  "candidates": 12,
+  "seconds": {
+    "editor": 150.6,
+    "researcher": 23.0,
+    "writer": 6.9,
+    "critic": 18.9
+  },
+  "critic_rounds": 2,
+  "stories": [
+    {
+      "id": "bcf32450cab1",
+      "title": "Google Research Introduces DeepCrossAttention for Faster Transformers",
+      "summary": "Google Research developed DeepCrossAttention (DCA) to enhance transformer networks by dynamically combining outputs from previous layers. The architecture achieves comparable model quality up to three times faster with a negligible increase in parameters.",
+      "why_it_matters": "You can retrofit DCA onto pre-trained transformers to reduce perplexity and reach standard performance in significantly fewer training steps.",
+      "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+      "source": "research.google via Hacker News",
+      "domain": "research.google",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Google DeepCrossAttention accelerates transformer residual connections significantly while maintaining quality.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Google Research introduced DeepCrossAttention (DCA), an architecture that enhances transformer networks by dynamically combining outputs from previous layers.",
+          "quote": "We present DeepCrossAttention (DCA), an architecture that enhances transformer networks by using learnable weights and depth-wise cross-attention to dynamically combine outputs from previous layers"
+        },
+        {
+          "claim": "DCA allows models to achieve the same quality up to three times faster with a negligible increase in parameters.",
+          "quote": "this architectural improvement allows models to achieve the same quality up to three times faster with a negligible increase in parameters."
+        },
+        {
+          "claim": "On specific language model benchmarks, DCA reached standard transformer performance in up to five times fewer training steps.",
+          "quote": "DCA reached the performance of standard transformers in up to five times fewer training steps."
+        },
+        {
+          "claim": "Retrofitting DCA onto an already pre-trained transformer and briefly continuing training reduced perplexity by 0.19 on the LM1B dataset.",
+          "quote": "retrofitting DCA onto an already pre-trained transformer and briefly continuing training reduced perplexity by 0.19 on LM1B"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "42792ea1ec91",
+      "title": "Prospero: A Native C++ AI Coding Harness",
+      "summary": "Prospero is a native GUI application for major operating systems that enables AI agents to develop software. Built as a single C++ executable, it features passive rendering that uses zero resources when idle and is released into the public domain.",
+      "why_it_matters": "You can use this bloat-free, resource-efficient native harness for AI-driven software development across operating systems.",
+      "url": "https://github.com/skeeto/prospero",
+      "source": "github.com via Hacker News",
+      "domain": "github.com",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Prospero offers a new bloat-free, native AI coding harness with ImGui.",
+      "status": "rewritten",
+      "rewrites": 1,
+      "sentences_checked": 8,
+      "facts": [
+        {
+          "claim": "Prospero is a native GUI application across major operating systems that allows AI agents to develop software.",
+          "quote": "Prospero is a native GUI application for Windows, macOS, and Linux that connects to an AI model provider"
+        },
+        {
+          "claim": "The application is built as a single, lean C++ executable with passive rendering that uses zero resources when idle.",
+          "quote": "It is a single executable, written in C++. In the typical case the engine runs in the same process as the window"
+        },
+        {
+          "claim": "The software is released into the public domain as free and unencumbered software.",
+          "quote": "Prospero is free and unencumbered software released into the public domain."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": [
+        {
+          "text": "ImGui",
+          "problem": "Mention of ImGui is not present in the verified facts.",
+          "by": "critic"
+        }
+      ]
+    },
+    {
+      "id": "60fe99fe03e0",
+      "title": "SessionGraph Visualizes Local Coding Agent Sessions",
+      "summary": "SessionGraph is a local desktop application that visualizes coding agent sessions in an interactive graph via a simple terminal command. It supports multiple coding harnesses and agents like OpenCode, Claude Code, and Codex, allowing you to search across them from a single index.",
+      "why_it_matters": "You can use it to locally track and search across multiple different AI coding agent sessions from one interface.",
+      "url": "https://sessiongraph.ai/",
+      "source": "sessiongraph.ai via Hacker News",
+      "domain": "sessiongraph.ai",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "SessionGraph provides an interactive visualization tool for coding agent sessions.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "SessionGraph is a desktop application that visualizes coding agent sessions in an interactive local graph.",
+          "quote": "SessionGraph reads your harness' session store, indexes it and opens a desktop app for you to play around."
+        },
+        {
+          "claim": "Users can run the application locally by executing a command in their terminal.",
+          "quote": "Paste this into your terminal to open SessionGraph.\nnpx sessiongraph"
+        },
+        {
+          "claim": "The tool supports a wide variety of coding harnesses and agents, including OpenCode, Claude Code, and Codex.",
+          "quote": "- OpenCode\n- Claude Code\n- Codex"
+        },
+        {
+          "claim": "The software allows users to search across multiple different harnesses from a single local index.",
+          "quote": "Search across your harnesses from one local index."
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "02a088434703",
+      "title": "Hugging Face Launches llama.cpp Benchmark Dashboard for AMD Hardware",
+      "summary": "Hugging Face released a benchmark dashboard to track local inference performance of llama.cpp on AMD Ryzen and Radeon hardware. The dashboard runs weekly public workflows and lets users filter performance metrics measured in tokens per second by hardware, model, and build.",
+      "why_it_matters": "You can use this dashboard to evaluate and compare local LLM inference performance on AMD Ryzen and Radeon setups.",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "New llama.cpp benchmark dashboard targets AMD Ryzen and Radeon hardware.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "Hugging Face launched the llama.cpp × AMD Benchmark dashboard to track local inference performance on AMD Ryzen and Radeon hardware.",
+          "quote": "The llama.cpp × AMD Benchmark dashboard is available on Hugging Face."
+        },
+        {
+          "claim": "Users can customize their view by selecting specific hardware, models, and llama.cpp builds in the Configuration sidebar.",
+          "quote": "You can choose Hardware, Model, and llama.cpp build in the Configuration sidebar."
+        },
+        {
+          "claim": "The dashboard measures performance using two main tests, PP512 and TG128, both recorded in tokens per second.",
+          "quote": "The dashboard shows two separate tests, both measured in tokens per second"
+        },
+        {
+          "claim": "Public workflows for the specified hardware run on a weekly schedule using standardized benchmarking tools.",
+          "quote": "The public gfx1151 and gfx1201 workflows are scheduled weekly and run the standard benchmarks"
+        }
+      ],
+      "dropped_facts": 0,
+      "first_issues": []
+    },
+    {
+      "id": "d3aa48daa62d",
+      "title": "NVIDIA Releases Nemotron 3.5 Parse for Structured Data Extraction",
+      "summary": "NVIDIA introduced Nemotron 3.5 Parse, a compact document model trained via supervised fine-tuning and reinforcement learning to convert page images into structured data. It features a DFlash2 speculator that proposes up to 32 tokens ahead to accelerate inference verification.",
+      "why_it_matters": "You can leverage this model and its speculator for faster, more efficient document parsing and structured data extraction tasks.",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "source": "Hugging Face Blog",
+      "domain": "huggingface.co",
+      "is_paper": false,
+      "text_source": "article",
+      "editor_reason": "Hugging Face covers open data and fine-tuning for Nemotron 3.5 Parse.",
+      "status": "approved",
+      "rewrites": 0,
+      "sentences_checked": 4,
+      "facts": [
+        {
+          "claim": "NVIDIA released Nemotron 3.5 Parse, a compact document model that converts page images into structured data.",
+          "quote": "We recently released NVIDIA Nemotron 3.5 Parse, a compact document model that turns page images into structured data"
+        },
+        {
+          "claim": "The model was trained using supervised fine-tuning followed by reinforcement learning with verifiable rewards using Group Relative Policy Optimization.",
+          "quote": "We then continued with reinforcement learning with verifiable rewards (RLVR), using Group Relative Policy Optimization (GRPO)."
+        },
+        {
+          "claim": "A DFlash2 speculator was introduced to enable faster inference by proposing up to 32 tokens ahead for verification.",
+          "quote": "Our DFlash2 speculator goes further: a small draft model proposes up to 32 tokens ahead, and Parse verifies the proposals together."
+        }
+      ],
+      "dropped_facts": 1,
+      "first_issues": []
+    }
+  ]
+}
